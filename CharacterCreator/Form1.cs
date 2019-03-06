@@ -12,6 +12,10 @@ namespace CharacterCreator
 {
     public partial class FrmMain : Form
     {
+        Boolean toggleMove;
+        int mouseXVal;
+        int mouseYVal;
+
         public FrmMain()
         {
             InitializeComponent();
@@ -30,6 +34,29 @@ namespace CharacterCreator
             txtFirstName.Clear();
             txtLastName.Clear();
             txtClass.Clear();
+        }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void titleLabel_MouseDown(object sender, MouseEventArgs e)
+        {
+            toggleMove = true;
+            mouseXVal = e.X;
+            mouseYVal = e.Y;
+        }
+
+        private void titleLabel_MouseUp(object sender, MouseEventArgs e)
+        {
+            toggleMove = false;
+        }
+
+        private void titleLabel_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (toggleMove)
+                this.SetDesktopLocation(MousePosition.X - mouseXVal, MousePosition.Y - mouseYVal);
         }
     }
 }

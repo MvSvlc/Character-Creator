@@ -37,6 +37,8 @@
             this.SubmitButton = new System.Windows.Forms.Button();
             this.titleLabel = new System.Windows.Forms.Label();
             this.lstCharacter = new System.Windows.Forms.ListBox();
+            this.ExitButton = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.ExitButton)).BeginInit();
             this.SuspendLayout();
             // 
             // firstNameLabel
@@ -137,6 +139,9 @@
             this.titleLabel.TabIndex = 7;
             this.titleLabel.Text = "Character Creator";
             this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.titleLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.titleLabel_MouseDown);
+            this.titleLabel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.titleLabel_MouseMove);
+            this.titleLabel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.titleLabel_MouseUp);
             // 
             // lstCharacter
             // 
@@ -150,12 +155,25 @@
             this.lstCharacter.Size = new System.Drawing.Size(486, 184);
             this.lstCharacter.TabIndex = 8;
             // 
+            // ExitButton
+            // 
+            this.ExitButton.BackColor = System.Drawing.SystemColors.Control;
+            this.ExitButton.Image = global::CharacterCreator.Properties.Resources.power_button_off1;
+            this.ExitButton.Location = new System.Drawing.Point(541, 6);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(21, 18);
+            this.ExitButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.ExitButton.TabIndex = 9;
+            this.ExitButton.TabStop = false;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(568, 489);
+            this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.lstCharacter);
             this.Controls.Add(this.titleLabel);
             this.Controls.Add(this.SubmitButton);
@@ -166,10 +184,11 @@
             this.Controls.Add(this.lastNameLabel);
             this.Controls.Add(this.firstNameLabel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmMain";
             this.Text = "Character Creator";
+            ((System.ComponentModel.ISupportInitialize)(this.ExitButton)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,6 +205,7 @@
         private System.Windows.Forms.Button SubmitButton;
         private System.Windows.Forms.Label titleLabel;
         private System.Windows.Forms.ListBox lstCharacter;
+        private System.Windows.Forms.PictureBox ExitButton;
     }
 }
 
