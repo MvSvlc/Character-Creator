@@ -29,7 +29,11 @@ namespace CharacterCreator
                 LastName = txtLastName.Text,
                 CharacterClass = txtClass.Text
             };
-
+            if (txtFirstName.Text == "" || txtLastName.Text == "" || txtClass.Text == "")
+            {
+                MessageBox.Show("You can not leave any field empty!");
+                return;
+            }
             lstCharacter.Items.Add(character.ToString());
             txtFirstName.Clear();
             txtLastName.Clear();

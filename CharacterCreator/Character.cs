@@ -46,7 +46,7 @@ namespace CharacterCreator
                 if (validateLength(value))
                     firstName = value;
                 else
-                    firstName = "ERROR SETTING FIRSTNAME";
+                    firstName = "ERROR SETTING FIRSTNAME ";
             }
         }
 
@@ -58,7 +58,7 @@ namespace CharacterCreator
                 if (validateLength(value))
                     lastName = value;
                 else
-                    lastName = "ERROR SETTING LASTNAME";
+                    lastName = "ERROR SETTING LASTNAME ";
             }
         }
 
@@ -70,7 +70,7 @@ namespace CharacterCreator
                 if (validateLength(value))
                     charClass = value;
                 else
-                    charClass = "ERROR SETTING CHARACTER CLASS";
+                    charClass = "ERROR SETTING CHARACTER CLASS ";
             }
         }
         
