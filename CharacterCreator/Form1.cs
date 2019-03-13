@@ -25,8 +25,8 @@ namespace CharacterCreator
         {
             Character character = new Character
             {
-                FirstName = txtFirstName.Text,
-                LastName = txtLastName.Text,
+                CharacterName = txtFirstName.Text,
+                CharacterRace = txtLastName.Text,
                 CharacterClass = classComboBox.Text
             };
             if (txtFirstName.Text == "" || txtLastName.Text == "")

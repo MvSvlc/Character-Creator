@@ -4,33 +4,33 @@ namespace CharacterCreator
 {
     class Character
     {
-        private string firstName;
-        private string lastName;
+        private string charName;
+        private string charRace;
         private string charClass;
 
         public Character()
         {
-            firstName = null;
-            lastName = null;
+            charName = null;
+            charRace = null;
             charClass = null;
         }
         
-        public Character(string firstName, string lastName, string charClass)
+        public Character(string charName, string charRace, string charClass)
         {
-            firstName = this.firstName;
-            lastName = this.lastName;
+            charName = this.charName;
+            charRace = this.charRace;
             charClass = this.charClass;
         }
 
         public override string ToString()
         {
             string output = null;
-            output += "NAME: " + firstName + " " + lastName;
+            output += "NAME: " + charName + " RACE: " + charRace;
             output += " CLASS: " + charClass;
             return output;
         }
 
-        public Boolean validateLength(string value)
+        public Boolean ValidateLength(string value)
         {
             if (value.Length == 0)
                 return false;
@@ -38,27 +38,27 @@ namespace CharacterCreator
                 return true;
         }
 
-        public string FirstName
+        public string CharacterName
         {
-            get { return firstName; }
+            get { return charName; }
             set
             {
-                if (validateLength(value))
-                    firstName = value;
+                if (ValidateLength(value))
+                    charName = value;
                 else
-                    firstName = "ERROR SETTING FIRSTNAME ";
+                    charName = "ERROR SETTING NAME ";
             }
         }
 
-        public string LastName
+        public string CharacterRace
         {
-            get { return lastName; }
+            get { return charRace; }
             set
             {
-                if (validateLength(value))
-                    lastName = value;
+                if (ValidateLength(value))
+                    charRace = value;
                 else
-                    lastName = "ERROR SETTING LASTNAME ";
+                    charRace = "ERROR SETTING RACE ";
             }
         }
 
@@ -67,7 +67,7 @@ namespace CharacterCreator
             get { return charClass; }
             set
             {
-                if (validateLength(value))
+                if (ValidateLength(value))
                     charClass = value;
                 else
                     charClass = "ERROR SETTING CHARACTER CLASS ";

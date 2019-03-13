@@ -47,12 +47,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.firstNameLabel.AutoSize = true;
-            this.firstNameLabel.Location = new System.Drawing.Point(34, 65);
+            this.firstNameLabel.Location = new System.Drawing.Point(56, 65);
             this.firstNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.firstNameLabel.Name = "firstNameLabel";
-            this.firstNameLabel.Size = new System.Drawing.Size(86, 20);
+            this.firstNameLabel.Size = new System.Drawing.Size(51, 20);
             this.firstNameLabel.TabIndex = 0;
-            this.firstNameLabel.Text = "First Name";
+            this.firstNameLabel.Text = "Name";
             this.firstNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lastNameLabel
@@ -61,12 +61,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lastNameLabel.AutoSize = true;
-            this.lastNameLabel.Location = new System.Drawing.Point(34, 103);
+            this.lastNameLabel.Location = new System.Drawing.Point(59, 103);
             this.lastNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lastNameLabel.Name = "lastNameLabel";
-            this.lastNameLabel.Size = new System.Drawing.Size(86, 20);
+            this.lastNameLabel.Size = new System.Drawing.Size(47, 20);
             this.lastNameLabel.TabIndex = 1;
-            this.lastNameLabel.Text = "Last Name";
+            this.lastNameLabel.Text = "Race";
             this.lastNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // classLabel
@@ -75,7 +75,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.classLabel.AutoSize = true;
-            this.classLabel.Location = new System.Drawing.Point(50, 143);
+            this.classLabel.Location = new System.Drawing.Point(58, 143);
             this.classLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.classLabel.Name = "classLabel";
             this.classLabel.Size = new System.Drawing.Size(48, 20);
