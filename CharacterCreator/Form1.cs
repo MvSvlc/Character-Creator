@@ -27,9 +27,9 @@ namespace CharacterCreator
             {
                 FirstName = txtFirstName.Text,
                 LastName = txtLastName.Text,
-                CharacterClass = txtClass.Text
+                CharacterClass = classComboBox.Text
             };
-            if (txtFirstName.Text == "" || txtLastName.Text == "" || txtClass.Text == "")
+            if (txtFirstName.Text == "" || txtLastName.Text == "")
             {
                 MessageBox.Show("You can not leave any field empty!");
                 return;
@@ -37,7 +37,6 @@ namespace CharacterCreator
             lstCharacter.Items.Add(character.ToString());
             txtFirstName.Clear();
             txtLastName.Clear();
-            txtClass.Clear();
         }
 
         private void ExitButton_Click(object sender, EventArgs e)

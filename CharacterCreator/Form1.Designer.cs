@@ -33,11 +33,11 @@
             this.classLabel = new System.Windows.Forms.Label();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.txtLastName = new System.Windows.Forms.TextBox();
-            this.txtClass = new System.Windows.Forms.TextBox();
             this.SubmitButton = new System.Windows.Forms.Button();
             this.titleLabel = new System.Windows.Forms.Label();
             this.lstCharacter = new System.Windows.Forms.ListBox();
             this.ExitButton = new System.Windows.Forms.PictureBox();
+            this.classComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.ExitButton)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,17 +105,6 @@
             this.txtLastName.Size = new System.Drawing.Size(400, 26);
             this.txtLastName.TabIndex = 4;
             // 
-            // txtClass
-            // 
-            this.txtClass.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtClass.Location = new System.Drawing.Point(124, 139);
-            this.txtClass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtClass.Name = "txtClass";
-            this.txtClass.Size = new System.Drawing.Size(400, 26);
-            this.txtClass.TabIndex = 5;
-            // 
             // SubmitButton
             // 
             this.SubmitButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -167,17 +156,39 @@
             this.ExitButton.TabStop = false;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
+            // classComboBox
+            // 
+            this.classComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.classComboBox.FormattingEnabled = true;
+            this.classComboBox.Items.AddRange(new object[] {
+            "Barbarian",
+            "Bard",
+            "Cleric",
+            "Druid",
+            "Fighter",
+            "Wizard",
+            "Warlock",
+            "Rogue",
+            "Sorcerer",
+            "Ranger",
+            "Paladin",
+            "Monk"});
+            this.classComboBox.Location = new System.Drawing.Point(124, 138);
+            this.classComboBox.Name = "classComboBox";
+            this.classComboBox.Size = new System.Drawing.Size(400, 28);
+            this.classComboBox.TabIndex = 10;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(568, 489);
+            this.Controls.Add(this.classComboBox);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.lstCharacter);
             this.Controls.Add(this.titleLabel);
             this.Controls.Add(this.SubmitButton);
-            this.Controls.Add(this.txtClass);
             this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.classLabel);
@@ -201,11 +212,11 @@
         private System.Windows.Forms.Label classLabel;
         private System.Windows.Forms.TextBox txtFirstName;
         private System.Windows.Forms.TextBox txtLastName;
-        private System.Windows.Forms.TextBox txtClass;
         private System.Windows.Forms.Button SubmitButton;
         private System.Windows.Forms.Label titleLabel;
         private System.Windows.Forms.ListBox lstCharacter;
         private System.Windows.Forms.PictureBox ExitButton;
+        private System.Windows.Forms.ComboBox classComboBox;
     }
 }
 
