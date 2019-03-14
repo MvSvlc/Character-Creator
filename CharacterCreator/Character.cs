@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 
 namespace CharacterCreator
 {
@@ -32,10 +33,10 @@ namespace CharacterCreator
 
         public Boolean ValidateLength(string value)
         {
-            if (value.Length == 0)
-                return false;
-            else
+            if (value.Length != 0)
                 return true;
+            else
+                return false;
         }
 
         public string CharacterName
@@ -45,8 +46,6 @@ namespace CharacterCreator
             {
                 if (ValidateLength(value))
                     charName = value;
-                else
-                    charName = "ERROR SETTING NAME ";
             }
         }
 
@@ -57,8 +56,6 @@ namespace CharacterCreator
             {
                 if (ValidateLength(value))
                     charRace = value;
-                else
-                    charRace = "ERROR SETTING RACE ";
             }
         }
 
@@ -69,8 +66,6 @@ namespace CharacterCreator
             {
                 if (ValidateLength(value))
                     charClass = value;
-                else
-                    charClass = "ERROR SETTING CHARACTER CLASS ";
             }
         }
         

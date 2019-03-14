@@ -25,18 +25,18 @@ namespace CharacterCreator
         {
             Character character = new Character
             {
-                CharacterName = txtFirstName.Text,
-                CharacterRace = txtLastName.Text,
+                CharacterName = txtCharName.Text,
+                CharacterRace = txtChaName.Text,
                 CharacterClass = classComboBox.Text
             };
-            if (txtFirstName.Text == "" || txtLastName.Text == "")
+            if (txtCharName.Text == "" || txtChaName.Text == "")
             {
                 MessageBox.Show("You can not leave any field empty!");
                 return;
             }
             lstCharacter.Items.Add(character.ToString());
-            txtFirstName.Clear();
-            txtLastName.Clear();
+            txtCharName.Clear();
+            txtChaName.Clear();
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
@@ -44,19 +44,19 @@ namespace CharacterCreator
             this.Close();
         }
 
-        private void titleLabel_MouseDown(object sender, MouseEventArgs e)
+        private void TitleLabel_MouseDown(object sender, MouseEventArgs e)
         {
             toggleMove = true;
             mouseXVal = e.X;
             mouseYVal = e.Y;
         }
 
-        private void titleLabel_MouseUp(object sender, MouseEventArgs e)
+        private void TitleLabel_MouseUp(object sender, MouseEventArgs e)
         {
             toggleMove = false;
         }
 
-        private void titleLabel_MouseMove(object sender, MouseEventArgs e)
+        private void TitleLabel_MouseMove(object sender, MouseEventArgs e)
         {
             if (toggleMove)
                 this.SetDesktopLocation(MousePosition.X - mouseXVal, MousePosition.Y - mouseYVal);
