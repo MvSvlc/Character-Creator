@@ -5,28 +5,44 @@ namespace CharacterCreator
 {
     class Character
     {
-        private string charName;
-        private string charRace;
+        private string name;
+        private string race;
         private string charClass;
+        private int strength;
+        private int strengthMod;
+        private int dexterity;
+        private int dexterityMod;
+        private int constitution;
+        private int constitutionMod;
+        private int intelligence;
+        private int intelligenceMod;
+        private int wisdom;
+        private int wisdomMod;
+        private int charisma;
+        private int charismaMod;
+        private int armorClass;
+        private int initiative;
+        private int level;
+
 
         public Character()
         {
-            charName = null;
-            charRace = null;
+            name = null;
+            race = null;
             charClass = null;
         }
         
         public Character(string charName, string charRace, string charClass)
         {
-            charName = this.charName;
-            charRace = this.charRace;
+            charName = this.name;
+            charRace = this.race;
             charClass = this.charClass;
         }
 
         public override string ToString()
         {
             string output = null;
-            output += "NAME: " + charName + " RACE: " + charRace;
+            output += "NAME: " + name + " RACE: " + race;
             output += " CLASS: " + charClass;
             return output;
         }
@@ -41,21 +57,21 @@ namespace CharacterCreator
 
         public string CharacterName
         {
-            get { return charName; }
+            get { return name; }
             set
             {
                 if (ValidateLength(value))
-                    charName = value;
+                    name = value;
             }
         }
 
         public string CharacterRace
         {
-            get { return charRace; }
+            get { return race; }
             set
             {
                 if (ValidateLength(value))
-                    charRace = value;
+                    race = value;
             }
         }
 
