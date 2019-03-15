@@ -8,6 +8,12 @@ namespace CharacterCreator
         private string name;
         private string race;
         private string charClass;
+        private string background;
+        private string allignment;
+        private string personalityTraits;
+        private string ideals;
+        private string bonds;
+        private string flaws;
         private int strength;
         private int strengthMod;
         private int dexterity;
@@ -24,19 +30,76 @@ namespace CharacterCreator
         private int initiative;
         private int level;
 
-
         public Character()
         {
             name = null;
             race = null;
             charClass = null;
+            strength = 0;
+            strengthMod = 0;
+            dexterity = 0;
+            dexterityMod = 0;
+            constitution = 0;
+            constitutionMod = 0;
+            intelligence = 0;
+            intelligenceMod = 0;
+            wisdom = 0;
+            wisdomMod = 0;
+            charisma = 0;
+            charismaMod = 0;
+            armorClass = 0;
+            initiative = 0;
+            level = 1;
         }
         
-        public Character(string charName, string charRace, string charClass)
+        public Character(string charName, string charRace, string clas)
         {
-            charName = this.name;
-            charRace = this.race;
-            charClass = this.charClass;
+            name = charName;
+            race = charRace;
+            charClass = clas;
+            strength = 0;
+            strengthMod = 0;
+            dexterity = 0;
+            dexterityMod = 0;
+            constitution = 0;
+            constitutionMod = 0;
+            intelligence = 0;
+            intelligenceMod = 0;
+            wisdom = 0;
+            wisdomMod = 0;
+            charisma = 0;
+            charismaMod = 0;
+            armorClass = 0;
+            initiative = 0;
+            level = 1;
+        }
+
+        public void setAbilities(ref int ability, int value, ref int mod)
+        {
+            if (value > 0)
+                ability = value;
+            mod = (ability / 2) - 5;
+        }
+
+        public int Strength
+        {
+            get { return strength; }
+            set
+            {
+                setAbilities(ref strength, value, ref strengthMod);
+                //if (value > 0)
+                //    strength = value;
+                //strengthMod = (strength / 2) - 5;
+            }
+        }
+
+        public int StrengthMod
+        {
+            get { return strengthMod; }
+            set
+            {
+                strengthMod = value;
+            }
         }
 
         public override string ToString()
@@ -51,11 +114,10 @@ namespace CharacterCreator
         {
             if (value.Length != 0)
                 return true;
-            else
-                return false;
+            return false;
         }
 
-        public string CharacterName
+        public string Name
         {
             get { return name; }
             set
@@ -65,7 +127,7 @@ namespace CharacterCreator
             }
         }
 
-        public string CharacterRace
+        public string Race
         {
             get { return race; }
             set
