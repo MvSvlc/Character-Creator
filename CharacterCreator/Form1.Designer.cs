@@ -67,7 +67,7 @@
             this.TitleLabel.Name = "TitleLabel";
             this.TitleLabel.Size = new System.Drawing.Size(643, 61);
             this.TitleLabel.TabIndex = 7;
-            this.TitleLabel.Text = "Character Creator";
+            this.TitleLabel.Text = "Home";
             this.TitleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.TitleLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TitleLabel_MouseDown);
             this.TitleLabel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TitleLabel_MouseMove);
@@ -161,6 +161,7 @@
             this.button5.TabIndex = 4;
             this.button5.Text = "Page 5";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -172,6 +173,7 @@
             this.button4.TabIndex = 3;
             this.button4.Text = "Page 4";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -183,6 +185,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "Page 3";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -194,6 +197,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Page 2";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -206,6 +210,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Home";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmMain
             // 

@@ -49,5 +49,30 @@ namespace CharacterCreator
             if (toggleMove)
                 this.SetDesktopLocation(MousePosition.X - mouseXVal, MousePosition.Y - mouseYVal);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TitleLabel.Text = "Home";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            TitleLabel.Text = "Page 2";
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            TitleLabel.Text = "Page 3";
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            TitleLabel.Text = "Page 4";
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            TitleLabel.Text = "Page 5";
+        }
     }
 }
