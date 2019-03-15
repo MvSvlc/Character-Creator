@@ -15,6 +15,7 @@ namespace CharacterCreator
         Boolean toggleMove;
         int mouseXVal;
         int mouseYVal;
+        int charTotal = 0;
 
         public FrmMain()
         {
@@ -23,20 +24,7 @@ namespace CharacterCreator
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            Character character = new Character
-            {
-                CharacterName = txtCharName.Text,
-                CharacterRace = txtChaName.Text,
-                CharacterClass = classComboBox.Text
-            };
-            if (txtCharName.Text == "" || txtChaName.Text == "")
-            {
-                MessageBox.Show("You can not leave any field empty!");
-                return;
-            }
-            lstCharacter.Items.Add(character.ToString());
-            txtCharName.Clear();
-            txtChaName.Clear();
+
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
