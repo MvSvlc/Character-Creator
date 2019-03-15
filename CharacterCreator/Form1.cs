@@ -12,10 +12,10 @@ namespace CharacterCreator
 {
     public partial class FrmMain : Form
     {
-        Boolean toggleMove;
+        bool toggleMove;
         int mouseXVal;
         int mouseYVal;
-        int charTotal = 0;
+
 
         public FrmMain()
         {

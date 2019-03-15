@@ -35,7 +35,7 @@ namespace CharacterCreator
             name = null;
             race = null;
             charClass = null;
-            strength = 0;
+            strength = 20;
             strengthMod = 0;
             dexterity = 0;
             dexterityMod = 0;
@@ -74,7 +74,7 @@ namespace CharacterCreator
             level = 1;
         }
 
-        public void setAbilities(ref int ability, int value, ref int mod)
+        public void SetAbilities(ref int ability, int value, ref int mod)
         {
             if (value > 0)
                 ability = value;
@@ -84,13 +84,7 @@ namespace CharacterCreator
         public int Strength
         {
             get { return strength; }
-            set
-            {
-                setAbilities(ref strength, value, ref strengthMod);
-                //if (value > 0)
-                //    strength = value;
-                //strengthMod = (strength / 2) - 5;
-            }
+            set { SetAbilities(ref strength, value, ref strengthMod); }
         }
 
         public int StrengthMod
@@ -100,14 +94,6 @@ namespace CharacterCreator
             {
                 strengthMod = value;
             }
-        }
-
-        public override string ToString()
-        {
-            string output = null;
-            output += "NAME: " + name + " RACE: " + race;
-            output += " CLASS: " + charClass;
-            return output;
         }
 
         public Boolean ValidateLength(string value)
