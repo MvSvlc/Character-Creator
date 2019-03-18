@@ -92,5 +92,14 @@
   <ItemGroup>
     <None Include="Resources\power-button-off1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ampersand on White.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dd_transparent.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

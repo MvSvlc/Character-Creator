@@ -12,7 +12,8 @@ namespace CharacterCreator
         private string ideals;
         private string bonds;
         private string flaws;
-    
+
+
         public string Name
         {
             get { return name; }

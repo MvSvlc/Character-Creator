@@ -12,7 +12,7 @@ namespace CharacterCreator
 {
     public partial class FrmMain : Form
     {
-        bool toggleMove;
+        bool toggle_move;
         int mouseXVal;
         int mouseYVal;
 
@@ -34,19 +34,19 @@ namespace CharacterCreator
 
         private void TitleLabel_MouseDown(object sender, MouseEventArgs e)
         {
-            toggleMove = true;
+            toggle_move = true;
             mouseXVal = e.X;
             mouseYVal = e.Y;
         }
 
         private void TitleLabel_MouseUp(object sender, MouseEventArgs e)
         {
-            toggleMove = false;
+            toggle_move = false;
         }
 
         private void TitleLabel_MouseMove(object sender, MouseEventArgs e)
         {
-            if (toggleMove)
+            if(toggle_move)
                 this.SetDesktopLocation(MousePosition.X - mouseXVal, MousePosition.Y - mouseYVal);
         }
 
@@ -73,6 +73,11 @@ namespace CharacterCreator
         private void button5_Click(object sender, EventArgs e)
         {
             TitleLabel.Text = "Page 5";
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            TitleLabel.Text = "Overview";
         }
     }
 }
