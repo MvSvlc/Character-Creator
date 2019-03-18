@@ -81,6 +81,7 @@
     <Compile Include="Stats.cs" />
     <Compile Include="Races.cs" />
     <Compile Include="Subraces.cs" />
+    <Compile Include="Classes.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

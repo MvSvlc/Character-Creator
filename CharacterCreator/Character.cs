@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace CharacterCreator
 {
-    class Character
+    class Character : Classes
     {
         private string name;
         private string background;
@@ -12,6 +12,12 @@ namespace CharacterCreator
         private string ideals;
         private string bonds;
         private string flaws;
-        
+    
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
     } // END CLASS
 } // END NAMESPACE
