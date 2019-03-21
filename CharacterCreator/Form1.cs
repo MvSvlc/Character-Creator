@@ -20,11 +20,7 @@ namespace CharacterCreator
         public FrmMain()
         {
             InitializeComponent();
-        }
-
-        private void SubmitButton_Click(object sender, EventArgs e)
-        {
-
+            homeControl1.BringToFront();
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
@@ -53,11 +49,13 @@ namespace CharacterCreator
         private void button1_Click(object sender, EventArgs e)
         {
             TitleLabel.Text = "Home";
+            homeControl1.BringToFront();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             TitleLabel.Text = "Page 2";
+            page2Control1.BringToFront();
         }
 
         private void button3_Click(object sender, EventArgs e)
