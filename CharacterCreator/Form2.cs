@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace CharacterCreator
 {
-    public partial class Page2Control : UserControl
+    public partial class Form2 : Form
     {
-        public Page2Control()
+        public Form2()
         {
             InitializeComponent();
         }
-
     }
 }

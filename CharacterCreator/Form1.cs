@@ -61,6 +61,7 @@ namespace CharacterCreator
         private void button3_Click(object sender, EventArgs e)
         {
             TitleLabel.Text = "Page 3";
+            page3Control1.BringToFront();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -76,6 +77,11 @@ namespace CharacterCreator
         private void button6_Click(object sender, EventArgs e)
         {
             TitleLabel.Text = "Overview";
+        }
+
+        private void page2Control1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

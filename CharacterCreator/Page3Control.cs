@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace CharacterCreator
 {
-    public partial class Page2Control : UserControl
+    public partial class Page3Control : UserControl
     {
-        public Page2Control()
+        public Page3Control()
         {
             InitializeComponent();
         }
-
     }
 }
