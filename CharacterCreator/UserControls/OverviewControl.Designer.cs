@@ -37,15 +37,15 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(210, 25);
+            this.label1.Size = new System.Drawing.Size(231, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "This will be page 3";
+            this.label1.Text = "This will be overview";
             // 
-            // Page3Control
+            // OverviewControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.Controls.Add(this.label1);
-            this.Name = "Page3Control";
+            this.Name = "OverviewControl";
             this.Size = new System.Drawing.Size(757, 479);
             this.ResumeLayout(false);
             this.PerformLayout();

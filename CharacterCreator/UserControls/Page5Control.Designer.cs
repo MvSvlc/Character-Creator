@@ -39,13 +39,13 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(210, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "This will be page 3";
+            this.label1.Text = "This will be page 5";
             // 
-            // Page3Control
+            // Page5Control
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.Controls.Add(this.label1);
-            this.Name = "Page3Control";
+            this.Name = "Page5Control";
             this.Size = new System.Drawing.Size(757, 479);
             this.ResumeLayout(false);
             this.PerformLayout();

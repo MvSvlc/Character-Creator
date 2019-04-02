@@ -46,42 +46,40 @@ namespace CharacterCreator
                 this.SetDesktopLocation(MousePosition.X - mouseXVal, MousePosition.Y - mouseYVal);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void homebtn_Click(object sender, EventArgs e)
         {
             TitleLabel.Text = "Home";
             homeControl1.BringToFront();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void page2btn_Click(object sender, EventArgs e)
         {
             TitleLabel.Text = "Page 2";
             page2Control1.BringToFront();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void page3btn_Click(object sender, EventArgs e)
         {
             TitleLabel.Text = "Page 3";
             page3Control1.BringToFront();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void page4btn_Click(object sender, EventArgs e)
         {
             TitleLabel.Text = "Page 4";
+            page4Control1.BringToFront();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void page5btn_Click(object sender, EventArgs e)
         {
             TitleLabel.Text = "Page 5";
+            page5Control1.BringToFront();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void overviewbtn_Click(object sender, EventArgs e)
         {
             TitleLabel.Text = "Overview";
-        }
-
-        private void page2Control1_Load(object sender, EventArgs e)
-        {
-
+            overviewControl1.BringToFront();
         }
     }
 }
