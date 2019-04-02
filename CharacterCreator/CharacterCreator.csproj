@@ -47,51 +47,69 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Character.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HomeControl.cs">
+    <Compile Include="UserControls\HomeControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="HomeControl.Designer.cs">
+    <Compile Include="UserControls\HomeControl.Designer.cs">
       <DependentUpon>HomeControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Page2Control.cs">
+    <Compile Include="UserControls\Page2Control.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Page2Control.Designer.cs">
+    <Compile Include="UserControls\Page2Control.Designer.cs">
       <DependentUpon>Page2Control.cs</DependentUpon>
     </Compile>
-    <Compile Include="Page3Control.cs">
+    <Compile Include="UserControls\OverviewControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Page3Control.Designer.cs">
+    <Compile Include="UserControls\OverviewControl.Designer.cs">
+      <DependentUpon>OverviewControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Page5Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Page5Control.Designer.cs">
+      <DependentUpon>Page5Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Page4Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Page4Control.Designer.cs">
+      <DependentUpon>Page4Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Page3Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Page3Control.Designer.cs">
       <DependentUpon>Page3Control.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HomeControl.resx">
+    <EmbeddedResource Include="UserControls\HomeControl.resx">
       <DependentUpon>HomeControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Page2Control.resx">
+    <EmbeddedResource Include="UserControls\Page2Control.resx">
       <DependentUpon>Page2Control.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Page3Control.resx">
+    <EmbeddedResource Include="UserControls\OverviewControl.resx">
+      <DependentUpon>OverviewControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Page5Control.resx">
+      <DependentUpon>Page5Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Page4Control.resx">
+      <DependentUpon>Page4Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Page3Control.resx">
       <DependentUpon>Page3Control.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
