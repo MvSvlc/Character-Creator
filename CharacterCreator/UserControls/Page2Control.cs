@@ -17,5 +17,24 @@ namespace CharacterCreator
             InitializeComponent();
         }
 
+        private void textBoxName_Enter(object sender, EventArgs e)
+        {
+            if (textBoxName.Text == "Enter a name for your character")
+            {
+                textBoxName.Text = "";
+                textBoxName.Font = new Font(textBoxName.Font, FontStyle.Regular);
+                textBoxName.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBoxName_Leave(object sender, EventArgs e)
+        {
+            if (textBoxName.Text == "")
+            {
+                textBoxName.Text = "Enter a name for your character";
+                textBoxName.Font = new Font(textBoxName.Font, FontStyle.Italic);
+                textBoxName.ForeColor = Color.Silver;
+            }
+        }
     }
 }
