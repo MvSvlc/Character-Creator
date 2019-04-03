@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,12 +16,15 @@ namespace CharacterCreator
         bool toggle_move;
         int mouseXVal;
         int mouseYVal;
+        String dirpath = Directory.GetCurrentDirectory();
+        Utils Utils = new Utils();
 
 
         public FrmMain()
         {
             InitializeComponent();
             homeControl1.BringToFront();
+            Utils.createCharacterFile(dirpath + @"\Characters.txt");
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
