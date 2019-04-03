@@ -37,12 +37,12 @@
             this.homebtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.TitleLabel = new System.Windows.Forms.Label();
-            this.overviewControl1 = new CharacterCreator.OverviewControl();
-            this.page5Control1 = new CharacterCreator.Page5Control();
-            this.page4Control1 = new CharacterCreator.Page4Control();
-            this.page3Control1 = new CharacterCreator.Page3Control();
-            this.page2Control1 = new CharacterCreator.Page2Control();
             this.homeControl1 = new CharacterCreator.HomeControl();
+            this.page2Control1 = new CharacterCreator.Page2Control();
+            this.page3Control1 = new CharacterCreator.Page3Control();
+            this.page4Control1 = new CharacterCreator.Page4Control();
+            this.page5Control1 = new CharacterCreator.Page5Control();
+            this.overviewControl1 = new CharacterCreator.OverviewControl();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -163,38 +163,14 @@
             this.TitleLabel.Text = "Home";
             this.TitleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // overviewControl1
+            // homeControl1
             // 
-            this.overviewControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.overviewControl1.Location = new System.Drawing.Point(203, 61);
-            this.overviewControl1.Name = "overviewControl1";
-            this.overviewControl1.Size = new System.Drawing.Size(757, 479);
-            this.overviewControl1.TabIndex = 20;
-            // 
-            // page5Control1
-            // 
-            this.page5Control1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.page5Control1.Location = new System.Drawing.Point(203, 61);
-            this.page5Control1.Name = "page5Control1";
-            this.page5Control1.Size = new System.Drawing.Size(757, 479);
-            this.page5Control1.TabIndex = 19;
-            // 
-            // page4Control1
-            // 
-            this.page4Control1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.page4Control1.Location = new System.Drawing.Point(203, 61);
-            this.page4Control1.Name = "page4Control1";
-            this.page4Control1.Size = new System.Drawing.Size(757, 479);
-            this.page4Control1.TabIndex = 18;
-            // 
-            // page3Control1
-            // 
-            this.page3Control1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.page3Control1.Location = new System.Drawing.Point(203, 61);
-            this.page3Control1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.page3Control1.Name = "page3Control1";
-            this.page3Control1.Size = new System.Drawing.Size(757, 479);
-            this.page3Control1.TabIndex = 17;
+            this.homeControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.homeControl1.Location = new System.Drawing.Point(203, 61);
+            this.homeControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.homeControl1.Name = "homeControl1";
+            this.homeControl1.Size = new System.Drawing.Size(757, 479);
+            this.homeControl1.TabIndex = 15;
             // 
             // page2Control1
             // 
@@ -206,14 +182,38 @@
             this.page2Control1.Size = new System.Drawing.Size(757, 479);
             this.page2Control1.TabIndex = 16;
             // 
-            // homeControl1
+            // page3Control1
             // 
-            this.homeControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.homeControl1.Location = new System.Drawing.Point(203, 61);
-            this.homeControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.homeControl1.Name = "homeControl1";
-            this.homeControl1.Size = new System.Drawing.Size(757, 479);
-            this.homeControl1.TabIndex = 15;
+            this.page3Control1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.page3Control1.Location = new System.Drawing.Point(203, 61);
+            this.page3Control1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.page3Control1.Name = "page3Control1";
+            this.page3Control1.Size = new System.Drawing.Size(757, 479);
+            this.page3Control1.TabIndex = 17;
+            // 
+            // page4Control1
+            // 
+            this.page4Control1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.page4Control1.Location = new System.Drawing.Point(203, 61);
+            this.page4Control1.Name = "page4Control1";
+            this.page4Control1.Size = new System.Drawing.Size(757, 479);
+            this.page4Control1.TabIndex = 18;
+            // 
+            // page5Control1
+            // 
+            this.page5Control1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.page5Control1.Location = new System.Drawing.Point(203, 61);
+            this.page5Control1.Name = "page5Control1";
+            this.page5Control1.Size = new System.Drawing.Size(757, 479);
+            this.page5Control1.TabIndex = 19;
+            // 
+            // overviewControl1
+            // 
+            this.overviewControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.overviewControl1.Location = new System.Drawing.Point(203, 61);
+            this.overviewControl1.Name = "overviewControl1";
+            this.overviewControl1.Size = new System.Drawing.Size(757, 479);
+            this.overviewControl1.TabIndex = 20;
             // 
             // FrmMain
             // 
