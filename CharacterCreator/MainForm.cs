@@ -16,7 +16,6 @@ namespace CharacterCreator
         bool toggle_move;
         int mouseXVal;
         int mouseYVal;
-        String dirpath = Directory.GetCurrentDirectory();
         Utils Utils = new Utils();
 
 
@@ -24,7 +23,7 @@ namespace CharacterCreator
         {
             InitializeComponent();
             homeControl1.BringToFront();
-            Utils.createCharacterFile(dirpath + @"\Characters.txt");
+            Utils.createCharacterFile("Characters.txt");
         }
 
         private void ExitButton_Click(object sender, EventArgs e)

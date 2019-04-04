@@ -18,15 +18,16 @@ namespace CharacterCreator
 
         public void createCharacterFile(String name)
         {
-            if (!File.Exists(name)) // Does not exist
+            string directory = Directory.GetCurrentDirectory();
+            string path = Path.Combine(directory, name);
+
+            if (File.Exists(path))
             {
-                StreamWriter file = new StreamWriter(name);
-                file.Write("FILE DOES NOT EXIST AND HAS BEEN CREATED");
-                file.Close();
+                File.WriteAllText(path, "THE FILE ALREADY EXISTS");
             }
             else
             {
-                // The File already exists
+                File.WriteAllText(path, "THE FILE DOES NOT EXIST AND HAS BEEN CREATED");
             }
         }
     }
