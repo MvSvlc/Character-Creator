@@ -17,6 +17,15 @@ namespace CharacterCreator
             InitializeComponent();
         }
 
+        private void addSubraces(params String[] items)
+        {
+            comboBoxSubrace.Show();
+            comboBoxSubrace.Items.Clear();
+            labelSubrace.Show();
+            foreach (String item in items)
+                comboBoxSubrace.Items.Add(item);
+        }
+
         // ------------------------------------------ Name Text Box control ---------------------------------------
         private void textBoxName_Enter(object sender, EventArgs e)
         {
@@ -46,6 +55,23 @@ namespace CharacterCreator
         private void Page2Control_Load(object sender, EventArgs e)
         {
             comboBoxRace.Text = "Select your Race";
+        }
+
+        private void comboBoxRace_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            String value = comboBoxRace.Text;
+
+            if (value == "Human")
+            {
+                labelSubrace.Hide();
+                comboBoxSubrace.Hide();
+            }
+            else if (value == "Elf")
+                addSubraces("High Elf", "Wood Elf");
+            else if (value == "Dwarf")
+                addSubraces("Mountain Dwarf", "Hill Dwarf");
+            else if (value == "Hafling")
+                addSubraces("Stout", "Lightfoot");
         }
     }
 }
