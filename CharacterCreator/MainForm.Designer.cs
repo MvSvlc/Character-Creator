@@ -32,9 +32,9 @@
             this.overviewbtn = new System.Windows.Forms.Button();
             this.page5btn = new System.Windows.Forms.Button();
             this.page4btn = new System.Windows.Forms.Button();
-            this.page3btn = new System.Windows.Forms.Button();
-            this.page2btn = new System.Windows.Forms.Button();
-            this.homebtn = new System.Windows.Forms.Button();
+            this.buttonStatsPage = new System.Windows.Forms.Button();
+            this.buttonGeneralPage = new System.Windows.Forms.Button();
+            this.buttonHome = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.TitleLabel = new System.Windows.Forms.Label();
             this.homeControl1 = new CharacterCreator.HomeControl();
@@ -53,9 +53,9 @@
             this.panel1.Controls.Add(this.overviewbtn);
             this.panel1.Controls.Add(this.page5btn);
             this.panel1.Controls.Add(this.page4btn);
-            this.panel1.Controls.Add(this.page3btn);
-            this.panel1.Controls.Add(this.page2btn);
-            this.panel1.Controls.Add(this.homebtn);
+            this.panel1.Controls.Add(this.buttonStatsPage);
+            this.panel1.Controls.Add(this.buttonGeneralPage);
+            this.panel1.Controls.Add(this.buttonHome);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -101,45 +101,45 @@
             this.page4btn.UseVisualStyleBackColor = true;
             this.page4btn.Click += new System.EventHandler(this.page4btn_Click);
             // 
-            // page3btn
+            // buttonStatsPage
             // 
-            this.page3btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.page3btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.page3btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.page3btn.Location = new System.Drawing.Point(0, 120);
-            this.page3btn.Name = "page3btn";
-            this.page3btn.Size = new System.Drawing.Size(203, 62);
-            this.page3btn.TabIndex = 2;
-            this.page3btn.Text = "Page 3";
-            this.page3btn.UseVisualStyleBackColor = true;
-            this.page3btn.Click += new System.EventHandler(this.page3btn_Click);
+            this.buttonStatsPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonStatsPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonStatsPage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.buttonStatsPage.Location = new System.Drawing.Point(0, 120);
+            this.buttonStatsPage.Name = "buttonStatsPage";
+            this.buttonStatsPage.Size = new System.Drawing.Size(203, 62);
+            this.buttonStatsPage.TabIndex = 2;
+            this.buttonStatsPage.Text = "Stats";
+            this.buttonStatsPage.UseVisualStyleBackColor = true;
+            this.buttonStatsPage.Click += new System.EventHandler(this.buttonStatsPage_Click);
             // 
-            // page2btn
+            // buttonGeneralPage
             // 
-            this.page2btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.page2btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.page2btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.page2btn.Location = new System.Drawing.Point(0, 60);
-            this.page2btn.Name = "page2btn";
-            this.page2btn.Size = new System.Drawing.Size(203, 62);
-            this.page2btn.TabIndex = 1;
-            this.page2btn.Text = "Page 2";
-            this.page2btn.UseVisualStyleBackColor = true;
-            this.page2btn.Click += new System.EventHandler(this.page2btn_Click);
+            this.buttonGeneralPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonGeneralPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonGeneralPage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.buttonGeneralPage.Location = new System.Drawing.Point(0, 60);
+            this.buttonGeneralPage.Name = "buttonGeneralPage";
+            this.buttonGeneralPage.Size = new System.Drawing.Size(203, 62);
+            this.buttonGeneralPage.TabIndex = 1;
+            this.buttonGeneralPage.Text = "General";
+            this.buttonGeneralPage.UseVisualStyleBackColor = true;
+            this.buttonGeneralPage.Click += new System.EventHandler(this.buttonGeneralPage_Click);
             // 
-            // homebtn
+            // buttonHome
             // 
-            this.homebtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(162)))), ((int)(((byte)(130)))));
-            this.homebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.homebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.homebtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.homebtn.Location = new System.Drawing.Point(0, 0);
-            this.homebtn.Name = "homebtn";
-            this.homebtn.Size = new System.Drawing.Size(203, 62);
-            this.homebtn.TabIndex = 0;
-            this.homebtn.Text = "Dashboard";
-            this.homebtn.UseVisualStyleBackColor = true;
-            this.homebtn.Click += new System.EventHandler(this.homebtn_Click);
+            this.buttonHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(162)))), ((int)(((byte)(130)))));
+            this.buttonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.buttonHome.Location = new System.Drawing.Point(0, 0);
+            this.buttonHome.Name = "buttonHome";
+            this.buttonHome.Size = new System.Drawing.Size(203, 62);
+            this.buttonHome.TabIndex = 0;
+            this.buttonHome.Text = "Home";
+            this.buttonHome.UseVisualStyleBackColor = true;
+            this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
             // 
             // panel2
             // 
@@ -153,12 +153,12 @@
             // 
             // TitleLabel
             // 
-            this.TitleLabel.AutoSize = true;
+            this.TitleLabel.AutoEllipsis = true;
             this.TitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TitleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.TitleLabel.Location = new System.Drawing.Point(342, 17);
+            this.TitleLabel.Location = new System.Drawing.Point(0, 0);
             this.TitleLabel.Name = "TitleLabel";
-            this.TitleLabel.Size = new System.Drawing.Size(68, 25);
+            this.TitleLabel.Size = new System.Drawing.Size(757, 62);
             this.TitleLabel.TabIndex = 0;
             this.TitleLabel.Text = "Home";
             this.TitleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -237,7 +237,6 @@
             this.Text = "Character Creator";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,9 +246,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button page5btn;
         private System.Windows.Forms.Button page4btn;
-        private System.Windows.Forms.Button page3btn;
-        private System.Windows.Forms.Button page2btn;
-        private System.Windows.Forms.Button homebtn;
+        private System.Windows.Forms.Button buttonStatsPage;
+        private System.Windows.Forms.Button buttonGeneralPage;
+        private System.Windows.Forms.Button buttonHome;
         private System.Windows.Forms.Button overviewbtn;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label TitleLabel;

@@ -49,21 +49,21 @@ namespace CharacterCreator
                 this.SetDesktopLocation(MousePosition.X - mouseXVal, MousePosition.Y - mouseYVal);
         }
 
-        private void homebtn_Click(object sender, EventArgs e)
+        private void buttonHome_Click(object sender, EventArgs e)
         {
             TitleLabel.Text = "Home";
             homeControl1.BringToFront();
         }
 
-        private void page2btn_Click(object sender, EventArgs e)
+        private void buttonGeneralPage_Click(object sender, EventArgs e)
         {
-            TitleLabel.Text = "Page 2";
+            TitleLabel.Text = "General Character Information";
             page2Control1.BringToFront();
         }
 
-        private void page3btn_Click(object sender, EventArgs e)
+        private void buttonStatsPage_Click(object sender, EventArgs e)
         {
-            TitleLabel.Text = "Page 3";
+            TitleLabel.Text = "Stats";
             page3Control1.BringToFront();
         }
 

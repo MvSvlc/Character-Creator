@@ -59,11 +59,11 @@
     <Compile Include="UserControls\HomeControl.Designer.cs">
       <DependentUpon>HomeControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\Page2Control.cs">
+    <Compile Include="UserControls\GeneralControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\Page2Control.Designer.cs">
-      <DependentUpon>Page2Control.cs</DependentUpon>
+    <Compile Include="UserControls\GeneralControl.Designer.cs">
+      <DependentUpon>GeneralControl.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\OverviewControl.cs">
       <SubType>UserControl</SubType>
@@ -83,11 +83,11 @@
     <Compile Include="UserControls\Page4Control.Designer.cs">
       <DependentUpon>Page4Control.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\Page3Control.cs">
+    <Compile Include="UserControls\StatsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\Page3Control.Designer.cs">
-      <DependentUpon>Page3Control.cs</DependentUpon>
+    <Compile Include="UserControls\StatsControl.Designer.cs">
+      <DependentUpon>StatsControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -97,8 +97,8 @@
     <EmbeddedResource Include="UserControls\HomeControl.resx">
       <DependentUpon>HomeControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\Page2Control.resx">
-      <DependentUpon>Page2Control.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\GeneralControl.resx">
+      <DependentUpon>GeneralControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\OverviewControl.resx">
       <DependentUpon>OverviewControl.cs</DependentUpon>
@@ -109,8 +109,8 @@
     <EmbeddedResource Include="UserControls\Page4Control.resx">
       <DependentUpon>Page4Control.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\Page3Control.resx">
-      <DependentUpon>Page3Control.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\StatsControl.resx">
+      <DependentUpon>StatsControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
