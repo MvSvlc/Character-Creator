@@ -20,7 +20,25 @@ namespace CharacterCreator
         private int charismaMod = 0;
         private int armorClass = 0;
         private int initiative = 0;
+        private int proficiencyBonus = 2;
         private int acrobatics;
+        private int animalHandling;
+        private int arcana;
+        private int athletics;
+        private int deception;
+        private int history;
+        private int insight;
+        private int intimidation;
+        private int investigation;
+        private int medicine;
+        private int nature;
+        private int perception;
+        private int performance;
+        private int persuasion;
+        private int religion;
+        private int sleightHand;
+        private int stealth;
+        private int survival;
 
         public int HitPoints
         {
@@ -37,7 +55,11 @@ namespace CharacterCreator
         public int StrengthMod
         {
             get { return strengthMod; }
-            set { strengthMod = value; }
+            set 
+                {
+                    strengthMod = value;
+                    athletics = strengthMod;
+                }
         }
 
         public int Dexterity
@@ -53,6 +75,9 @@ namespace CharacterCreator
                 {
                     dexterityMod = value;
                     initiative = dexterityMod;
+                    acrobatics = dexterityMod;
+                    sleightHand = dexterityMod;
+                    stealth = dexterityMod;
                 }
         }
 
@@ -65,11 +90,7 @@ namespace CharacterCreator
         public int ConstitutionMod
         {
             get { return constitutionMod; }
-            set
-                {
-                    constitutionMod = value;
-                    HitPoints += constitutionMod;
-                }
+            set { constitutionMod = value; }
         }
 
         public int Intelligence
@@ -81,7 +102,15 @@ namespace CharacterCreator
         public int IntelligenceMod
         {
             get { return intelligenceMod; }
-            set { intelligenceMod = value; }
+            set 
+                {
+                    intelligenceMod = value;
+                    arcana = intelligenceMod;
+                    history = intelligenceMod;
+                    investigation = intelligenceMod;
+                    nature = intelligenceMod;
+                    religion = intelligenceMod;
+                }
         }
 
         public int Wisdom
@@ -93,7 +122,15 @@ namespace CharacterCreator
         public int WisdomMod
         {
             get { return wisdomMod; }
-            set { wisdomMod = value; }
+            set
+                {
+                    wisdomMod = value;
+                    animalHandling = wisdomMod;
+                    insight = wisdomMod;
+                    medicine = wisdomMod;
+                    perception = wisdomMod;
+                    survival = wisdomMod;
+                }
         }
 
         public int Charisma
@@ -105,7 +142,14 @@ namespace CharacterCreator
         public int CharismaMod
         {
             get { return charismaMod; }
-            set { charismaMod = value; }
+            set 
+                { 
+                    charismaMod = value;
+                    deception = charismaMod;
+                    intimidation = charismaMod;
+                    performance = charismaMod;
+                    perception = charismaMod;
+                }
         }
 
         public int ArmorClass
