@@ -19,8 +19,8 @@ namespace CharacterCreator
 
         private void addSubraces(params String[] items)
         {
-            comboBoxSubrace.Show();
             comboBoxSubrace.Items.Clear();
+            comboBoxSubrace.Show();
             labelSubrace.Show();
             foreach (String item in items)
                 comboBoxSubrace.Items.Add(item);
@@ -70,7 +70,7 @@ namespace CharacterCreator
                 addSubraces("High Elf", "Wood Elf");
             else if (value == "Dwarf")
                 addSubraces("Mountain Dwarf", "Hill Dwarf");
-            else if (value == "Hafling")
+            else if (value == "Halfling")
                 addSubraces("Stout", "Lightfoot");
         }
     }

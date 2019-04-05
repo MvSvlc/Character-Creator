@@ -32,13 +32,13 @@
             this.comboBoxRace = new System.Windows.Forms.ComboBox();
             this.labelRace = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.comboBoxBackground = new System.Windows.Forms.ComboBox();
             this.labelName = new System.Windows.Forms.Label();
             this.labelSubrace = new System.Windows.Forms.Label();
             this.labelClass = new System.Windows.Forms.Label();
             this.comboBoxSubrace = new System.Windows.Forms.ComboBox();
             this.comboBoxClass = new System.Windows.Forms.ComboBox();
             this.labelBackground = new System.Windows.Forms.Label();
-            this.comboBoxBackground = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,8 +64,8 @@
             "Human",
             "Dwarf",
             "Elf",
-            "Halfing"});
-            this.comboBoxRace.Location = new System.Drawing.Point(89, 32);
+            "Halfling"});
+            this.comboBoxRace.Location = new System.Drawing.Point(89, 29);
             this.comboBoxRace.Name = "comboBoxRace";
             this.comboBoxRace.Size = new System.Drawing.Size(205, 21);
             this.comboBoxRace.TabIndex = 2;
@@ -77,7 +77,7 @@
             this.labelRace.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelRace.AutoSize = true;
             this.labelRace.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.labelRace.Location = new System.Drawing.Point(10, 29);
+            this.labelRace.Location = new System.Drawing.Point(10, 26);
             this.labelRace.Name = "labelRace";
             this.labelRace.Size = new System.Drawing.Size(66, 13);
             this.labelRace.TabIndex = 3;
@@ -109,6 +109,23 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(408, 272);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
+            // comboBoxBackground
+            // 
+            this.comboBoxBackground.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxBackground.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxBackground.ForeColor = System.Drawing.Color.Black;
+            this.comboBoxBackground.Items.AddRange(new object[] {
+            "Acolyte",
+            "Criminal",
+            "Folk Hero",
+            "Noble",
+            "Sage",
+            "Soldier"});
+            this.comboBoxBackground.Location = new System.Drawing.Point(89, 110);
+            this.comboBoxBackground.Name = "comboBoxBackground";
+            this.comboBoxBackground.Size = new System.Drawing.Size(205, 21);
+            this.comboBoxBackground.TabIndex = 10;
+            // 
             // labelName
             // 
             this.labelName.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -126,7 +143,7 @@
             this.labelSubrace.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelSubrace.AutoSize = true;
             this.labelSubrace.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.labelSubrace.Location = new System.Drawing.Point(3, 58);
+            this.labelSubrace.Location = new System.Drawing.Point(3, 53);
             this.labelSubrace.Name = "labelSubrace";
             this.labelSubrace.Size = new System.Drawing.Size(80, 13);
             this.labelSubrace.TabIndex = 7;
@@ -137,7 +154,7 @@
             this.labelClass.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelClass.AutoSize = true;
             this.labelClass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.labelClass.Location = new System.Drawing.Point(10, 87);
+            this.labelClass.Location = new System.Drawing.Point(10, 80);
             this.labelClass.Name = "labelClass";
             this.labelClass.Size = new System.Drawing.Size(65, 13);
             this.labelClass.TabIndex = 6;
@@ -149,7 +166,7 @@
             this.comboBoxSubrace.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxSubrace.ForeColor = System.Drawing.Color.Black;
             this.comboBoxSubrace.FormattingEnabled = true;
-            this.comboBoxSubrace.Location = new System.Drawing.Point(89, 61);
+            this.comboBoxSubrace.Location = new System.Drawing.Point(89, 56);
             this.comboBoxSubrace.Name = "comboBoxSubrace";
             this.comboBoxSubrace.Size = new System.Drawing.Size(205, 21);
             this.comboBoxSubrace.TabIndex = 8;
@@ -164,7 +181,7 @@
             "Fighter",
             "Rogue",
             "Wizard"});
-            this.comboBoxClass.Location = new System.Drawing.Point(89, 90);
+            this.comboBoxClass.Location = new System.Drawing.Point(89, 83);
             this.comboBoxClass.Name = "comboBoxClass";
             this.comboBoxClass.Size = new System.Drawing.Size(205, 21);
             this.comboBoxClass.TabIndex = 5;
@@ -174,28 +191,11 @@
             this.labelBackground.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelBackground.AutoSize = true;
             this.labelBackground.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.labelBackground.Location = new System.Drawing.Point(10, 115);
+            this.labelBackground.Location = new System.Drawing.Point(10, 107);
             this.labelBackground.Name = "labelBackground";
             this.labelBackground.Size = new System.Drawing.Size(65, 13);
             this.labelBackground.TabIndex = 9;
             this.labelBackground.Text = "Background";
-            // 
-            // comboBoxBackground
-            // 
-            this.comboBoxBackground.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxBackground.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxBackground.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxBackground.Items.AddRange(new object[] {
-            "Acolyte",
-            "Criminal",
-            "Folk Hero",
-            "Noble",
-            "Sage",
-            "Soldier"});
-            this.comboBoxBackground.Location = new System.Drawing.Point(89, 118);
-            this.comboBoxBackground.Name = "comboBoxBackground";
-            this.comboBoxBackground.Size = new System.Drawing.Size(205, 21);
-            this.comboBoxBackground.TabIndex = 10;
             // 
             // Page2Control
             // 
