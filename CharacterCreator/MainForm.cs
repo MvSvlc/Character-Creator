@@ -58,13 +58,13 @@ namespace CharacterCreator
         private void buttonGeneralPage_Click(object sender, EventArgs e)
         {
             TitleLabel.Text = "General Character Information";
-            page2Control1.BringToFront();
+            generalControl1.BringToFront();
         }
 
         private void buttonStatsPage_Click(object sender, EventArgs e)
         {
             TitleLabel.Text = "Stats";
-            page3Control1.BringToFront();
+            statsControl1.BringToFront();
         }
 
         private void page4btn_Click(object sender, EventArgs e)
