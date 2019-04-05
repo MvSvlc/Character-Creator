@@ -14,19 +14,19 @@ namespace CharacterCreator
                 switch (charClass)
                 {
                     case "Cleric":
-                        HitPoints = 8 + ConstitutionMod;
+                        HitPoints += 8;
                         break;
 
                     case "Fighter":
-                        HitPoints = 10 + ConstitutionMod;
+                        HitPoints += 10;
                         break;
 
                     case "Rogue":
-                        HitPoints = 8 + ConstitutionMod;
+                        HitPoints += 8;
                         break;
 
                     case "Wizard":
-                        HitPoints = 6 + ConstitutionMod;
+                        HitPoints += 6;
                         break;
                 }
             }
