@@ -19,6 +19,6 @@ namespace CharacterCreator
             get { return name; }
             set { name = value; }
         }
-
+        
     } // END CLASS
 } // END NAMESPACE

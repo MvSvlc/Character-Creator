@@ -3,15 +3,6 @@ namespace CharacterCreator
 {
     public class Stats : Utils
     {
-        //private string name;
-        //private string race;
-        //private string charClass;
-        //private string background;
-        //private string allignment;
-        //private string personalityTraits;
-        //private string ideals;
-        //private string bonds;
-        //private string flaws;
         private int hitPoints = 0;
         private int level = 1;
         private int speed = 0;
@@ -29,6 +20,7 @@ namespace CharacterCreator
         private int charismaMod = 0;
         private int armorClass = 0;
         private int initiative = 0;
+        private int acrobatics;
 
         public int HitPoints
         {
@@ -57,7 +49,11 @@ namespace CharacterCreator
         public int DexterityMod
         {
             get { return dexterityMod; }
-            set { dexterityMod = value; }
+            set
+                {
+                    dexterityMod = value;
+                    initiative = dexterityMod;
+                }
         }
 
         public int Constitution
@@ -69,7 +65,11 @@ namespace CharacterCreator
         public int ConstitutionMod
         {
             get { return constitutionMod; }
-            set { constitutionMod = value; }
+            set
+                {
+                    constitutionMod = value;
+                    HitPoints += constitutionMod;
+                }
         }
 
         public int Intelligence
@@ -111,13 +111,13 @@ namespace CharacterCreator
         public int ArmorClass
         {
             get { return armorClass; }
-            set { armorClass = value + dexterityMod; }
+            set { armorClass = value; }
         }
 
         public int Initiative
         {
             get { return initiative; }
-            set { initiative = value + dexterityMod; }
+            set { initiative = value; }
         }
 
         public int Level
