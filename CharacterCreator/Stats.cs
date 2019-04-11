@@ -5,21 +5,21 @@ namespace CharacterCreator
     {
         private int hitPoints = 0;
         private int level = 1;
-        private int speed = 0;
+        private int speed;
         private int strength = 0;
-        private int strengthMod = 0;
+        private int strengthMod;
         private int dexterity = 0;
-        private int dexterityMod = 0;
+        private int dexterityMod;
         private int constitution = 0;
-        private int constitutionMod = 0;
+        private int constitutionMod;
         private int intelligence = 0;
-        private int intelligenceMod = 0;
+        private int intelligenceMod;
         private int wisdom = 0;
-        private int wisdomMod = 0;
+        private int wisdomMod;
         private int charisma = 0;
-        private int charismaMod = 0;
-        private int armorClass = 0;
-        private int initiative = 0;
+        private int charismaMod;
+        private int armorClass = 10;
+        private int initiative;
         private int proficiencyBonus = 2;
         private int acrobatics;
         private int animalHandling;
@@ -176,5 +176,96 @@ namespace CharacterCreator
             set { speed = value; }
         }
 
+
+        public int Acrobatics
+        {
+            get { return acrobatics; }
+        }
+
+        public int AnimalHandling
+        {
+            get { return animalHandling; }
+        }
+
+        public int Arcana
+        {
+            get { return arcana; }
+        }
+
+        public int Athletics
+        {
+            get { return athletics; }
+        }
+
+        public int Deception
+        {
+            get { return athletics; }
+        }
+
+        public int History
+        {
+            get { return history; }
+        }
+
+        public int Insight
+        {
+            get { return insight; }
+
+        }
+
+        public int Intimidation
+        {
+            get { return intimidation; }
+        }
+
+        public int Investigation
+        {
+            get { return investigation; }
+        }
+
+        public int Medicine
+        {
+            get { return medicine; }
+        }
+
+        public int Nature
+        {
+            get { return nature; }
+        }
+
+        public int Perception
+        {
+            get { return perception; }
+        }
+
+        public int Performance
+        {
+            get { return performance; }
+        }
+
+        public int Persuasion
+        {
+            get { return persuasion; }
+        }
+
+        public int Religion
+        {
+            get { return religion; }
+        }
+
+        public int SleightHand
+        {
+            get { return sleightHand; }
+        }
+
+        public int Stealth
+        {
+            get { return stealth; }
+        }
+
+        public int Survival
+        {
+            get { return survival; }
+        }
     }
 }

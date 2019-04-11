@@ -13,6 +13,24 @@ namespace CharacterCreator
         private string bonds;
         private string flaws;
 
+        public Character(string name, string race , string subrace , string charClass)
+        {
+            Name = name;
+            Race = race;
+            Subrace = subrace;
+            Class = charClass;
+        }
+
+        public string Background
+        {
+            get { return background; }
+            set { background = value; }
+        }
+
+        public int FinalHP
+        {
+            get { return HitPoints + ConstitutionMod; }
+        }
 
         public string Name
         {
