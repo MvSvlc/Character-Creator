@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CharacterCreator
 {
-    public partial class Page2Control : UserControl
+    public partial class GeneralControl : UserControl
     {
-        public Page2Control()
+        public GeneralControl()
         {
             InitializeComponent();
         }
@@ -52,7 +52,7 @@ namespace CharacterCreator
             comboBoxRace.Text = "Race";
         }
 
-        private void Page2Control_Load(object sender, EventArgs e)
+        private void GeneralControl_Load(object sender, EventArgs e)
         {
             comboBoxRace.Text = "Select your Race";
         }
@@ -72,6 +72,12 @@ namespace CharacterCreator
                 addSubraces("Mountain Dwarf", "Hill Dwarf");
             else if (value == "Halfling")
                 addSubraces("Stout", "Lightfoot");
+        }
+
+        private void GeneralSaveButton_Click(object sender, EventArgs e)
+        {
+            Character newChar = new Character(textBoxName.Text, comboBoxRace.Text, comboBoxSubrace.Text, comboBoxClass.Text);
+            
         }
     }
 }

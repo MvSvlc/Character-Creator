@@ -1,6 +1,6 @@
 ﻿namespace CharacterCreator
 {
-    partial class Page2Control
+    partial class GeneralControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -39,6 +39,7 @@
             this.comboBoxSubrace = new System.Windows.Forms.ComboBox();
             this.comboBoxClass = new System.Windows.Forms.ComboBox();
             this.labelBackground = new System.Windows.Forms.Label();
+            this.GeneralSaveButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -197,13 +198,26 @@
             this.labelBackground.TabIndex = 9;
             this.labelBackground.Text = "Background";
             // 
-            // Page2Control
+            // GeneralSaveButton
+            // 
+            this.GeneralSaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GeneralSaveButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.GeneralSaveButton.Location = new System.Drawing.Point(3, 431);
+            this.GeneralSaveButton.Name = "GeneralSaveButton";
+            this.GeneralSaveButton.Size = new System.Drawing.Size(751, 45);
+            this.GeneralSaveButton.TabIndex = 5;
+            this.GeneralSaveButton.Text = "Save";
+            this.GeneralSaveButton.UseVisualStyleBackColor = true;
+            this.GeneralSaveButton.Click += new System.EventHandler(this.GeneralSaveButton_Click);
+            // 
+            // GeneralControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.Controls.Add(this.GeneralSaveButton);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "Page2Control";
+            this.Name = "GeneralControl";
             this.Size = new System.Drawing.Size(757, 479);
-            this.Load += new System.EventHandler(this.Page2Control_Load);
+            this.Load += new System.EventHandler(this.GeneralControl_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -222,5 +236,6 @@
         private System.Windows.Forms.ComboBox comboBoxClass;
         private System.Windows.Forms.ComboBox comboBoxBackground;
         private System.Windows.Forms.Label labelBackground;
+        private System.Windows.Forms.Button GeneralSaveButton;
     }
 }

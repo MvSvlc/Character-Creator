@@ -38,7 +38,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.TitleLabel = new System.Windows.Forms.Label();
             this.homeControl1 = new CharacterCreator.HomeControl();
-            this.generalControl1 = new CharacterCreator.Page2Control();
+            this.generalControl1 = new CharacterCreator.GeneralControl();
             this.statsControl1 = new CharacterCreator.Page3Control();
             this.page4Control1 = new CharacterCreator.Page4Control();
             this.page5Control1 = new CharacterCreator.Page5Control();
@@ -172,13 +172,13 @@
             this.homeControl1.Size = new System.Drawing.Size(757, 479);
             this.homeControl1.TabIndex = 15;
             // 
-            // page2Control1
+            // GeneralControl1
             // 
             this.generalControl1.AutoSize = true;
             this.generalControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.generalControl1.Location = new System.Drawing.Point(203, 61);
             this.generalControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.generalControl1.Name = "page2Control1";
+            this.generalControl1.Name = "GeneralControl1";
             this.generalControl1.Size = new System.Drawing.Size(757, 479);
             this.generalControl1.TabIndex = 16;
             // 
@@ -253,7 +253,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label TitleLabel;
         private HomeControl homeControl1;
-        private Page2Control generalControl1;
+        private GeneralControl generalControl1;
         private Page3Control statsControl1;
         private Page4Control page4Control1;
         private Page5Control page5Control1;
