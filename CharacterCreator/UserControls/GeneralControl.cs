@@ -79,5 +79,10 @@ namespace CharacterCreator
             Character newChar = new Character(textBoxName.Text, comboBoxRace.Text, comboBoxSubrace.Text, comboBoxClass.Text);
             
         }
+
+        private void TableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
