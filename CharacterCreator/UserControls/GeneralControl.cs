@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace CharacterCreator
 {
     public partial class GeneralControl : UserControl
@@ -77,12 +78,22 @@ namespace CharacterCreator
         private void GeneralSaveButton_Click(object sender, EventArgs e)
         {
             Character newChar = new Character(textBoxName.Text, comboBoxRace.Text, comboBoxSubrace.Text, comboBoxClass.Text);
-            
+            Utils utilsTest = new Utils();
+            SerializeTestClass test123 = new SerializeTestClass(29, "test successful");
+            utilsTest.SerializeObject(test123);
+
         }
 
         private void TableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            Utils utilsTest = new Utils();
+            SerializeTestClass test123 = (SerializeTestClass)utilsTest.DeSerializeObject();
+            Console.WriteLine(test123.data1 + " " + test123.data2);
         }
     }
 }
