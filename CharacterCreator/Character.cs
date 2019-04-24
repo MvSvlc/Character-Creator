@@ -8,7 +8,7 @@ namespace CharacterCreator
     {
         private string name;
         private string background;
-        private string allignment;
+        private string alignment;
         private string personalityTraits;
         private string ideals;
         private string bonds;
