@@ -80,7 +80,7 @@ namespace CharacterCreator
             Character newChar = new Character(textBoxName.Text, comboBoxRace.Text, comboBoxSubrace.Text, comboBoxClass.Text);
             Utils utilsTest = new Utils();
             SerializeTestClass test123 = new SerializeTestClass(29, "test successful");
-            utilsTest.SerializeObject(test123);
+            utilsTest.SerializeObject(newChar);
 
         }
 
