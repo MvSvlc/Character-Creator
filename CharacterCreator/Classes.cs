@@ -1,6 +1,7 @@
 ﻿using System;
 namespace CharacterCreator
 {
+    [Serializable()]
     public class Classes : Subraces
     {
         private string charClass;

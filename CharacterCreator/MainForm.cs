@@ -23,7 +23,6 @@ namespace CharacterCreator
         {
             InitializeComponent();
             homeControl1.BringToFront();
-            Utils.createCharacterFile("Characters.txt");
         }
 
         private void ExitButton_Click(object sender, EventArgs e)

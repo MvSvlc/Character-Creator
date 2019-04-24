@@ -3,6 +3,7 @@ using System.Windows.Forms;
 
 namespace CharacterCreator
 {
+    [Serializable()]
     public class Character : Classes
     {
         private string name;

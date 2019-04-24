@@ -11,6 +11,7 @@ using System.Text;
 
 namespace CharacterCreator
 {
+    [Serializable()]
     public class Utils
     {
         public string path;
@@ -22,7 +23,7 @@ namespace CharacterCreator
             mod = (ability / 2) - 5;
         }
 
-        public void createCharacterFile(String name)
+        private void createFile(String name)
         {
             string directory = Directory.GetCurrentDirectory();
             name = @"SerialTestInfo.txt";
@@ -42,22 +43,21 @@ namespace CharacterCreator
 
         public void SerializeObject(Character o)
         {
-            createCharacterFile(name);
+            createFile(name);
 
             try
             {
                 File.WriteAllText(path, XmlSerialize<Character>(o));
             }
-            catch(System.IO.IOException e)
+            catch (System.IO.IOException e)
             {
                 Console.WriteLine(e);
             }
         }
 
-        public object DeSerializeObject()
+        /*public object DeSerializeObject()
         {
-            SerializeTestClass deserializeTest = new SerializeTestClass();
-            createCharacterFile(name);
+            createFile(name);
             string fileText;
 
             try
@@ -81,19 +81,30 @@ namespace CharacterCreator
             }
 
             return deserializeTest;
-        }
-        public string XmlSerialize<T>(T obj)
+        }*/
+        private string XmlSerialize<T>(T obj)
         {
-            XmlSerializer serializer = new XmlSerializer(obj.GetType());
+            string result = "";
 
-            using (StringWriter sWriter = new StringWriter())
+            try
             {
-                serializer.Serialize(sWriter, obj);
-                return sWriter.ToString();
+                XmlSerializer serializer = new XmlSerializer(obj.GetType());
+
+                using (StringWriter sWriter = new StringWriter())
+                {
+                    serializer.Serialize(sWriter, obj);
+                    result = sWriter.ToString();
+                }
             }
+            catch (SerializationException e)
+            {
+                Console.WriteLine(e);
+            }
+
+            return result;
         }
 
-        public T XmlDeserialize<T>(string input) where T : class
+        private T XmlDeserialize<T>(string input) where T : class
         {
             System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer(typeof(T));
 
@@ -103,25 +114,26 @@ namespace CharacterCreator
             }
         }
 
+        public static string BinarySerialize(Character character)
+        {
+            FileInfo f = new FileInfo(character.Name);
+            Stream s = f.Open(FileMode.Create);
+            BinaryFormatter b = new BinaryFormatter();
+            b.Serialize(s, character);
+            s.Close();
+            return character.Name;
+        }
+
+        public static Character BinaryDeserialize()
+        {
+            FileInfo f = new FileInfo("charInfoData.dat");
+            Stream s = f.Open(FileMode.Open);
+            BinaryFormatter b = new BinaryFormatter();
+            Character temp =  (Character)b.Deserialize(s);
+            s.Close();
+            return temp;
+        }
         
     }
 
-
-    public class SerializeTestClass
-    {
-        public int data1;
-        public string data2;
-
-        public SerializeTestClass(int d1, string d2)
-        {
-            data1 = d1;
-            data2 = d2;
-        }
-
-        public SerializeTestClass()
-        {
-            data1 = 98;
-            data2 = "fkjdslaflfj";
-        }
-    }
 }

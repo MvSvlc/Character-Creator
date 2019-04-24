@@ -1,6 +1,7 @@
 ﻿using System;
 namespace CharacterCreator
 {
+    [Serializable()]
     public class Stats : Utils
     {
         private int hitPoints = 0;

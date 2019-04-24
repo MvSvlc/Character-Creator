@@ -78,9 +78,8 @@ namespace CharacterCreator
         private void GeneralSaveButton_Click(object sender, EventArgs e)
         {
             Character newChar = new Character(textBoxName.Text, comboBoxRace.Text, comboBoxSubrace.Text, comboBoxClass.Text);
-            Utils utilsTest = new Utils();
-            SerializeTestClass test123 = new SerializeTestClass(29, "test successful");
-            utilsTest.SerializeObject(newChar);
+            //SerializeTestClass test123 = new SerializeTestClass(29, "test successful");
+            Utils.BinarySerialize(newChar);
 
         }
 
@@ -91,9 +90,8 @@ namespace CharacterCreator
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            Utils utilsTest = new Utils();
-            SerializeTestClass test123 = (SerializeTestClass)utilsTest.DeSerializeObject();
-            Console.WriteLine(test123.data1 + " " + test123.data2);
+            Character testChar = Utils.BinaryDeserialize();
+            Console.WriteLine(testChar.Name);
         }
     }
 }
