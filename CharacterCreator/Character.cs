@@ -14,12 +14,13 @@ namespace CharacterCreator
         private string bonds;
         private string flaws;
 
-        public Character(string name, string race , string subrace , string charClass)
+        public Character(string name, string race , string subrace , string charClass, string BG)
         {
             Name = name;
             Race = race;
             Subrace = subrace;
             Class = charClass;
+            Background = BG;
         }
 
         public string Background
@@ -37,6 +38,11 @@ namespace CharacterCreator
         {
             get { return name; }
             set { name = value; }
+        }
+
+        public string toString()
+        {
+            return Name + " | " + Race + " | " + Subrace + " | " + Class + " | " + Background;
         }
         
     } // END CLASS

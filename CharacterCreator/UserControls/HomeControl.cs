@@ -17,5 +17,16 @@ namespace CharacterCreator
             InitializeComponent();
         }
 
+        private void HomeControl_Load(object sender, EventArgs e)
+        {
+        
+        }
+
+        private void RefreshButton_Click(object sender, EventArgs e)
+        {
+            Character character = Utils.BinaryDeserialize("David");
+            Console.WriteLine(character.Name + " | " + character.Race + " | " + character.Subrace + " | " + character.Class + " | " + character.Background);
+            charListBox.Items.Add(character.toString());
+        }
     }
 }

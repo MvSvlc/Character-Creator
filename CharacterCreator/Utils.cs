@@ -40,80 +40,6 @@ namespace CharacterCreator
             }
         }
 
-
-        public void SerializeObject(Character o)
-        {
-            createFile(name);
-
-            try
-            {
-                File.WriteAllText(path, XmlSerialize<Character>(o));
-            }
-            catch (System.IO.IOException e)
-            {
-                Console.WriteLine(e);
-            }
-        }
-
-        /*public object DeSerializeObject()
-        {
-            createFile(name);
-            string fileText;
-
-            try
-            {
-                fileText = File.ReadAllText(path);
-
-                try
-                {
-                    deserializeTest = XmlDeserialize<SerializeTestClass>(fileText);
-                }
-                catch (SerializationException e)
-                {
-                    Console.WriteLine(e);
-                }
-
-                return deserializeTest;
-            }
-            catch (System.IO.IOException e)
-            {
-                Console.WriteLine(e);
-            }
-
-            return deserializeTest;
-        }*/
-        private string XmlSerialize<T>(T obj)
-        {
-            string result = "";
-
-            try
-            {
-                XmlSerializer serializer = new XmlSerializer(obj.GetType());
-
-                using (StringWriter sWriter = new StringWriter())
-                {
-                    serializer.Serialize(sWriter, obj);
-                    result = sWriter.ToString();
-                }
-            }
-            catch (SerializationException e)
-            {
-                Console.WriteLine(e);
-            }
-
-            return result;
-        }
-
-        private T XmlDeserialize<T>(string input) where T : class
-        {
-            System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer(typeof(T));
-
-            using (StringReader sReader = new StringReader(input))
-            {
-                return (T)serializer.Deserialize(sReader);
-            }
-        }
-
         public static string BinarySerialize(Character character)
         {
             FileInfo f = new FileInfo(character.Name);
@@ -124,12 +50,12 @@ namespace CharacterCreator
             return character.Name;
         }
 
-        public static Character BinaryDeserialize()
+        public static Character BinaryDeserialize(String name)
         {
-            FileInfo f = new FileInfo("charInfoData.dat");
+            FileInfo f = new FileInfo(name);
             Stream s = f.Open(FileMode.Open);
             BinaryFormatter b = new BinaryFormatter();
-            Character temp =  (Character)b.Deserialize(s);
+            Character temp =  (Character) b.Deserialize(s);
             s.Close();
             return temp;
         }

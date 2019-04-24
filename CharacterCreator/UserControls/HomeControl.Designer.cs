@@ -28,40 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.charListBox = new System.Windows.Forms.ListBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.refreshButton = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // listBox1
+            // charListBox
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(107, 61);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(541, 355);
-            this.listBox1.TabIndex = 1;
+            this.charListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
+            this.charListBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.charListBox.FormattingEnabled = true;
+            this.charListBox.Location = new System.Drawing.Point(107, 61);
+            this.charListBox.Name = "charListBox";
+            this.charListBox.Size = new System.Drawing.Size(541, 355);
+            this.charListBox.TabIndex = 1;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.refreshButton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(757, 479);
             this.panel1.TabIndex = 2;
             // 
+            // refreshButton
+            // 
+            this.refreshButton.Location = new System.Drawing.Point(194, 433);
+            this.refreshButton.Name = "refreshButton";
+            this.refreshButton.Size = new System.Drawing.Size(75, 23);
+            this.refreshButton.TabIndex = 0;
+            this.refreshButton.Text = "Refresh";
+            this.refreshButton.UseVisualStyleBackColor = true;
+            this.refreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
+            // 
             // HomeControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.charListBox);
             this.Controls.Add(this.panel1);
             this.Name = "HomeControl";
             this.Size = new System.Drawing.Size(757, 479);
+            this.Load += new System.EventHandler(this.HomeControl_Load);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox charListBox;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button refreshButton;
     }
 }
