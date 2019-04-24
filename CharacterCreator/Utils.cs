@@ -40,14 +40,13 @@ namespace CharacterCreator
         }
 
 
-        public void SerializeObject(SerializeTestClass o)
+        public void SerializeObject(Character o)
         {
-            SerializeTestClass test = new SerializeTestClass(9, "data test");
             createCharacterFile(name);
 
             try
             {
-                File.WriteAllText(path, XmlSerialize<SerializeTestClass>(o));
+                File.WriteAllText(path, XmlSerialize<Character>(o));
             }
             catch(System.IO.IOException e)
             {
