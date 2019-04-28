@@ -80,13 +80,12 @@ namespace CharacterCreator
             Character newChar = new Character(textBoxName.Text, comboBoxRace.Text, comboBoxSubrace.Text, comboBoxClass.Text, comboBoxBackground.Text);
             Utils.BinarySerialize(newChar);
             Console.WriteLine(newChar.Name + " " + newChar.Background);
-
+            
         }
 
-        private void TableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void CharSlotComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
-
     }
 }

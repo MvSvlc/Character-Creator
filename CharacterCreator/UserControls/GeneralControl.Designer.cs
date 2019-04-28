@@ -41,6 +41,8 @@
             this.labelBackground = new System.Windows.Forms.Label();
             this.GeneralSaveButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.charSlotLabel = new System.Windows.Forms.Label();
+            this.charSlotComboBox = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -103,13 +105,14 @@
             this.tableLayoutPanel1.Controls.Add(this.labelBackground, 0, 4);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 5;
+            this.tableLayoutPanel1.RowCount = 6;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(408, 136);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(408, 356);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
             // comboBoxBackground
@@ -215,11 +218,41 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.tableLayoutPanel1);
+            this.panel1.Controls.Add(this.charSlotLabel);
+            this.panel1.Controls.Add(this.charSlotComboBox);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(757, 479);
             this.panel1.TabIndex = 6;
+            // 
+            // charSlotLabel
+            // 
+            this.charSlotLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.charSlotLabel.AutoSize = true;
+            this.charSlotLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.charSlotLabel.Location = new System.Drawing.Point(133, 404);
+            this.charSlotLabel.Name = "charSlotLabel";
+            this.charSlotLabel.Size = new System.Drawing.Size(95, 13);
+            this.charSlotLabel.TabIndex = 12;
+            this.charSlotLabel.Text = "Select a Save Slot";
+            // 
+            // charSlotComboBox
+            // 
+            this.charSlotComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.charSlotComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.charSlotComboBox.ForeColor = System.Drawing.Color.Black;
+            this.charSlotComboBox.Items.AddRange(new object[] {
+            "Character Slot 1",
+            "Character Slot 2",
+            "Character Slot 3",
+            "Character Slot 4",
+            "Character Slot 5"});
+            this.charSlotComboBox.Location = new System.Drawing.Point(276, 404);
+            this.charSlotComboBox.Name = "charSlotComboBox";
+            this.charSlotComboBox.Size = new System.Drawing.Size(205, 21);
+            this.charSlotComboBox.TabIndex = 11;
+            this.charSlotComboBox.SelectedIndexChanged += new System.EventHandler(this.CharSlotComboBox_SelectedIndexChanged);
             // 
             // GeneralControl
             // 
@@ -232,6 +265,7 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -250,5 +284,7 @@
         private System.Windows.Forms.Label labelBackground;
         private System.Windows.Forms.Button GeneralSaveButton;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label charSlotLabel;
+        private System.Windows.Forms.ComboBox charSlotComboBox;
     }
 }
