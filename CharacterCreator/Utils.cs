@@ -42,17 +42,17 @@ namespace CharacterCreator
 
         public static string BinarySerialize(Character character)
         {
-            FileInfo f = new FileInfo(character.Name);
-            Stream s = f.Open(FileMode.Create);
+            //FileInfo f = new FileInfo(character.Name);
+            Stream s = Builder.ActiveCharFile.Open(FileMode.Create);
             BinaryFormatter b = new BinaryFormatter();
             b.Serialize(s, character);
             s.Close();
             return character.Name;
         }
 
-        public static Character BinaryDeserialize(String name)
+        public static Character BinaryDeserialize(FileInfo f)
         {
-            FileInfo f = new FileInfo(name);
+            //FileInfo f = new FileInfo(name);
             Stream s = f.Open(FileMode.Open);
             BinaryFormatter b = new BinaryFormatter();
             Character temp =  (Character) b.Deserialize(s);

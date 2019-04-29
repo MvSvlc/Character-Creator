@@ -19,6 +19,29 @@ namespace CharacterCreator
 
         private static FileInfo activeCharFile;
 
+        public static int CharCount
+        {
+            get
+            {
+                return charCount;
+            }
+            set
+            {
+                charCount = value;
+            }
+        }
+        public static FileInfo ActiveCharFile
+        {
+            get
+            {
+                return activeCharFile;
+            }
+            set
+            {
+                activeCharFile = value;
+            }
+        }
+
         public static void IncCharCount()
         {
             if (charCount < 5)
@@ -39,9 +62,29 @@ namespace CharacterCreator
         {
             if (s.Equals("Character Slot 1"))
             {
-                //activeCharFile = ref charFile1;
+                activeCharFile = charFile1;
             }
-                
+
+            else if (s.Equals("Character Slot 2"))
+            {
+                activeCharFile = charFile2;
+            }
+
+            else if (s.Equals("Character Slot 3"))
+            {
+                activeCharFile = charFile3;
+            }
+
+            else if (s.Equals("Character Slot 4"))
+            {
+                activeCharFile = charFile4;
+            }
+
+            else if (s.Equals("Character Slot 5"))
+            {
+                activeCharFile = charFile5;
+            }
+
         }
     }
 }
