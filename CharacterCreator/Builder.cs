@@ -22,8 +22,8 @@ namespace CharacterCreator
         {
             charFile1 = new FileInfo("charData1.dat");
             charFile2 = new FileInfo("charData2.dat");
-            charFile3 = new FileInfo("charData2.dat");
-            charFile4 = new FileInfo("charData2.dat");
+            charFile3 = new FileInfo("charData3.dat");
+            charFile4 = new FileInfo("charData4.dat");
             activeCharFile = charFile1;
         }
 
