@@ -24,6 +24,7 @@ namespace CharacterCreator
             charFile2 = new FileInfo("charData2.dat");
             charFile3 = new FileInfo("charData2.dat");
             charFile4 = new FileInfo("charData2.dat");
+            activeCharFile = charFile1;
         }
 
         public static int CharCount

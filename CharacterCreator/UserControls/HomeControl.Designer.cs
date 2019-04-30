@@ -42,8 +42,8 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.nameColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.raceColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.subraceColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.classColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.subclassColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.backgroundColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.homeTableLayoutPanel.SuspendLayout();
@@ -230,8 +230,8 @@
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.nameColumn,
             this.raceColumn,
+            this.subraceColumn,
             this.classColumn,
-            this.subclassColumn,
             this.backgroundColumn});
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.Location = new System.Drawing.Point(0, 0);
@@ -251,15 +251,15 @@
             this.raceColumn.Text = "Race";
             this.raceColumn.Width = 100;
             // 
+            // subraceColumn
+            // 
+            this.subraceColumn.Text = "Sub-Race";
+            this.subraceColumn.Width = 100;
+            // 
             // classColumn
             // 
             this.classColumn.Text = "Class";
             this.classColumn.Width = 100;
-            // 
-            // subclassColumn
-            // 
-            this.subclassColumn.Text = "Sub-Class";
-            this.subclassColumn.Width = 100;
             // 
             // backgroundColumn
             // 
@@ -311,8 +311,8 @@
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader nameColumn;
         private System.Windows.Forms.ColumnHeader raceColumn;
+        private System.Windows.Forms.ColumnHeader subraceColumn;
         private System.Windows.Forms.ColumnHeader classColumn;
-        private System.Windows.Forms.ColumnHeader subclassColumn;
         private System.Windows.Forms.ColumnHeader backgroundColumn;
     }
 }
