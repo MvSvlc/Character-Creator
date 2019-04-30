@@ -246,8 +246,7 @@
             "Character Slot 1",
             "Character Slot 2",
             "Character Slot 3",
-            "Character Slot 4",
-            "Character Slot 5"});
+            "Character Slot 4"});
             this.charSlotComboBox.Location = new System.Drawing.Point(276, 404);
             this.charSlotComboBox.Name = "charSlotComboBox";
             this.charSlotComboBox.Size = new System.Drawing.Size(205, 21);

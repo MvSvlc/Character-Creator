@@ -85,7 +85,7 @@ namespace CharacterCreator
 
         private void CharSlotComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            Builder.SetSaveSlot(charSlotComboBox.Text);
         }
     }
 }

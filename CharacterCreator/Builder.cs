@@ -39,6 +39,22 @@ namespace CharacterCreator
             set { charFile1 = value; }
         }
 
+        public static FileInfo CharFile2
+        {
+            get { return charFile2; }
+            set { charFile2 = value; }
+        }
+        public static FileInfo CharFile3
+        {
+            get { return charFile3; }
+            set { charFile3 = value; }
+        }
+        public static FileInfo CharFile4
+        {
+            get { return charFile4; }
+            set { charFile4 = value; }
+        }
+
         public static FileInfo ActiveCharFile
         {
             get { return activeCharFile; }

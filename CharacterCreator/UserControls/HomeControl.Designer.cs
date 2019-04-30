@@ -45,10 +45,29 @@
             this.subraceColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.classColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.backgroundColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listView3 = new System.Windows.Forms.ListView();
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listView4 = new System.Windows.Forms.ListView();
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.homeTableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.homeSplitContainer2)).BeginInit();
             this.homeSplitContainer2.Panel1.SuspendLayout();
+            this.homeSplitContainer2.Panel2.SuspendLayout();
             this.homeSplitContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.homeSplitContainer1)).BeginInit();
             this.homeSplitContainer1.Panel1.SuspendLayout();
@@ -56,9 +75,11 @@
             this.homeSplitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.homeSplitContainer3)).BeginInit();
             this.homeSplitContainer3.Panel1.SuspendLayout();
+            this.homeSplitContainer3.Panel2.SuspendLayout();
             this.homeSplitContainer3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.homeSplitContainer4)).BeginInit();
             this.homeSplitContainer4.Panel1.SuspendLayout();
+            this.homeSplitContainer4.Panel2.SuspendLayout();
             this.homeSplitContainer4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,6 +137,7 @@
             // homeSplitContainer2.Panel2
             // 
             this.homeSplitContainer2.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.homeSplitContainer2.Panel2.Controls.Add(this.listView2);
             this.homeSplitContainer2.Size = new System.Drawing.Size(656, 90);
             this.homeSplitContainer2.SplitterDistance = 107;
             this.homeSplitContainer2.TabIndex = 5;
@@ -151,6 +173,7 @@
             // homeSplitContainer3.Panel2
             // 
             this.homeSplitContainer3.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.homeSplitContainer3.Panel2.Controls.Add(this.listView3);
             this.homeSplitContainer3.Size = new System.Drawing.Size(656, 90);
             this.homeSplitContainer3.SplitterDistance = 107;
             this.homeSplitContainer3.TabIndex = 7;
@@ -168,6 +191,7 @@
             // homeSplitContainer4.Panel2
             // 
             this.homeSplitContainer4.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.homeSplitContainer4.Panel2.Controls.Add(this.listView4);
             this.homeSplitContainer4.Size = new System.Drawing.Size(656, 90);
             this.homeSplitContainer4.SplitterDistance = 107;
             this.homeSplitContainer4.TabIndex = 8;
@@ -266,6 +290,132 @@
             this.backgroundColumn.Text = "Background";
             this.backgroundColumn.Width = 100;
             // 
+            // listView2
+            // 
+            this.listView2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5});
+            this.listView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView2.Location = new System.Drawing.Point(0, 0);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(545, 90);
+            this.listView2.TabIndex = 1;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Name";
+            this.columnHeader1.Width = 100;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Race";
+            this.columnHeader2.Width = 100;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Sub-Race";
+            this.columnHeader3.Width = 100;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Class";
+            this.columnHeader4.Width = 100;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Background";
+            this.columnHeader5.Width = 100;
+            // 
+            // listView3
+            // 
+            this.listView3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader10});
+            this.listView3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView3.Location = new System.Drawing.Point(0, 0);
+            this.listView3.Name = "listView3";
+            this.listView3.Size = new System.Drawing.Size(545, 90);
+            this.listView3.TabIndex = 1;
+            this.listView3.UseCompatibleStateImageBehavior = false;
+            this.listView3.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Name";
+            this.columnHeader6.Width = 100;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Race";
+            this.columnHeader7.Width = 100;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Sub-Race";
+            this.columnHeader8.Width = 100;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Class";
+            this.columnHeader9.Width = 100;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Background";
+            this.columnHeader10.Width = 100;
+            // 
+            // listView4
+            // 
+            this.listView4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.listView4.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader11,
+            this.columnHeader12,
+            this.columnHeader13,
+            this.columnHeader14,
+            this.columnHeader15});
+            this.listView4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView4.Location = new System.Drawing.Point(0, 0);
+            this.listView4.Name = "listView4";
+            this.listView4.Size = new System.Drawing.Size(545, 90);
+            this.listView4.TabIndex = 1;
+            this.listView4.UseCompatibleStateImageBehavior = false;
+            this.listView4.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "Name";
+            this.columnHeader11.Width = 100;
+            // 
+            // columnHeader12
+            // 
+            this.columnHeader12.Text = "Race";
+            this.columnHeader12.Width = 100;
+            // 
+            // columnHeader13
+            // 
+            this.columnHeader13.Text = "Sub-Race";
+            this.columnHeader13.Width = 100;
+            // 
+            // columnHeader14
+            // 
+            this.columnHeader14.Text = "Class";
+            this.columnHeader14.Width = 100;
+            // 
+            // columnHeader15
+            // 
+            this.columnHeader15.Text = "Background";
+            this.columnHeader15.Width = 100;
+            // 
             // HomeControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -277,6 +427,7 @@
             this.homeTableLayoutPanel.ResumeLayout(false);
             this.homeSplitContainer2.Panel1.ResumeLayout(false);
             this.homeSplitContainer2.Panel1.PerformLayout();
+            this.homeSplitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.homeSplitContainer2)).EndInit();
             this.homeSplitContainer2.ResumeLayout(false);
             this.homeSplitContainer1.Panel1.ResumeLayout(false);
@@ -286,10 +437,12 @@
             this.homeSplitContainer1.ResumeLayout(false);
             this.homeSplitContainer3.Panel1.ResumeLayout(false);
             this.homeSplitContainer3.Panel1.PerformLayout();
+            this.homeSplitContainer3.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.homeSplitContainer3)).EndInit();
             this.homeSplitContainer3.ResumeLayout(false);
             this.homeSplitContainer4.Panel1.ResumeLayout(false);
             this.homeSplitContainer4.Panel1.PerformLayout();
+            this.homeSplitContainer4.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.homeSplitContainer4)).EndInit();
             this.homeSplitContainer4.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -314,5 +467,23 @@
         private System.Windows.Forms.ColumnHeader subraceColumn;
         private System.Windows.Forms.ColumnHeader classColumn;
         private System.Windows.Forms.ColumnHeader backgroundColumn;
+        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ListView listView3;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
+        private System.Windows.Forms.ListView listView4;
+        private System.Windows.Forms.ColumnHeader columnHeader11;
+        private System.Windows.Forms.ColumnHeader columnHeader12;
+        private System.Windows.Forms.ColumnHeader columnHeader13;
+        private System.Windows.Forms.ColumnHeader columnHeader14;
+        private System.Windows.Forms.ColumnHeader columnHeader15;
     }
 }

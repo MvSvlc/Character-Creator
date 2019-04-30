@@ -42,7 +42,6 @@ namespace CharacterCreator
 
         public static string BinarySerialize(Character character)
         {
-            //FileInfo f = new FileInfo(character.Name);
             Stream s = Builder.ActiveCharFile.Open(FileMode.Create);
             BinaryFormatter b = new BinaryFormatter();
             b.Serialize(s, character);
@@ -52,7 +51,6 @@ namespace CharacterCreator
 
         public static Character BinaryDeserialize(FileInfo f)
         {
-            //FileInfo f = new FileInfo(name);
             Character temp = new Character();
             try
             {
