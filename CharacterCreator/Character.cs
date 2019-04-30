@@ -14,6 +14,15 @@ namespace CharacterCreator
         private string bonds;
         private string flaws;
 
+        public Character()
+        {
+            Name = "";
+            Race = "";
+            Subrace = "";
+            Class = "";
+            Background = "";
+        }
+
         public Character(string name, string race , string subrace , string charClass, string BG)
         {
             Name = name;

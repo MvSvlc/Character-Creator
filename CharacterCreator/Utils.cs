@@ -53,10 +53,19 @@ namespace CharacterCreator
         public static Character BinaryDeserialize(FileInfo f)
         {
             //FileInfo f = new FileInfo(name);
-            Stream s = f.Open(FileMode.Open);
-            BinaryFormatter b = new BinaryFormatter();
-            Character temp =  (Character) b.Deserialize(s);
-            s.Close();
+            Character temp = new Character();
+            try
+            {
+                Stream s = f.Open(FileMode.Open);
+                BinaryFormatter b = new BinaryFormatter();
+                temp = (Character)b.Deserialize(s);
+                s.Close();
+            }
+            catch(FileNotFoundException e)
+            {
+                Console.WriteLine(e);
+            }
+            
             return temp;
         }
         

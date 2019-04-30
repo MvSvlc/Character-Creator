@@ -11,35 +11,37 @@ namespace CharacterCreator
     {
         private static int charCount = 0;
 
-        private static FileInfo charFile1 = new FileInfo("charData1.dat");
-        private static FileInfo charFile2 = new FileInfo("charData2.dat");
-        private static FileInfo charFile3 = new FileInfo("charData3.dat");
-        private static FileInfo charFile4 = new FileInfo("charData4.dat");
-        private static FileInfo charFile5 = new FileInfo("charData5.dat");
+        private static FileInfo charFile1;
+        private static FileInfo charFile2;
+        private static FileInfo charFile3;
+        private static FileInfo charFile4;
 
         private static FileInfo activeCharFile;
 
+        public static void initCharFiles()
+        {
+            charFile1 = new FileInfo("charData1.dat");
+            charFile2 = new FileInfo("charData2.dat");
+            charFile3 = new FileInfo("charData2.dat");
+            charFile4 = new FileInfo("charData2.dat");
+        }
+
         public static int CharCount
         {
-            get
-            {
-                return charCount;
-            }
-            set
-            {
-                charCount = value;
-            }
+            get { return charCount; }
+            set { charCount = value; }
         }
+
+        public static FileInfo CharFile1
+        {
+            get { return charFile1; }
+            set { charFile1 = value; }
+        }
+
         public static FileInfo ActiveCharFile
         {
-            get
-            {
-                return activeCharFile;
-            }
-            set
-            {
-                activeCharFile = value;
-            }
+            get { return activeCharFile; }
+            set { activeCharFile = value; }
         }
 
         public static void IncCharCount()
@@ -78,11 +80,6 @@ namespace CharacterCreator
             else if (s.Equals("Character Slot 4"))
             {
                 activeCharFile = charFile4;
-            }
-
-            else if (s.Equals("Character Slot 5"))
-            {
-                activeCharFile = charFile5;
             }
 
         }
