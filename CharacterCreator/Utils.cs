@@ -23,23 +23,6 @@ namespace CharacterCreator
             mod = (ability / 2) - 5;
         }
 
-        private void createFile(String name)
-        {
-            string directory = Directory.GetCurrentDirectory();
-            name = @"SerialTestInfo.txt";
-            path = Path.Combine(directory, name);
-
-            if (File.Exists(path))
-            {
-                Console.WriteLine(path, "THE FILE ALREADY EXISTS");
-            }
-            else
-            {
-                Console.WriteLine(path, "THE FILE DOES NOT EXIST AND HAS BEEN CREATED");
-                File.Create(path);
-            }
-        }
-
         public static string BinarySerialize(Character character)
         {
             Stream s = Builder.ActiveCharFile.Open(FileMode.Create);

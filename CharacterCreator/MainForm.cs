@@ -16,13 +16,12 @@ namespace CharacterCreator
         bool toggle_move;
         int mouseXVal;
         int mouseYVal;
-        Utils Utils = new Utils();
-
-
+        
         public FrmMain()
         {
             InitializeComponent();
             homeControl1.BringToFront();
+            Utils.createFile()
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
