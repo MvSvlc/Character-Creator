@@ -74,12 +74,17 @@ namespace CharacterCreator
             else if (value == "Halfling")
                 addSubraces("Stout", "Lightfoot");
         }
+        
 
         private void GeneralSaveButton_Click(object sender, EventArgs e)
         {
-            Character newChar = new Character(textBoxName.Text, comboBoxRace.Text, comboBoxSubrace.Text, comboBoxClass.Text, comboBoxBackground.Text);
-            Utils.BinarySerialize(newChar);
-            Console.WriteLine(newChar.Name + " " + newChar.Background);
+            if (textBoxName.Text == "" || comboBoxRace.Text == "" || comboBoxSubrace.Text == "" || comboBoxClass.Text == "" || comboBoxBackground.Text == "" || comboBoxAlignment.Text == "")
+                MessageBox.Show("Can not leave any field empty!");
+            else
+            {
+                Character newChar = new Character(textBoxName.Text, comboBoxRace.Text, comboBoxSubrace.Text, comboBoxClass.Text, comboBoxBackground.Text, comboBoxAlignment.Text);
+                Utils.BinarySerialize(newChar);
+            }
             
         }
 

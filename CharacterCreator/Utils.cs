@@ -14,8 +14,6 @@ namespace CharacterCreator
     [Serializable()]
     public class Utils
     {
-        public string path;
-        public string name;
         public void setAbilities(ref int ability, int value, ref int mod)
         {
             if (value > 0)

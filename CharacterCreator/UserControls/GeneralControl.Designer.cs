@@ -43,6 +43,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.charSlotLabel = new System.Windows.Forms.Label();
             this.charSlotComboBox = new System.Windows.Forms.ComboBox();
+            this.comboBoxAlignment = new System.Windows.Forms.ComboBox();
+            this.AlignmentLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -93,6 +95,7 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.Controls.Add(this.AlignmentLabel, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.comboBoxBackground, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.labelName, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.comboBoxRace, 1, 1);
@@ -103,6 +106,7 @@
             this.tableLayoutPanel1.Controls.Add(this.comboBoxSubrace, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.comboBoxClass, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.labelBackground, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.comboBoxAlignment, 1, 5);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
@@ -253,6 +257,37 @@
             this.charSlotComboBox.TabIndex = 11;
             this.charSlotComboBox.SelectedIndexChanged += new System.EventHandler(this.CharSlotComboBox_SelectedIndexChanged);
             // 
+            // comboBoxAlignment
+            // 
+            this.comboBoxAlignment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxAlignment.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxAlignment.ForeColor = System.Drawing.Color.Black;
+            this.comboBoxAlignment.Items.AddRange(new object[] {
+            "Lawful Good",
+            "Lawful Neutral",
+            "Lawful Evil",
+            "Neutral Good",
+            "True Neutral",
+            "Neutral Evil",
+            "Chaotic Good",
+            "Chaotic Neutral",
+            "Chaotic Evil"});
+            this.comboBoxAlignment.Location = new System.Drawing.Point(89, 137);
+            this.comboBoxAlignment.Name = "comboBoxAlignment";
+            this.comboBoxAlignment.Size = new System.Drawing.Size(205, 21);
+            this.comboBoxAlignment.TabIndex = 11;
+            // 
+            // AlignmentLabel
+            // 
+            this.AlignmentLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.AlignmentLabel.AutoSize = true;
+            this.AlignmentLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.AlignmentLabel.Location = new System.Drawing.Point(16, 134);
+            this.AlignmentLabel.Name = "AlignmentLabel";
+            this.AlignmentLabel.Size = new System.Drawing.Size(53, 13);
+            this.AlignmentLabel.TabIndex = 12;
+            this.AlignmentLabel.Text = "Alignment";
+            // 
             // GeneralControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -285,5 +320,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label charSlotLabel;
         private System.Windows.Forms.ComboBox charSlotComboBox;
+        private System.Windows.Forms.Label AlignmentLabel;
+        private System.Windows.Forms.ComboBox comboBoxAlignment;
     }
 }
