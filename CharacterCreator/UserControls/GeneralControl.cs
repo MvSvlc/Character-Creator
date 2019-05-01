@@ -78,7 +78,7 @@ namespace CharacterCreator
 
         private void GeneralSaveButton_Click(object sender, EventArgs e)
         {
-            if (textBoxName.Text == "" || comboBoxRace.Text == "" || comboBoxSubrace.Text == "" || comboBoxClass.Text == "" || comboBoxBackground.Text == "" || comboBoxAlignment.Text == "")
+            if (textBoxName.Text == "Enter a name for your character" || comboBoxRace.Text == "" || (comboBoxSubrace.Text == "" && comboBoxRace.Text != "Human") || comboBoxClass.Text == "" || comboBoxBackground.Text == "" || comboBoxAlignment.Text == "")
                 MessageBox.Show("Can not leave any field empty!");
             else
             {
