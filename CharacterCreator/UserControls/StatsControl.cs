@@ -52,5 +52,16 @@ namespace CharacterCreator
         {
             CharismaModLabel.Text = setModLabel("Charisma Modifier", comboBoxCharisma.Text);
         }
+
+        public void UpdateStats()
+        {
+            Builder.Char1.Strength = Int32.Parse(comboBoxStrength.Text);
+            Builder.Char1.Dexterity = Int32.Parse(comboBoxDex.Text);
+            Builder.Char1.Constitution = Int32.Parse(comboBoxConst.Text);
+            Builder.Char1.Intelligence = Int32.Parse(comboBoxIntelli.Text);
+            Builder.Char1.Wisdom = Int32.Parse(comboBoxWisdom.Text);
+            Builder.Char1.Charisma = Int32.Parse(comboBoxCharisma.Text);
+        }
+
     }
 }

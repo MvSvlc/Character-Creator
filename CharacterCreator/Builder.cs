@@ -18,13 +18,24 @@ namespace CharacterCreator
 
         private static FileInfo activeCharFile;
 
-        public static void initCharFiles()
+        private static Character char1;
+
+
+        public static Character Char1
+        {
+            get { return char1;  }
+            set { char1 = value; }
+        }
+
+        public static void InitCharFiles()
         {
             charFile1 = new FileInfo("charData1.dat");
             charFile2 = new FileInfo("charData2.dat");
             charFile3 = new FileInfo("charData3.dat");
             charFile4 = new FileInfo("charData4.dat");
             activeCharFile = charFile1;
+
+            char1 = new Character();
         }
 
         public static int CharCount

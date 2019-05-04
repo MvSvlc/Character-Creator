@@ -149,7 +149,7 @@ namespace CharacterCreator
                     deception = charismaMod;
                     intimidation = charismaMod;
                     performance = charismaMod;
-                    perception = charismaMod;
+                    persuasion = charismaMod;
                 }
         }
 

@@ -19,7 +19,7 @@ namespace CharacterCreator
 
         private void HomeControl_Load(object sender, EventArgs e)
         {
-            Builder.initCharFiles();
+            Builder.InitCharFiles();
             Character char1 = Utils.BinaryDeserialize(Builder.CharFile1);
             Character char2 = Utils.BinaryDeserialize(Builder.CharFile2);
             Character char3 = Utils.BinaryDeserialize(Builder.CharFile3);

@@ -82,8 +82,10 @@ namespace CharacterCreator
                 MessageBox.Show("Can not leave any field empty!");
             else
             {
-                Character newChar = new Character(textBoxName.Text, comboBoxRace.Text, comboBoxSubrace.Text, comboBoxClass.Text, comboBoxBackground.Text, comboBoxAlignment.Text);
-                Utils.BinarySerialize(newChar);
+                //Character newChar = new Character(textBoxName.Text, comboBoxRace.Text, comboBoxSubrace.Text, comboBoxClass.Text, comboBoxBackground.Text, comboBoxAlignment.Text);
+                
+                Builder.Char1 = new Character(textBoxName.Text, comboBoxRace.Text, comboBoxSubrace.Text, comboBoxClass.Text, comboBoxBackground.Text, comboBoxAlignment.Text);
+                Utils.BinarySerialize(Builder.Char1);
             }
             
         }
