@@ -37,7 +37,8 @@ namespace CharacterCreator
 
         public string toString()
         {
-            return Name + " | " + Race + " | " + Subrace + " | " + Class + " | " + Background;
+            return String.Format("{0} | {1} | {2} | {3} | {4} | {5} | STR:{6} | WIS:{7} | DEX:{8} | CONST:{9} | INT:{10} | CHAR:{11}", 
+                Name, Race, Subrace,Class,Background, Alignment, Strength,Wisdom,Dexterity,Constitution, Intelligence, Charisma);
         }
         
     } // END CLASS

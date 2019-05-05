@@ -14,8 +14,6 @@ namespace CharacterCreator
     public partial class FrmMain : Form
     {
         bool toggle_move;
-        int mouseXVal;
-        int mouseYVal;
         private Point lastLocation;
         
         public FrmMain()

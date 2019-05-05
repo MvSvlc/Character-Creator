@@ -35,7 +35,6 @@ namespace CharacterCreator
                 textBoxName.Text = "";
                 textBoxName.Font = new Font(textBoxName.Font, FontStyle.Regular);
                 textBoxName.ForeColor = Color.Black;
-                UpdateGeneral();
             }
         }
 
@@ -46,8 +45,8 @@ namespace CharacterCreator
                 textBoxName.Text = "Enter a name for your character";
                 textBoxName.Font = new Font(textBoxName.Font, FontStyle.Italic);
                 textBoxName.ForeColor = Color.FromArgb(100, 26, 188, 156);
-                UpdateGeneral();
             }
+            UpdateGeneral();
         }
 
         private void comboBoxRace_DropDown(object sender, EventArgs e)
@@ -82,18 +81,18 @@ namespace CharacterCreator
 
         private void GeneralSaveButton_Click(object sender, EventArgs e)
         {
-            if (textBoxName.Text == "Enter a name for your character" || comboBoxRace.Text == "" || (comboBoxSubrace.Text == "" && comboBoxRace.Text != "Human") || comboBoxClass.Text == "" || comboBoxBackground.Text == "" || comboBoxAlignment.Text == "")
+            if (textBoxName.Text == "Enter a name for your character")
                 MessageBox.Show("Can not leave any field empty!");
-            else
+            /*else
             {
                 //Character newChar = new Character(textBoxName.Text, comboBoxRace.Text, comboBoxSubrace.Text, comboBoxClass.Text, comboBoxBackground.Text, comboBoxAlignment.Text);
                 
                 //Builder.NewChar = new Character(textBoxName.Text, comboBoxRace.Text, comboBoxSubrace.Text, comboBoxClass.Text, comboBoxBackground.Text, comboBoxAlignment.Text);
                 Utils.BinarySerialize(Builder.NewChar);
-            }
+            }*/
 
 
-            Console.WriteLine(Builder.NewChar + " " + Builder.NewChar.Strength + " " + Builder.NewChar.Charisma);
+            Console.WriteLine(Builder.NewChar.toString());
         }
 
         private void CharSlotComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -103,8 +102,8 @@ namespace CharacterCreator
 
         public void UpdateGeneral()
         {
-            if (textBoxName.Text == "Enter a name for your character" || comboBoxRace.Text == "" || (comboBoxSubrace.Text == "" && comboBoxRace.Text != "Human") || comboBoxClass.Text == "" || comboBoxBackground.Text == "" || comboBoxAlignment.Text == "")
-                MessageBox.Show("Can not leave any field empty!");
+            if (textBoxName.Text == "Enter a name for your character")
+                MessageBox.Show("Can not leave name empty!");
             else
             {
                 Builder.NewChar.Name = textBoxName.Text;

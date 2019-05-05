@@ -1,6 +1,6 @@
 ﻿namespace CharacterCreator
 {
-    partial class Page3Control
+    partial class StatsControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -42,13 +42,13 @@
             this.comboBoxStrength = new System.Windows.Forms.ComboBox();
             this.comboBoxCharisma = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.StatsSaveButton = new System.Windows.Forms.Button();
-            this.StrengthModLabel = new System.Windows.Forms.Label();
-            this.DexModLabel = new System.Windows.Forms.Label();
-            this.ConstModLabel = new System.Windows.Forms.Label();
-            this.IntelliModLabel = new System.Windows.Forms.Label();
-            this.WisdomModLabel = new System.Windows.Forms.Label();
             this.CharismaModLabel = new System.Windows.Forms.Label();
+            this.WisdomModLabel = new System.Windows.Forms.Label();
+            this.IntelliModLabel = new System.Windows.Forms.Label();
+            this.ConstModLabel = new System.Windows.Forms.Label();
+            this.DexModLabel = new System.Windows.Forms.Label();
+            this.StrengthModLabel = new System.Windows.Forms.Label();
+            this.StatsSaveButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -364,64 +364,17 @@
             this.panel1.Size = new System.Drawing.Size(757, 479);
             this.panel1.TabIndex = 8;
             // 
-            // StatsSaveButton
+            // CharismaModLabel
             // 
-            this.StatsSaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.StatsSaveButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.StatsSaveButton.Location = new System.Drawing.Point(3, 431);
-            this.StatsSaveButton.Name = "StatsSaveButton";
-            this.StatsSaveButton.Size = new System.Drawing.Size(751, 45);
-            this.StatsSaveButton.TabIndex = 6;
-            this.StatsSaveButton.Text = "Save";
-            this.StatsSaveButton.UseVisualStyleBackColor = true;
-            // 
-            // StrengthModLabel
-            // 
-            this.StrengthModLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.StrengthModLabel.AutoSize = true;
-            this.StrengthModLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.StrengthModLabel.Location = new System.Drawing.Point(170, 10);
-            this.StrengthModLabel.Name = "StrengthModLabel";
-            this.StrengthModLabel.Size = new System.Drawing.Size(102, 13);
-            this.StrengthModLabel.TabIndex = 8;
-            this.StrengthModLabel.Text = "Strength Modifier: ---";
-            this.StrengthModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // DexModLabel
-            // 
-            this.DexModLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.DexModLabel.AutoSize = true;
-            this.DexModLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.DexModLabel.Location = new System.Drawing.Point(170, 37);
-            this.DexModLabel.Name = "DexModLabel";
-            this.DexModLabel.Size = new System.Drawing.Size(103, 13);
-            this.DexModLabel.TabIndex = 9;
-            this.DexModLabel.Text = "Dexterity Modifier: ---";
-            this.DexModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // ConstModLabel
-            // 
-            this.ConstModLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ConstModLabel.AutoSize = true;
-            this.ConstModLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.ConstModLabel.Location = new System.Drawing.Point(170, 64);
-            this.ConstModLabel.Name = "ConstModLabel";
-            this.ConstModLabel.Size = new System.Drawing.Size(117, 13);
-            this.ConstModLabel.TabIndex = 10;
-            this.ConstModLabel.Text = "Constitution Modifier: ---";
-            this.ConstModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // IntelliModLabel
-            // 
-            this.IntelliModLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.IntelliModLabel.AutoSize = true;
-            this.IntelliModLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.IntelliModLabel.Location = new System.Drawing.Point(170, 91);
-            this.IntelliModLabel.Name = "IntelliModLabel";
-            this.IntelliModLabel.Size = new System.Drawing.Size(116, 13);
-            this.IntelliModLabel.TabIndex = 11;
-            this.IntelliModLabel.Text = "Intelligence Modifier: ---";
-            this.IntelliModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.CharismaModLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CharismaModLabel.AutoSize = true;
+            this.CharismaModLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.CharismaModLabel.Location = new System.Drawing.Point(170, 146);
+            this.CharismaModLabel.Name = "CharismaModLabel";
+            this.CharismaModLabel.Size = new System.Drawing.Size(105, 13);
+            this.CharismaModLabel.TabIndex = 13;
+            this.CharismaModLabel.Text = "Charisma Modifier: ---";
+            this.CharismaModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // WisdomModLabel
             // 
@@ -435,23 +388,71 @@
             this.WisdomModLabel.Text = "Wisdom Modifier: ---";
             this.WisdomModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // CharismaModLabel
+            // IntelliModLabel
             // 
-            this.CharismaModLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.CharismaModLabel.AutoSize = true;
-            this.CharismaModLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.CharismaModLabel.Location = new System.Drawing.Point(170, 146);
-            this.CharismaModLabel.Name = "CharismaModLabel";
-            this.CharismaModLabel.Size = new System.Drawing.Size(105, 13);
-            this.CharismaModLabel.TabIndex = 13;
-            this.CharismaModLabel.Text = "Charisma Modifier: ---";
-            this.CharismaModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.IntelliModLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.IntelliModLabel.AutoSize = true;
+            this.IntelliModLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.IntelliModLabel.Location = new System.Drawing.Point(170, 91);
+            this.IntelliModLabel.Name = "IntelliModLabel";
+            this.IntelliModLabel.Size = new System.Drawing.Size(116, 13);
+            this.IntelliModLabel.TabIndex = 11;
+            this.IntelliModLabel.Text = "Intelligence Modifier: ---";
+            this.IntelliModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Page3Control
+            // ConstModLabel
+            // 
+            this.ConstModLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ConstModLabel.AutoSize = true;
+            this.ConstModLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.ConstModLabel.Location = new System.Drawing.Point(170, 64);
+            this.ConstModLabel.Name = "ConstModLabel";
+            this.ConstModLabel.Size = new System.Drawing.Size(117, 13);
+            this.ConstModLabel.TabIndex = 10;
+            this.ConstModLabel.Text = "Constitution Modifier: ---";
+            this.ConstModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // DexModLabel
+            // 
+            this.DexModLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DexModLabel.AutoSize = true;
+            this.DexModLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.DexModLabel.Location = new System.Drawing.Point(170, 37);
+            this.DexModLabel.Name = "DexModLabel";
+            this.DexModLabel.Size = new System.Drawing.Size(103, 13);
+            this.DexModLabel.TabIndex = 9;
+            this.DexModLabel.Text = "Dexterity Modifier: ---";
+            this.DexModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // StrengthModLabel
+            // 
+            this.StrengthModLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.StrengthModLabel.AutoSize = true;
+            this.StrengthModLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.StrengthModLabel.Location = new System.Drawing.Point(170, 10);
+            this.StrengthModLabel.Name = "StrengthModLabel";
+            this.StrengthModLabel.Size = new System.Drawing.Size(102, 13);
+            this.StrengthModLabel.TabIndex = 8;
+            this.StrengthModLabel.Text = "Strength Modifier: ---";
+            this.StrengthModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // StatsSaveButton
+            // 
+            this.StatsSaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StatsSaveButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.StatsSaveButton.Location = new System.Drawing.Point(3, 431);
+            this.StatsSaveButton.Name = "StatsSaveButton";
+            this.StatsSaveButton.Size = new System.Drawing.Size(751, 45);
+            this.StatsSaveButton.TabIndex = 6;
+            this.StatsSaveButton.Text = "Save";
+            this.StatsSaveButton.UseVisualStyleBackColor = true;
+            this.StatsSaveButton.Click += new System.EventHandler(this.StatsSaveButton_Click);
+            // 
+            // StatsControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.Controls.Add(this.panel1);
-            this.Name = "Page3Control";
+            this.Name = "StatsControl";
             this.Size = new System.Drawing.Size(757, 479);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

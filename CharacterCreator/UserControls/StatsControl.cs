@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace CharacterCreator
 {
-    public partial class Page3Control : UserControl
+    public partial class StatsControl : UserControl
     {
-        public Page3Control()
+        public StatsControl()
         {
             InitializeComponent();
         }
@@ -26,6 +26,7 @@ namespace CharacterCreator
         private void ComboBoxStrength_SelectedIndexChanged(object sender, EventArgs e)
         {
             StrengthModLabel.Text = setModLabel("Strength Modifier", comboBoxStrength.Text);
+            Console.WriteLine("STR: " + Builder.NewChar.Strength);
         }
 
         private void ComboBoxDex_SelectedIndexChanged(object sender, EventArgs e)
@@ -63,12 +64,12 @@ namespace CharacterCreator
                 }
                 else
                 {
-                    Builder.NewChar.Strength = Int32.Parse(comboBoxStrength.Text);
-                    Builder.NewChar.Dexterity = Int32.Parse(comboBoxDex.Text);
-                    Builder.NewChar.Constitution = Int32.Parse(comboBoxConst.Text);
-                    Builder.NewChar.Intelligence = Int32.Parse(comboBoxIntelli.Text);
-                    Builder.NewChar.Wisdom = Int32.Parse(comboBoxWisdom.Text);
-                    Builder.NewChar.Charisma = Int32.Parse(comboBoxCharisma.Text);
+                    Builder.NewChar.Strength += Int32.Parse(comboBoxStrength.Text);
+                    Builder.NewChar.Dexterity += Int32.Parse(comboBoxDex.Text);
+                    Builder.NewChar.Constitution += Int32.Parse(comboBoxConst.Text);
+                    Builder.NewChar.Intelligence += Int32.Parse(comboBoxIntelli.Text);
+                    Builder.NewChar.Wisdom += Int32.Parse(comboBoxWisdom.Text);
+                    Builder.NewChar.Charisma += Int32.Parse(comboBoxCharisma.Text);
                 }
             }
             catch (Exception e)
@@ -77,5 +78,10 @@ namespace CharacterCreator
             }
         }
 
+        private void StatsSaveButton_Click(object sender, EventArgs e)
+        {
+            UpdateStats();
+            Console.WriteLine(Builder.NewChar.toString());
+        }
     }
 }

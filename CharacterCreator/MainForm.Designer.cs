@@ -44,7 +44,7 @@
             this.TitleLabel = new System.Windows.Forms.Label();
             this.homeControl1 = new CharacterCreator.HomeControl();
             this.generalControl1 = new CharacterCreator.GeneralControl();
-            this.statsControl1 = new CharacterCreator.Page3Control();
+            this.statsControl1 = new CharacterCreator.StatsControl();
             this.page4Control1 = new CharacterCreator.Page4Control();
             this.page5Control1 = new CharacterCreator.Page5Control();
             this.overviewControl1 = new CharacterCreator.OverviewControl();
@@ -316,7 +316,7 @@
         private System.Windows.Forms.Label TitleLabel;
         private HomeControl homeControl1;
         private GeneralControl generalControl1;
-        private Page3Control statsControl1;
+        private StatsControl statsControl1;
         private Page4Control page4Control1;
         private Page5Control page5Control1;
         private OverviewControl overviewControl1;
