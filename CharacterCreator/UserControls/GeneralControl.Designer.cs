@@ -32,6 +32,7 @@
             this.comboBoxRace = new System.Windows.Forms.ComboBox();
             this.labelRace = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.AlignmentLabel = new System.Windows.Forms.Label();
             this.comboBoxBackground = new System.Windows.Forms.ComboBox();
             this.labelName = new System.Windows.Forms.Label();
             this.labelSubrace = new System.Windows.Forms.Label();
@@ -39,12 +40,11 @@
             this.comboBoxSubrace = new System.Windows.Forms.ComboBox();
             this.comboBoxClass = new System.Windows.Forms.ComboBox();
             this.labelBackground = new System.Windows.Forms.Label();
+            this.comboBoxAlignment = new System.Windows.Forms.ComboBox();
             this.GeneralSaveButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.charSlotLabel = new System.Windows.Forms.Label();
             this.charSlotComboBox = new System.Windows.Forms.ComboBox();
-            this.comboBoxAlignment = new System.Windows.Forms.ComboBox();
-            this.AlignmentLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -119,6 +119,17 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(408, 356);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
+            // AlignmentLabel
+            // 
+            this.AlignmentLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.AlignmentLabel.AutoSize = true;
+            this.AlignmentLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.AlignmentLabel.Location = new System.Drawing.Point(16, 134);
+            this.AlignmentLabel.Name = "AlignmentLabel";
+            this.AlignmentLabel.Size = new System.Drawing.Size(53, 13);
+            this.AlignmentLabel.TabIndex = 12;
+            this.AlignmentLabel.Text = "Alignment";
+            // 
             // comboBoxBackground
             // 
             this.comboBoxBackground.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -135,6 +146,7 @@
             this.comboBoxBackground.Name = "comboBoxBackground";
             this.comboBoxBackground.Size = new System.Drawing.Size(205, 21);
             this.comboBoxBackground.TabIndex = 10;
+            this.comboBoxBackground.SelectedIndexChanged += new System.EventHandler(this.ComboBoxBackground_SelectedIndexChanged);
             // 
             // labelName
             // 
@@ -180,6 +192,7 @@
             this.comboBoxSubrace.Name = "comboBoxSubrace";
             this.comboBoxSubrace.Size = new System.Drawing.Size(205, 21);
             this.comboBoxSubrace.TabIndex = 8;
+            this.comboBoxSubrace.SelectedIndexChanged += new System.EventHandler(this.ComboBoxSubrace_SelectedIndexChanged);
             // 
             // comboBoxClass
             // 
@@ -206,6 +219,27 @@
             this.labelBackground.Size = new System.Drawing.Size(65, 13);
             this.labelBackground.TabIndex = 9;
             this.labelBackground.Text = "Background";
+            // 
+            // comboBoxAlignment
+            // 
+            this.comboBoxAlignment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxAlignment.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxAlignment.ForeColor = System.Drawing.Color.Black;
+            this.comboBoxAlignment.Items.AddRange(new object[] {
+            "Lawful Good",
+            "Lawful Neutral",
+            "Lawful Evil",
+            "Neutral Good",
+            "True Neutral",
+            "Neutral Evil",
+            "Chaotic Good",
+            "Chaotic Neutral",
+            "Chaotic Evil"});
+            this.comboBoxAlignment.Location = new System.Drawing.Point(89, 137);
+            this.comboBoxAlignment.Name = "comboBoxAlignment";
+            this.comboBoxAlignment.Size = new System.Drawing.Size(205, 21);
+            this.comboBoxAlignment.TabIndex = 11;
+            this.comboBoxAlignment.SelectedIndexChanged += new System.EventHandler(this.ComboBoxAlignment_SelectedIndexChanged);
             // 
             // GeneralSaveButton
             // 
@@ -256,37 +290,6 @@
             this.charSlotComboBox.Size = new System.Drawing.Size(205, 21);
             this.charSlotComboBox.TabIndex = 11;
             this.charSlotComboBox.SelectedIndexChanged += new System.EventHandler(this.CharSlotComboBox_SelectedIndexChanged);
-            // 
-            // comboBoxAlignment
-            // 
-            this.comboBoxAlignment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxAlignment.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxAlignment.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxAlignment.Items.AddRange(new object[] {
-            "Lawful Good",
-            "Lawful Neutral",
-            "Lawful Evil",
-            "Neutral Good",
-            "True Neutral",
-            "Neutral Evil",
-            "Chaotic Good",
-            "Chaotic Neutral",
-            "Chaotic Evil"});
-            this.comboBoxAlignment.Location = new System.Drawing.Point(89, 137);
-            this.comboBoxAlignment.Name = "comboBoxAlignment";
-            this.comboBoxAlignment.Size = new System.Drawing.Size(205, 21);
-            this.comboBoxAlignment.TabIndex = 11;
-            // 
-            // AlignmentLabel
-            // 
-            this.AlignmentLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.AlignmentLabel.AutoSize = true;
-            this.AlignmentLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.AlignmentLabel.Location = new System.Drawing.Point(16, 134);
-            this.AlignmentLabel.Name = "AlignmentLabel";
-            this.AlignmentLabel.Size = new System.Drawing.Size(53, 13);
-            this.AlignmentLabel.TabIndex = 12;
-            this.AlignmentLabel.Text = "Alignment";
             // 
             // GeneralControl
             // 

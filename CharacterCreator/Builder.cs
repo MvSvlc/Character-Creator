@@ -18,13 +18,14 @@ namespace CharacterCreator
 
         private static FileInfo activeCharFile;
 
-        private static Character char1;
+        private static Character newChar;
 
+        private static Character activeChar;
 
-        public static Character Char1
+        public static Character NewChar
         {
-            get { return char1;  }
-            set { char1 = value; }
+            get { return newChar;  }
+            set { newChar = value; }
         }
 
         public static void InitCharFiles()
@@ -35,7 +36,7 @@ namespace CharacterCreator
             charFile4 = new FileInfo("charData4.dat");
             activeCharFile = charFile1;
 
-            char1 = new Character();
+            newChar = new Character();
         }
 
         public static int CharCount

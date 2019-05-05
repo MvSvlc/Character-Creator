@@ -18,7 +18,7 @@ namespace CharacterCreator
             InitializeComponent();
         }
 
-        private void addSubraces(params String[] items)
+        private void AddSubraces(params String[] items)
         {
             comboBoxSubrace.Items.Clear();
             comboBoxSubrace.Show();
@@ -35,6 +35,7 @@ namespace CharacterCreator
                 textBoxName.Text = "";
                 textBoxName.Font = new Font(textBoxName.Font, FontStyle.Regular);
                 textBoxName.ForeColor = Color.Black;
+                UpdateGeneral();
             }
         }
 
@@ -45,6 +46,7 @@ namespace CharacterCreator
                 textBoxName.Text = "Enter a name for your character";
                 textBoxName.Font = new Font(textBoxName.Font, FontStyle.Italic);
                 textBoxName.ForeColor = Color.FromArgb(100, 26, 188, 156);
+                UpdateGeneral();
             }
         }
 
@@ -68,11 +70,13 @@ namespace CharacterCreator
                 comboBoxSubrace.Hide();
             }
             else if (value == "Elf")
-                addSubraces("High Elf", "Wood Elf");
+                AddSubraces("High Elf", "Wood Elf");
             else if (value == "Dwarf")
-                addSubraces("Mountain Dwarf", "Hill Dwarf");
+                AddSubraces("Mountain Dwarf", "Hill Dwarf");
             else if (value == "Halfling")
-                addSubraces("Stout", "Lightfoot");
+                AddSubraces("Stout", "Lightfoot");
+
+            UpdateGeneral();
         }
         
 
@@ -84,8 +88,8 @@ namespace CharacterCreator
             {
                 //Character newChar = new Character(textBoxName.Text, comboBoxRace.Text, comboBoxSubrace.Text, comboBoxClass.Text, comboBoxBackground.Text, comboBoxAlignment.Text);
                 
-                Builder.Char1 = new Character(textBoxName.Text, comboBoxRace.Text, comboBoxSubrace.Text, comboBoxClass.Text, comboBoxBackground.Text, comboBoxAlignment.Text);
-                Utils.BinarySerialize(Builder.Char1);
+                Builder.NewChar = new Character(textBoxName.Text, comboBoxRace.Text, comboBoxSubrace.Text, comboBoxClass.Text, comboBoxBackground.Text, comboBoxAlignment.Text);
+                Utils.BinarySerialize(Builder.NewChar);
             }
             
         }
@@ -93,6 +97,31 @@ namespace CharacterCreator
         private void CharSlotComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             Builder.SetSaveSlot(charSlotComboBox.Text);
+        }
+
+        private void UpdateGeneral()
+        {
+            Builder.NewChar.Name = textBoxName.Text;
+            Builder.NewChar.Race = comboBoxRace.Text;
+            Builder.NewChar.Subrace = comboBoxSubrace.Text;
+            Builder.NewChar.Class = comboBoxClass.Text;
+            Builder.NewChar.Background = comboBoxBackground.Text;
+            Builder.NewChar.Alignment = comboBoxAlignment.Text;
+        }
+
+        private void ComboBoxSubrace_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            UpdateGeneral();
+        }
+
+        private void ComboBoxBackground_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            UpdateGeneral();
+        }
+
+        private void ComboBoxAlignment_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            UpdateGeneral();
         }
     }
 }

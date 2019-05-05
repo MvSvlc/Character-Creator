@@ -26,41 +26,47 @@ namespace CharacterCreator
         private void ComboBoxStrength_SelectedIndexChanged(object sender, EventArgs e)
         {
             StrengthModLabel.Text = setModLabel("Strength Modifier", comboBoxStrength.Text);
+            UpdateStats();
         }
 
         private void ComboBoxDex_SelectedIndexChanged(object sender, EventArgs e)
         {
             DexModLabel.Text = setModLabel("Dexterity Modifier", comboBoxDex.Text);
+            UpdateStats();
         }
 
         private void ComboBoxConst_SelectedIndexChanged(object sender, EventArgs e)
         {
             ConstModLabel.Text = setModLabel("Constitution Modifier", comboBoxConst.Text);
+            UpdateStats();
         }
 
         private void ComboBoxIntelli_SelectedIndexChanged(object sender, EventArgs e)
         {
             IntelliModLabel.Text = setModLabel("Intelligence Modifier", comboBoxIntelli.Text);
+            UpdateStats();
         }
 
         private void ComboBoxWisdom_SelectedIndexChanged(object sender, EventArgs e)
         {
             WisdomModLabel.Text = setModLabel("Wisdom Modifier", comboBoxWisdom.Text);
+            UpdateStats();
         }
 
         private void ComboBoxCharisma_SelectedIndexChanged(object sender, EventArgs e)
         {
             CharismaModLabel.Text = setModLabel("Charisma Modifier", comboBoxCharisma.Text);
+            UpdateStats();
         }
 
-        public void UpdateStats()
+        private void UpdateStats()
         {
-            Builder.Char1.Strength = Int32.Parse(comboBoxStrength.Text);
-            Builder.Char1.Dexterity = Int32.Parse(comboBoxDex.Text);
-            Builder.Char1.Constitution = Int32.Parse(comboBoxConst.Text);
-            Builder.Char1.Intelligence = Int32.Parse(comboBoxIntelli.Text);
-            Builder.Char1.Wisdom = Int32.Parse(comboBoxWisdom.Text);
-            Builder.Char1.Charisma = Int32.Parse(comboBoxCharisma.Text);
+            Builder.NewChar.Strength = Int32.Parse(comboBoxStrength.Text);
+            Builder.NewChar.Dexterity = Int32.Parse(comboBoxDex.Text);
+            Builder.NewChar.Constitution = Int32.Parse(comboBoxConst.Text);
+            Builder.NewChar.Intelligence = Int32.Parse(comboBoxIntelli.Text);
+            Builder.NewChar.Wisdom = Int32.Parse(comboBoxWisdom.Text);
+            Builder.NewChar.Charisma = Int32.Parse(comboBoxCharisma.Text);
         }
 
     }

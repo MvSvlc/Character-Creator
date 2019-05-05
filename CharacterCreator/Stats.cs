@@ -73,7 +73,7 @@ namespace CharacterCreator
             get { return dexterity; }
             set {
                     dexterity = value;
-                    DexterityMod = ( value / 2 ) - 5;
+                    DexterityMod = (value / 2) - 5;
                 }
         }
 
