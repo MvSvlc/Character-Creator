@@ -88,10 +88,12 @@ namespace CharacterCreator
             {
                 //Character newChar = new Character(textBoxName.Text, comboBoxRace.Text, comboBoxSubrace.Text, comboBoxClass.Text, comboBoxBackground.Text, comboBoxAlignment.Text);
                 
-                Builder.NewChar = new Character(textBoxName.Text, comboBoxRace.Text, comboBoxSubrace.Text, comboBoxClass.Text, comboBoxBackground.Text, comboBoxAlignment.Text);
+                //Builder.NewChar = new Character(textBoxName.Text, comboBoxRace.Text, comboBoxSubrace.Text, comboBoxClass.Text, comboBoxBackground.Text, comboBoxAlignment.Text);
                 Utils.BinarySerialize(Builder.NewChar);
             }
-            
+
+
+            Console.WriteLine(Builder.NewChar + " " + Builder.NewChar.Strength + " " + Builder.NewChar.Charisma);
         }
 
         private void CharSlotComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -99,14 +101,20 @@ namespace CharacterCreator
             Builder.SetSaveSlot(charSlotComboBox.Text);
         }
 
-        private void UpdateGeneral()
+        public void UpdateGeneral()
         {
-            Builder.NewChar.Name = textBoxName.Text;
-            Builder.NewChar.Race = comboBoxRace.Text;
-            Builder.NewChar.Subrace = comboBoxSubrace.Text;
-            Builder.NewChar.Class = comboBoxClass.Text;
-            Builder.NewChar.Background = comboBoxBackground.Text;
-            Builder.NewChar.Alignment = comboBoxAlignment.Text;
+            if (textBoxName.Text == "Enter a name for your character" || comboBoxRace.Text == "" || (comboBoxSubrace.Text == "" && comboBoxRace.Text != "Human") || comboBoxClass.Text == "" || comboBoxBackground.Text == "" || comboBoxAlignment.Text == "")
+                MessageBox.Show("Can not leave any field empty!");
+            else
+            {
+                Builder.NewChar.Name = textBoxName.Text;
+                Builder.NewChar.Race = comboBoxRace.Text;
+                Builder.NewChar.Subrace = comboBoxSubrace.Text;
+                Builder.NewChar.Class = comboBoxClass.Text;
+                Builder.NewChar.Background = comboBoxBackground.Text;
+                Builder.NewChar.Alignment = comboBoxAlignment.Text;
+            }
+            
         }
 
         private void ComboBoxSubrace_SelectedIndexChanged(object sender, EventArgs e)

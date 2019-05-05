@@ -16,6 +16,7 @@ namespace CharacterCreator
         bool toggle_move;
         int mouseXVal;
         int mouseYVal;
+        private Point lastLocation;
         
         public FrmMain()
         {
@@ -31,8 +32,7 @@ namespace CharacterCreator
         private void TitleLabel_MouseDown(object sender, MouseEventArgs e)
         {
             toggle_move = true;
-            mouseXVal = e.X;
-            mouseYVal = e.Y;
+            lastLocation = e.Location;
         }
 
         private void TitleLabel_MouseUp(object sender, MouseEventArgs e)
@@ -42,14 +42,19 @@ namespace CharacterCreator
 
         private void TitleLabel_MouseMove(object sender, MouseEventArgs e)
         {
-            if(toggle_move)
-                this.SetDesktopLocation(MousePosition.X - mouseXVal, MousePosition.Y - mouseYVal);
+            if (toggle_move)
+            {
+                this.Location = new Point((this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
+                this.Update();
+            }
         }
 
         private void buttonHome_Click(object sender, EventArgs e)
         {
             TitleLabel.Text = "Home";
             homeControl1.BringToFront();
+            generalControl1.UpdateGeneral();
+            statsControl1.UpdateStats();
         }
 
         private void buttonGeneralPage_Click(object sender, EventArgs e)

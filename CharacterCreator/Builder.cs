@@ -37,6 +37,31 @@ namespace CharacterCreator
             activeCharFile = charFile1;
 
             newChar = new Character();
+
+            try
+            {
+                if(!charFile1.Exists)
+                {
+                    charFile1.Create();
+                }
+                if (!charFile2.Exists)
+                {
+                    charFile2.Create();
+                }
+                if (!charFile3.Exists)
+                {
+                    charFile3.Create();
+                }
+                if (!charFile4.Exists)
+                {
+                    charFile4.Create();
+                }
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e);
+            }
+
         }
 
         public static int CharCount

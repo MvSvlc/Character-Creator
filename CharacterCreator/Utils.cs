@@ -34,7 +34,7 @@ namespace CharacterCreator
                 temp = (Character)b.Deserialize(s);
                 s.Close();
             }
-            catch(FileNotFoundException e)
+            catch(Exception e)
             {
                 Console.WriteLine(e);
             }
