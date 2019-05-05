@@ -50,23 +50,31 @@ namespace CharacterCreator
         public int Strength
         {
             get { return strength; }
-            set { setAbilities(ref strength, value, ref strengthMod); }
+            set {
+                    strength = value;
+                    StrengthMod = ( value / 2 ) - 5;
+                }
         }
 
         public int StrengthMod
         {
             get { return strengthMod; }
-            set 
-                {
+            set {
                     strengthMod = value;
-                    athletics = strengthMod;
+                    if (value < 0)
+                        athletics = 0;
+                    else
+                        athletics = value;
                 }
         }
 
         public int Dexterity
         {
             get { return dexterity; }
-            set { setAbilities(ref dexterity, value, ref dexterityMod); }
+            set {
+                    dexterity = value;
+                    DexterityMod = ( value / 2 ) - 5;
+                }
         }
 
         public int DexterityMod
@@ -75,17 +83,30 @@ namespace CharacterCreator
             set
                 {
                     dexterityMod = value;
-                    initiative = dexterityMod;
-                    acrobatics = dexterityMod;
-                    sleightHand = dexterityMod;
-                    stealth = dexterityMod;
+                    if (value < 0)
+                    {
+                        initiative = 0;
+                        acrobatics = 0;
+                        sleightHand = 0;
+                        stealth = 0;
+                    }
+                    else
+                    {
+                        initiative = value;
+                        acrobatics = value;
+                        sleightHand = value;
+                        stealth = value;
+                    }
                 }
         }
 
         public int Constitution
         {
             get { return constitution; }
-            set { setAbilities(ref constitution, value, ref constitutionMod); }
+            set { 
+                    constitution = value;
+                    ConstitutionMod = (value / 2) - 5;
+                }
         }
 
         public int ConstitutionMod
@@ -97,59 +118,98 @@ namespace CharacterCreator
         public int Intelligence
         {
             get { return intelligence; }
-            set { setAbilities(ref intelligence, value, ref intelligenceMod); }
+            set {
+                    intelligence = value;
+                    IntelligenceMod = (value / 2) - 5;
+                }
         }
 
         public int IntelligenceMod
         {
             get { return intelligenceMod; }
-            set 
-                {
+            set {
                     intelligenceMod = value;
-                    arcana = intelligenceMod;
-                    history = intelligenceMod;
-                    investigation = intelligenceMod;
-                    nature = intelligenceMod;
-                    religion = intelligenceMod;
+                    if (value < 0)
+                    {
+                        arcana = 0;
+                        history = 0;
+                        investigation = 0;
+                        nature = 0;
+                        religion = 0;
+                    }
+                    else 
+                    {
+                        arcana = value;
+                        history = value;
+                        investigation = value;
+                        nature = value;
+                        religion = value;
+                    }
                 }
         }
 
         public int Wisdom
         {
             get { return wisdom; }
-            set { setAbilities(ref wisdom, value, ref wisdomMod); }
+            set {
+                    wisdom = value;
+                    WisdomMod = (value / 2) - 5;
+                }
         }
 
         public int WisdomMod
         {
             get { return wisdomMod; }
-            set
-                {
+            set {
                     wisdomMod = value;
-                    animalHandling = wisdomMod;
-                    insight = wisdomMod;
-                    medicine = wisdomMod;
-                    perception = wisdomMod;
-                    survival = wisdomMod;
+                    if (value < 0)
+                    {
+                        animalHandling = 0;
+                        insight = 0;
+                        medicine = 0;
+                        perception = 0;
+                        survival = 0;
+                    }
+                    else
+                    {
+
+                        animalHandling = value;
+                        insight = value;
+                        medicine = value;
+                        perception = value;
+                        survival = value;
+                    }
                 }
         }
 
         public int Charisma
         {
             get { return charisma; }
-            set { setAbilities(ref charisma, value, ref charismaMod); }
+            set {
+                    charisma = value;
+                    CharismaMod = (value / 2) - 5;
+                }
         }
 
         public int CharismaMod
         {
             get { return charismaMod; }
-            set 
-                { 
+            set {
                     charismaMod = value;
-                    deception = charismaMod;
-                    intimidation = charismaMod;
-                    performance = charismaMod;
-                    persuasion = charismaMod;
+                    if ( value < 0)
+                    {
+                        deception = 0;
+                        intimidation = 0;
+                        performance = 0;
+                        persuasion = 0;
+                    }
+                    else
+                    {
+                        deception = value;
+                        intimidation = value;
+                        performance = value;
+                        persuasion = value;
+                    }
                 }
         }
 
