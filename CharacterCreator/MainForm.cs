@@ -20,6 +20,7 @@ namespace CharacterCreator
         {
             InitializeComponent();
             homeControl1.BringToFront();
+            generalControl1.StatsControl = statsControl1;
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
@@ -51,8 +52,7 @@ namespace CharacterCreator
         {
             TitleLabel.Text = "Home";
             homeControl1.BringToFront();
-            generalControl1.UpdateGeneral();
-            statsControl1.UpdateStats();
+            homeControl1.RefreshCharList();
         }
 
         private void buttonGeneralPage_Click(object sender, EventArgs e)

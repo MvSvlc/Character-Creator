@@ -18,6 +18,12 @@ namespace CharacterCreator
             InitializeComponent();
         }
 
+        public StatsControl StatsControl
+        {
+            get;
+            set;
+        }
+
         private void AddSubraces(params String[] items)
         {
             comboBoxSubrace.Items.Clear();
@@ -90,16 +96,15 @@ namespace CharacterCreator
                 //Builder.NewChar = new Character(textBoxName.Text, comboBoxRace.Text, comboBoxSubrace.Text, comboBoxClass.Text, comboBoxBackground.Text, comboBoxAlignment.Text);
                 Utils.BinarySerialize(Builder.NewChar);
             }*/
+            else
+            {
 
+                Console.WriteLine(Builder.NewChar.toString());
 
-            Console.WriteLine(Builder.NewChar.toString());
-
+                StatsControl?.BringToFront();
+            }
         }
 
-        private void CharSlotComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Builder.SetSaveSlot(charSlotComboBox.Text);
-        }
 
         public void UpdateGeneral()
         {

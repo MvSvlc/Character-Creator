@@ -89,6 +89,12 @@ namespace CharacterCreator
         {
             UpdateStats();
             Console.WriteLine(Builder.NewChar.toString());
+            Utils.BinarySerialize(Builder.NewChar);
+        }
+
+        private void CharSlotComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Builder.SetSaveSlot(charSlotComboBox.Text);
         }
     }
 }
