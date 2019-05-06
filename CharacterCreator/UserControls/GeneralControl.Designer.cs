@@ -249,7 +249,7 @@
             this.GeneralSaveButton.Name = "GeneralSaveButton";
             this.GeneralSaveButton.Size = new System.Drawing.Size(751, 45);
             this.GeneralSaveButton.TabIndex = 5;
-            this.GeneralSaveButton.Text = "Save";
+            this.GeneralSaveButton.Text = "Save && Continue";
             this.GeneralSaveButton.UseVisualStyleBackColor = true;
             this.GeneralSaveButton.Click += new System.EventHandler(this.GeneralSaveButton_Click);
             // 

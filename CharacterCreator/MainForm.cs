@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace CharacterCreator
 {
-    public partial class FrmMain : Form
+    public partial class MainForm : Form
     {
         bool toggle_move;
         private Point lastLocation;
         
-        public FrmMain()
+        public MainForm()
         {
             InitializeComponent();
             homeControl1.BringToFront();
@@ -61,6 +61,10 @@ namespace CharacterCreator
             generalControl1.BringToFront();
         }
 
+        public void changePage()
+        { 
+            statsControl1.BringToFront();
+        }
         private void buttonStatsPage_Click(object sender, EventArgs e)
         {
             TitleLabel.Text = "Stats";

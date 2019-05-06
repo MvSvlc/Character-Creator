@@ -13,9 +13,16 @@ namespace CharacterCreator
 {
     public partial class StatsControl : UserControl
     {
+        String className = "StatsControl";
         public StatsControl()
         {
             InitializeComponent();
+        }
+
+        public StatsControl sControl
+        {
+            get { return this.sControl; }
+            set { }
         }
 
         private String setModLabel(String label, String num)

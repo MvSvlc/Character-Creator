@@ -93,6 +93,7 @@ namespace CharacterCreator
 
 
             Console.WriteLine(Builder.NewChar.toString());
+
         }
 
         private void CharSlotComboBox_SelectedIndexChanged(object sender, EventArgs e)
