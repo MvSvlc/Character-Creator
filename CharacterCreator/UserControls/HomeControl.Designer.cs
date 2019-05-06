@@ -62,7 +62,6 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.refreshButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.homeTableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.homeSplitContainer4)).BeginInit();
@@ -86,7 +85,6 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.homeTableLayoutPanel);
-            this.panel1.Controls.Add(this.refreshButton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -406,16 +404,6 @@
             this.columnHeader5.Text = "Background";
             this.columnHeader5.Width = 100;
             // 
-            // refreshButton
-            // 
-            this.refreshButton.Location = new System.Drawing.Point(194, 433);
-            this.refreshButton.Name = "refreshButton";
-            this.refreshButton.Size = new System.Drawing.Size(75, 23);
-            this.refreshButton.TabIndex = 0;
-            this.refreshButton.Text = "Refresh";
-            this.refreshButton.UseVisualStyleBackColor = true;
-            this.refreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
-            // 
             // HomeControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -451,7 +439,6 @@
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button refreshButton;
         private System.Windows.Forms.TableLayoutPanel homeTableLayoutPanel;
         private System.Windows.Forms.SplitContainer homeSplitContainer2;
         private System.Windows.Forms.SplitContainer homeSplitContainer4;

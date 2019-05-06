@@ -13,16 +13,13 @@ namespace CharacterCreator
 {
     public partial class GeneralControl : UserControl
     {
+        public OverviewControl OverviewControl { get; set; }
         public GeneralControl()
         {
             InitializeComponent();
         }
 
-        public StatsControl StatsControl
-        {
-            get;
-            set;
-        }
+        public StatsControl StatsControl { get; set; }
 
         private void AddSubraces(params String[] items)
         {
@@ -53,6 +50,8 @@ namespace CharacterCreator
                 textBoxName.ForeColor = Color.FromArgb(100, 26, 188, 156);
             }
             UpdateGeneral();
+            OverviewControl.charNameLabel.Text = Builder.NewChar.Name;
+
         }
 
         private void comboBoxRace_DropDown(object sender, EventArgs e)
@@ -82,6 +81,7 @@ namespace CharacterCreator
                 AddSubraces("Stout", "Lightfoot");
 
             UpdateGeneral();
+            OverviewControl.charRaceLabel.Text = Builder.NewChar.Race;
         }
         
 
@@ -125,16 +125,25 @@ namespace CharacterCreator
         private void ComboBoxSubrace_SelectedIndexChanged(object sender, EventArgs e)
         {
             UpdateGeneral();
+            OverviewControl.charSubraceLabel.Text = Builder.NewChar.Subrace;
         }
 
         private void ComboBoxBackground_SelectedIndexChanged(object sender, EventArgs e)
         {
             UpdateGeneral();
+            OverviewControl.charBGLabel.Text = Builder.NewChar.Background;
         }
 
         private void ComboBoxAlignment_SelectedIndexChanged(object sender, EventArgs e)
         {
             UpdateGeneral();
+            OverviewControl.charAlignLabel.Text = Builder.NewChar.Alignment;
+        }
+
+        private void ComboBoxClass_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            UpdateGeneral();
+            OverviewControl.charClassLabel.Text = Builder.NewChar.Class;
         }
     }
 }

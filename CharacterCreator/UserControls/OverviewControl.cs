@@ -16,5 +16,15 @@ namespace CharacterCreator
         {
             InitializeComponent();
         }
+
+        private void GeneralSaveButton_Click(object sender, EventArgs e)
+        {
+            Utils.BinarySerialize(Builder.NewChar);
+        }
+
+        private void CharSlotComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Builder.SetSaveSlot(charSlotComboBox.Text);
+        }
     }
 }

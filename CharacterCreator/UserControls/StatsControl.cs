@@ -13,7 +13,7 @@ namespace CharacterCreator
 {
     public partial class StatsControl : UserControl
     {
-        String className = "StatsControl";
+        public OverviewControl OverviewControl { get; set; }
         public StatsControl()
         {
             InitializeComponent();
@@ -33,27 +33,31 @@ namespace CharacterCreator
         private void ComboBoxStrength_SelectedIndexChanged(object sender, EventArgs e)
         {
             StrengthModLabel.Text = setModLabel("Strength Modifier", comboBoxStrength.Text);
-            Console.WriteLine("STR: " + Builder.NewChar.Strength);
+            
         }
 
         private void ComboBoxDex_SelectedIndexChanged(object sender, EventArgs e)
         {
             DexModLabel.Text = setModLabel("Dexterity Modifier", comboBoxDex.Text);
+            
         }
 
         private void ComboBoxConst_SelectedIndexChanged(object sender, EventArgs e)
         {
             ConstModLabel.Text = setModLabel("Constitution Modifier", comboBoxConst.Text);
+            
         }
 
         private void ComboBoxIntelli_SelectedIndexChanged(object sender, EventArgs e)
         {
             IntelliModLabel.Text = setModLabel("Intelligence Modifier", comboBoxIntelli.Text);
+            
         }
 
         private void ComboBoxWisdom_SelectedIndexChanged(object sender, EventArgs e)
         {
             WisdomModLabel.Text = setModLabel("Wisdom Modifier", comboBoxWisdom.Text);
+            
         }
 
         private void ComboBoxCharisma_SelectedIndexChanged(object sender, EventArgs e)
@@ -89,12 +93,21 @@ namespace CharacterCreator
         {
             UpdateStats();
             Console.WriteLine(Builder.NewChar.toString());
-            Utils.BinarySerialize(Builder.NewChar);
+            OverviewControl.charCharLabel.Text = Builder.NewChar.Charisma.ToString();
+            OverviewControl.charWisLabel.Text = Builder.NewChar.Wisdom.ToString();
+            OverviewControl.charIntLabel.Text = Builder.NewChar.Intelligence.ToString();
+            OverviewControl.charConsLabel.Text = Builder.NewChar.Constitution.ToString();
+            OverviewControl.charDexLabel.Text = Builder.NewChar.Dexterity.ToString();
+            OverviewControl.charStrLabel.Text = Builder.NewChar.Strength.ToString();
+            OverviewControl.StrMod.Text = Builder.NewChar.StrengthMod.ToString();
+            OverviewControl.ConsMod.Text = Builder.NewChar.ConstitutionMod.ToString();
+            OverviewControl.DexMod.Text = Builder.NewChar.DexterityMod.ToString();
+            OverviewControl.WisMod.Text = Builder.NewChar.WisdomMod.ToString();
+            OverviewControl.IntMod.Text = Builder.NewChar.IntelligenceMod.ToString();
+            OverviewControl.CharMod.Text = Builder.NewChar.CharismaMod.ToString();
+            OverviewControl.BringToFront();
         }
 
-        private void CharSlotComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Builder.SetSaveSlot(charSlotComboBox.Text);
-        }
+
     }
 }

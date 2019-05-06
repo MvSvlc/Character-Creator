@@ -206,6 +206,7 @@
             this.comboBoxClass.Name = "comboBoxClass";
             this.comboBoxClass.Size = new System.Drawing.Size(205, 21);
             this.comboBoxClass.TabIndex = 5;
+            this.comboBoxClass.SelectionChangeCommitted += new System.EventHandler(this.ComboBoxClass_SelectionChangeCommitted);
             // 
             // labelBackground
             // 

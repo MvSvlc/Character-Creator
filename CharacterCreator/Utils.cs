@@ -15,13 +15,12 @@ namespace CharacterCreator
     public class Utils
     {
 
-        public static string BinarySerialize(Character character)
+        public static void BinarySerialize(Character character)
         {
-            Stream s = Builder.ActiveCharFile.Open(FileMode.Create);
-            BinaryFormatter b = new BinaryFormatter();
-            b.Serialize(s, character);
-            s.Close();
-            return character.Name;
+                Stream s = Builder.ActiveCharFile.Open(FileMode.Create);
+                BinaryFormatter b = new BinaryFormatter();
+                b.Serialize(s, character);
+                s.Close();
         }
 
         public static Character BinaryDeserialize(FileInfo f)

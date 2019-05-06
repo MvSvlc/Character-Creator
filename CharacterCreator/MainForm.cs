@@ -21,6 +21,8 @@ namespace CharacterCreator
             InitializeComponent();
             homeControl1.BringToFront();
             generalControl1.StatsControl = statsControl1;
+            generalControl1.OverviewControl = overviewControl1;
+            statsControl1.OverviewControl = overviewControl1;
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
