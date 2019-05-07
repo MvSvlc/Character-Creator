@@ -74,19 +74,7 @@ namespace CharacterCreator
             TitleLabel.Text = "Stats";
             statsControl1.BringToFront();
         }
-
-        private void page4btn_Click(object sender, EventArgs e)
-        {
-            TitleLabel.Text = "Page 4";
-            page4Control1.BringToFront();
-        }
-
-        private void page5btn_Click(object sender, EventArgs e)
-        {
-            TitleLabel.Text = "Page 5";
-            page5Control1.BringToFront();
-        }
-
+        
         private void overviewbtn_Click(object sender, EventArgs e)
         {
             TitleLabel.Text = "Overview";

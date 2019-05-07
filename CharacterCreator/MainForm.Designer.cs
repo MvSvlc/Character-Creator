@@ -35,8 +35,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.overviewbtn = new System.Windows.Forms.Button();
-            this.page5btn = new System.Windows.Forms.Button();
-            this.page4btn = new System.Windows.Forms.Button();
             this.buttonStatsPage = new System.Windows.Forms.Button();
             this.buttonGeneralPage = new System.Windows.Forms.Button();
             this.buttonHome = new System.Windows.Forms.Button();
@@ -45,8 +43,6 @@
             this.homeControl1 = new CharacterCreator.HomeControl();
             this.generalControl1 = new CharacterCreator.GeneralControl();
             this.statsControl1 = new CharacterCreator.StatsControl();
-            this.page4Control1 = new CharacterCreator.Page4Control();
-            this.page5Control1 = new CharacterCreator.Page5Control();
             this.overviewControl1 = new CharacterCreator.OverviewControl();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -64,8 +60,6 @@
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.overviewbtn);
-            this.panel1.Controls.Add(this.page5btn);
-            this.panel1.Controls.Add(this.page4btn);
             this.panel1.Controls.Add(this.buttonStatsPage);
             this.panel1.Controls.Add(this.buttonGeneralPage);
             this.panel1.Controls.Add(this.buttonHome);
@@ -132,32 +126,6 @@
             this.overviewbtn.Text = "Overview";
             this.overviewbtn.UseVisualStyleBackColor = true;
             this.overviewbtn.Click += new System.EventHandler(this.overviewbtn_Click);
-            // 
-            // page5btn
-            // 
-            this.page5btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.page5btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.page5btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.page5btn.Location = new System.Drawing.Point(0, 240);
-            this.page5btn.Name = "page5btn";
-            this.page5btn.Size = new System.Drawing.Size(203, 62);
-            this.page5btn.TabIndex = 4;
-            this.page5btn.Text = "Page 5";
-            this.page5btn.UseVisualStyleBackColor = true;
-            this.page5btn.Click += new System.EventHandler(this.page5btn_Click);
-            // 
-            // page4btn
-            // 
-            this.page4btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.page4btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.page4btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.page4btn.Location = new System.Drawing.Point(0, 180);
-            this.page4btn.Name = "page4btn";
-            this.page4btn.Size = new System.Drawing.Size(203, 62);
-            this.page4btn.TabIndex = 3;
-            this.page4btn.Text = "Page 4";
-            this.page4btn.UseVisualStyleBackColor = true;
-            this.page4btn.Click += new System.EventHandler(this.page4btn_Click);
             // 
             // buttonStatsPage
             // 
@@ -249,22 +217,6 @@
             this.statsControl1.Size = new System.Drawing.Size(757, 479);
             this.statsControl1.TabIndex = 17;
             // 
-            // page4Control1
-            // 
-            this.page4Control1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.page4Control1.Location = new System.Drawing.Point(203, 61);
-            this.page4Control1.Name = "page4Control1";
-            this.page4Control1.Size = new System.Drawing.Size(757, 479);
-            this.page4Control1.TabIndex = 18;
-            // 
-            // page5Control1
-            // 
-            this.page5Control1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.page5Control1.Location = new System.Drawing.Point(203, 61);
-            this.page5Control1.Name = "page5Control1";
-            this.page5Control1.Size = new System.Drawing.Size(757, 479);
-            this.page5Control1.TabIndex = 19;
-            // 
             // overviewControl1
             // 
             this.overviewControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -282,8 +234,6 @@
             this.Controls.Add(this.homeControl1);
             this.Controls.Add(this.generalControl1);
             this.Controls.Add(this.statsControl1);
-            this.Controls.Add(this.page4Control1);
-            this.Controls.Add(this.page5Control1);
             this.Controls.Add(this.overviewControl1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -306,8 +256,6 @@
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button page5btn;
-        private System.Windows.Forms.Button page4btn;
         private System.Windows.Forms.Button buttonStatsPage;
         private System.Windows.Forms.Button buttonGeneralPage;
         private System.Windows.Forms.Button buttonHome;
@@ -317,8 +265,6 @@
         private HomeControl homeControl1;
         private GeneralControl generalControl1;
         private StatsControl statsControl1;
-        private Page4Control page4Control1;
-        private Page5Control page5Control1;
         private OverviewControl overviewControl1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
