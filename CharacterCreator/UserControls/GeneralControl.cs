@@ -49,9 +49,6 @@ namespace CharacterCreator
                 textBoxName.Font = new Font(textBoxName.Font, FontStyle.Italic);
                 textBoxName.ForeColor = Color.FromArgb(100, 26, 188, 156);
             }
-            UpdateGeneral();
-            OverviewControl.charNameLabel.Text = Builder.NewChar.Name;
-
         }
 
         private void comboBoxRace_DropDown(object sender, EventArgs e)
@@ -81,7 +78,6 @@ namespace CharacterCreator
                 AddSubraces("Stout", "Lightfoot");
 
             UpdateGeneral();
-            OverviewControl.charRaceLabel.Text = Builder.NewChar.Race;
         }
         
 
@@ -89,19 +85,13 @@ namespace CharacterCreator
         {
             if (textBoxName.Text == "Enter a name for your character")
                 MessageBox.Show("Can not leave any field empty!");
-            /*else
-            {
-                //Character newChar = new Character(textBoxName.Text, comboBoxRace.Text, comboBoxSubrace.Text, comboBoxClass.Text, comboBoxBackground.Text, comboBoxAlignment.Text);
-                
-                //Builder.NewChar = new Character(textBoxName.Text, comboBoxRace.Text, comboBoxSubrace.Text, comboBoxClass.Text, comboBoxBackground.Text, comboBoxAlignment.Text);
-                Utils.BinarySerialize(Builder.NewChar);
-            }*/
             else
             {
-
+                Character tempChar = new Character(Builder.NewChar.Name, Builder.NewChar.Race, Builder.NewChar.Subrace, Builder.NewChar.Class, Builder.NewChar.Background, Builder.NewChar.Alignment);
+                Builder.NewChar = tempChar;
                 Console.WriteLine(Builder.NewChar.toString());
-
                 StatsControl?.BringToFront();
+                UpdateGeneral();
             }
         }
 
@@ -118,6 +108,15 @@ namespace CharacterCreator
                 Builder.NewChar.Class = comboBoxClass.Text;
                 Builder.NewChar.Background = comboBoxBackground.Text;
                 Builder.NewChar.Alignment = comboBoxAlignment.Text;
+                OverviewControl.charNameLabel.Text = Builder.NewChar.Name;
+                OverviewControl.charRaceLabel.Text = Builder.NewChar.Race;
+                if (Builder.NewChar.Race == "Human")
+                    OverviewControl.charSubraceLabel.Text = "---";
+                else
+                    OverviewControl.charSubraceLabel.Text = Builder.NewChar.Subrace;
+                OverviewControl.charBGLabel.Text = Builder.NewChar.Background;
+                OverviewControl.charAlignLabel.Text = Builder.NewChar.Alignment;
+                OverviewControl.charClassLabel.Text = Builder.NewChar.Class;
             }
             
         }
@@ -125,25 +124,21 @@ namespace CharacterCreator
         private void ComboBoxSubrace_SelectedIndexChanged(object sender, EventArgs e)
         {
             UpdateGeneral();
-            OverviewControl.charSubraceLabel.Text = Builder.NewChar.Subrace;
         }
 
         private void ComboBoxBackground_SelectedIndexChanged(object sender, EventArgs e)
         {
             UpdateGeneral();
-            OverviewControl.charBGLabel.Text = Builder.NewChar.Background;
         }
 
         private void ComboBoxAlignment_SelectedIndexChanged(object sender, EventArgs e)
         {
             UpdateGeneral();
-            OverviewControl.charAlignLabel.Text = Builder.NewChar.Alignment;
         }
 
         private void ComboBoxClass_SelectionChangeCommitted(object sender, EventArgs e)
         {
             UpdateGeneral();
-            OverviewControl.charClassLabel.Text = Builder.NewChar.Class;
         }
     }
 }

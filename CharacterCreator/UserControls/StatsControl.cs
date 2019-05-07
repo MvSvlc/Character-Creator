@@ -19,6 +19,9 @@ namespace CharacterCreator
             InitializeComponent();
         }
 
+        //Character NewChar1 = new Character(Builder.NewChar.Name, Builder.NewChar.Race, Builder.NewChar.Subrace, Builder.NewChar.Class, Builder.NewChar.Background, Builder.NewChar.Alignment);
+        //Builder.NewChar = NewChar1;
+
         public StatsControl sControl
         {
             get { return this.sControl; }

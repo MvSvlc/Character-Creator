@@ -66,6 +66,8 @@ namespace CharacterCreator
         public void changePage()
         { 
             statsControl1.BringToFront();
+            Character tempChar = new Character(Builder.NewChar.Name, Builder.NewChar.Race, Builder.NewChar.Subrace, Builder.NewChar.Class, Builder.NewChar.Background, Builder.NewChar.Alignment);
+            Builder.NewChar = tempChar;
         }
         private void buttonStatsPage_Click(object sender, EventArgs e)
         {
