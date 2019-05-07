@@ -40,31 +40,25 @@ namespace CharacterCreator
             {
                 if(!charFile1.Exists)
                 {
-                    var fs = charFile1.Create();
-                    
-
+                    using (FileStream fs = charFile1.Create()) ;
                 }
                 if (!charFile2.Exists)
                 {
-                    var fs = charFile2.Create();
-                 
+                    using (FileStream fs = charFile2.Create()) ;
                 }
                 if (!charFile3.Exists)
                 {
-                    var fs = charFile3.Create();
-                   
+                    using (FileStream fs = charFile3.Create()) ;
                 }
                 if (!charFile4.Exists)
                 {
-                    var fs = charFile4.Create();
-                    
+                    using (FileStream fs = charFile4.Create()) ;
                 }
             }
             catch(Exception e)
             {
                 Console.WriteLine(e);
             }
-
         }
 
         public static int CharCount
