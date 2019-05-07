@@ -17,7 +17,7 @@ namespace CharacterCreator
 
         public static void BinarySerialize(Character character)
         {
-                Stream s = Builder.ActiveCharFile.Open(FileMode.Create);
+                FileStream s = Builder.ActiveCharFile.Open(FileMode.OpenOrCreate, FileAccess.ReadWrite,FileShare.None);
                 BinaryFormatter b = new BinaryFormatter();
                 b.Serialize(s, character);
                 s.Close();

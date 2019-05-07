@@ -16,6 +16,7 @@ namespace CharacterCreator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Builder.InitCharFiles();
             Application.Run(new MainForm());
         }
     }

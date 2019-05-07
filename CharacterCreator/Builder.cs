@@ -35,30 +35,26 @@ namespace CharacterCreator
             activeCharFile = charFile1;
 
             newChar = new Character();
-
-            try
+            /*if(!charFile1.Exists)
             {
-                if(!charFile1.Exists)
-                {
-                    using (FileStream fs = charFile1.Create()) ;
-                }
-                if (!charFile2.Exists)
-                {
-                    using (FileStream fs = charFile2.Create()) ;
-                }
-                if (!charFile3.Exists)
-                {
-                    using (FileStream fs = charFile3.Create()) ;
-                }
-                if (!charFile4.Exists)
-                {
-                    using (FileStream fs = charFile4.Create()) ;
-                }
+                FileStream fs = charFile1.Open(FileMode.Create,FileAccess.ReadWrite);
+                fs.Close();
             }
-            catch(Exception e)
+            if (!charFile2.Exists)
             {
-                Console.WriteLine(e);
+                FileStream fs = charFile2.Open(FileMode.Create, FileAccess.ReadWrite);
+                fs.Close();
             }
+            if (!charFile3.Exists)
+            {
+                FileStream fs = charFile3.Open(FileMode.Create, FileAccess.ReadWrite);
+                fs.Close();
+            }
+            if (!charFile4.Exists)
+            {
+                FileStream fs = charFile4.Open(FileMode.Create, FileAccess.ReadWrite);
+                fs.Close();
+            }*/
         }
 
         public static int CharCount
