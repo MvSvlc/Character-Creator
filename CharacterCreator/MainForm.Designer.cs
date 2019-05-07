@@ -119,7 +119,7 @@
             this.overviewbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.overviewbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.overviewbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.overviewbtn.Location = new System.Drawing.Point(0, 300);
+            this.overviewbtn.Location = new System.Drawing.Point(0, 181);
             this.overviewbtn.Name = "overviewbtn";
             this.overviewbtn.Size = new System.Drawing.Size(203, 62);
             this.overviewbtn.TabIndex = 5;

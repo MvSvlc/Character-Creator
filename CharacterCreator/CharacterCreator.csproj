@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -80,18 +80,6 @@
     <Compile Include="UserControls\OverviewControl.Designer.cs">
       <DependentUpon>OverviewControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\Page5Control.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\Page5Control.Designer.cs">
-      <DependentUpon>Page5Control.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\Page4Control.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\Page4Control.Designer.cs">
-      <DependentUpon>Page4Control.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\StatsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -111,12 +99,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\OverviewControl.resx">
       <DependentUpon>OverviewControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\Page5Control.resx">
-      <DependentUpon>Page5Control.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\Page4Control.resx">
-      <DependentUpon>Page4Control.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\StatsControl.resx">
       <DependentUpon>StatsControl.cs</DependentUpon>
