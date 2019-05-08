@@ -14,6 +14,8 @@ namespace CharacterCreator
     public partial class GeneralControl : UserControl
     {
         public OverviewControl OverviewControl { get; set; }
+        public MainForm MainForm { get; set; }
+
         public GeneralControl()
         {
             InitializeComponent();
@@ -83,23 +85,29 @@ namespace CharacterCreator
 
         private void GeneralSaveButton_Click(object sender, EventArgs e)
         {
-            if (textBoxName.Text == "Enter a name for your character")
-                MessageBox.Show("Can not leave any field empty!");
+            if (textBoxName.Text == "Enter a name for your character" || textBoxName.Text == "")
+                MessageBox.Show("Can not leave name field empty!", "No Character Name Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
-                Character tempChar = new Character(Builder.NewChar.Name, Builder.NewChar.Race, Builder.NewChar.Subrace, Builder.NewChar.Class, Builder.NewChar.Background, Builder.NewChar.Alignment);
+                Character tempChar = GetTempChar();
                 Builder.NewChar = tempChar;
-                Console.WriteLine(Builder.NewChar.toString());
-                StatsControl?.BringToFront();
+                MainForm.TitleLabel.Text = "Stats";
                 UpdateGeneral();
+                StatsControl?.BringToFront();
             }
+        }
+
+        public Character GetTempChar()
+        {
+             return new Character(Builder.NewChar.Name, Builder.NewChar.Race, Builder.NewChar.Subrace, Builder.NewChar.Class, Builder.NewChar.Background, Builder.NewChar.Alignment);
+
         }
 
 
         public void UpdateGeneral()
         {
             if (textBoxName.Text == "Enter a name for your character")
-                MessageBox.Show("Can not leave name empty!");
+                MessageBox.Show("Can not leave name field empty!", "No Character Name Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
                 Builder.NewChar.Name = textBoxName.Text;

@@ -9,17 +9,32 @@ namespace CharacterCreator
     {
         bool toggle_move;
         private Point lastLocation;
-        
+
         public MainForm()
         {
             InitializeComponent();
             homeControl1.BringToFront();
+
+            InitUserControls();
+        }
+
+        private void InitUserControls()
+        {
+            homeControl1.MainForm = this;
+            homeControl1.GeneralControl = generalControl1;
+            homeControl1.StatsControl = statsControl1;
+
             generalControl1.StatsControl = statsControl1;
             generalControl1.OverviewControl = overviewControl1;
+            generalControl1.MainForm = this;
+
             statsControl1.OverviewControl = overviewControl1;
+            statsControl1.MainForm = this;
+
             overviewControl1.HomeControl = homeControl1;
             overviewControl1.GeneralControl = generalControl1;
             overviewControl1.StatsControl = statsControl1;
+            overviewControl1.MainForm = this;
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
@@ -60,15 +75,11 @@ namespace CharacterCreator
             generalControl1.BringToFront();
         }
 
-        public void changePage()
-        { 
-            statsControl1.BringToFront();
-            Character tempChar = new Character(Builder.NewChar.Name, Builder.NewChar.Race, Builder.NewChar.Subrace, Builder.NewChar.Class, Builder.NewChar.Background, Builder.NewChar.Alignment);
-            Builder.NewChar = tempChar;
-        }
         private void buttonStatsPage_Click(object sender, EventArgs e)
         {
             TitleLabel.Text = "Stats";
+            Character tempChar = generalControl1.GetTempChar();
+            Builder.NewChar = tempChar;
             statsControl1.BringToFront();
         }
         

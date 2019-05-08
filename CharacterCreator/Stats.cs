@@ -22,6 +22,7 @@ namespace CharacterCreator
         private int deception;
 
         public int HitPoints { get; set; }
+        public Character StatsChar { get; set; }
 
         public int Strength
         {

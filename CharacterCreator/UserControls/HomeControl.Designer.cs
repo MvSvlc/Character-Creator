@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.charSlotLabel = new System.Windows.Forms.Label();
+            this.charSlotComboBox = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.CreateCharButton = new System.Windows.Forms.Button();
             this.homeTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.homeSplitContainer4 = new System.Windows.Forms.SplitContainer();
             this.slot4Label = new System.Windows.Forms.Label();
@@ -62,6 +66,10 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.homeTableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.homeSplitContainer4)).BeginInit();
@@ -80,16 +88,78 @@
             this.homeSplitContainer2.Panel1.SuspendLayout();
             this.homeSplitContainer2.Panel2.SuspendLayout();
             this.homeSplitContainer2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.pictureBox4);
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.charSlotLabel);
+            this.panel1.Controls.Add(this.charSlotComboBox);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.CreateCharButton);
             this.panel1.Controls.Add(this.homeTableLayoutPanel);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(757, 479);
             this.panel1.TabIndex = 2;
+            // 
+            // charSlotLabel
+            // 
+            this.charSlotLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.charSlotLabel.AutoSize = true;
+            this.charSlotLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.charSlotLabel.Location = new System.Drawing.Point(53, 396);
+            this.charSlotLabel.Name = "charSlotLabel";
+            this.charSlotLabel.Size = new System.Drawing.Size(74, 13);
+            this.charSlotLabel.TabIndex = 24;
+            this.charSlotLabel.Text = "Character Slot";
+            // 
+            // charSlotComboBox
+            // 
+            this.charSlotComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.charSlotComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.charSlotComboBox.ForeColor = System.Drawing.Color.Black;
+            this.charSlotComboBox.Items.AddRange(new object[] {
+            "Character Slot 1",
+            "Character Slot 2",
+            "Character Slot 3",
+            "Character Slot 4"});
+            this.charSlotComboBox.Location = new System.Drawing.Point(172, 395);
+            this.charSlotComboBox.Name = "charSlotComboBox";
+            this.charSlotComboBox.Size = new System.Drawing.Size(205, 21);
+            this.charSlotComboBox.TabIndex = 23;
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.button1.Location = new System.Drawing.Point(3, 431);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(374, 45);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Load Character";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // CreateCharButton
+            // 
+            this.CreateCharButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CreateCharButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.CreateCharButton.Location = new System.Drawing.Point(380, 431);
+            this.CreateCharButton.Name = "CreateCharButton";
+            this.CreateCharButton.Size = new System.Drawing.Size(374, 45);
+            this.CreateCharButton.TabIndex = 6;
+            this.CreateCharButton.Text = "Create Character";
+            this.CreateCharButton.UseVisualStyleBackColor = true;
+            this.CreateCharButton.Click += new System.EventHandler(this.CreateCharButton_Click);
             // 
             // homeTableLayoutPanel
             // 
@@ -109,12 +179,12 @@
             this.homeTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.homeTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.homeTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.homeTableLayoutPanel.Size = new System.Drawing.Size(662, 387);
+            this.homeTableLayoutPanel.Size = new System.Drawing.Size(662, 340);
             this.homeTableLayoutPanel.TabIndex = 1;
             // 
             // homeSplitContainer4
             // 
-            this.homeSplitContainer4.Location = new System.Drawing.Point(3, 291);
+            this.homeSplitContainer4.Location = new System.Drawing.Point(3, 258);
             this.homeSplitContainer4.Name = "homeSplitContainer4";
             // 
             // homeSplitContainer4.Panel1
@@ -126,7 +196,7 @@
             // 
             this.homeSplitContainer4.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.homeSplitContainer4.Panel2.Controls.Add(this.listView4);
-            this.homeSplitContainer4.Size = new System.Drawing.Size(656, 90);
+            this.homeSplitContainer4.Size = new System.Drawing.Size(656, 79);
             this.homeSplitContainer4.SplitterDistance = 107;
             this.homeSplitContainer4.TabIndex = 8;
             // 
@@ -155,7 +225,7 @@
             this.listView4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView4.Location = new System.Drawing.Point(0, 0);
             this.listView4.Name = "listView4";
-            this.listView4.Size = new System.Drawing.Size(545, 90);
+            this.listView4.Size = new System.Drawing.Size(545, 79);
             this.listView4.TabIndex = 1;
             this.listView4.UseCompatibleStateImageBehavior = false;
             this.listView4.View = System.Windows.Forms.View.Details;
@@ -187,7 +257,7 @@
             // 
             // homeSplitContainer3
             // 
-            this.homeSplitContainer3.Location = new System.Drawing.Point(3, 195);
+            this.homeSplitContainer3.Location = new System.Drawing.Point(3, 173);
             this.homeSplitContainer3.Name = "homeSplitContainer3";
             // 
             // homeSplitContainer3.Panel1
@@ -199,7 +269,7 @@
             // 
             this.homeSplitContainer3.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.homeSplitContainer3.Panel2.Controls.Add(this.listView3);
-            this.homeSplitContainer3.Size = new System.Drawing.Size(656, 90);
+            this.homeSplitContainer3.Size = new System.Drawing.Size(656, 79);
             this.homeSplitContainer3.SplitterDistance = 107;
             this.homeSplitContainer3.TabIndex = 7;
             // 
@@ -228,7 +298,7 @@
             this.listView3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView3.Location = new System.Drawing.Point(0, 0);
             this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(545, 90);
+            this.listView3.Size = new System.Drawing.Size(545, 79);
             this.listView3.TabIndex = 1;
             this.listView3.UseCompatibleStateImageBehavior = false;
             this.listView3.View = System.Windows.Forms.View.Details;
@@ -272,7 +342,7 @@
             // 
             this.homeSplitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.homeSplitContainer1.Panel2.Controls.Add(this.listView1);
-            this.homeSplitContainer1.Size = new System.Drawing.Size(656, 90);
+            this.homeSplitContainer1.Size = new System.Drawing.Size(656, 79);
             this.homeSplitContainer1.SplitterDistance = 107;
             this.homeSplitContainer1.TabIndex = 6;
             // 
@@ -301,7 +371,7 @@
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.Location = new System.Drawing.Point(0, 0);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(545, 90);
+            this.listView1.Size = new System.Drawing.Size(545, 79);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -333,7 +403,7 @@
             // 
             // homeSplitContainer2
             // 
-            this.homeSplitContainer2.Location = new System.Drawing.Point(3, 99);
+            this.homeSplitContainer2.Location = new System.Drawing.Point(3, 88);
             this.homeSplitContainer2.Name = "homeSplitContainer2";
             // 
             // homeSplitContainer2.Panel1
@@ -345,7 +415,7 @@
             // 
             this.homeSplitContainer2.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.homeSplitContainer2.Panel2.Controls.Add(this.listView2);
-            this.homeSplitContainer2.Size = new System.Drawing.Size(656, 90);
+            this.homeSplitContainer2.Size = new System.Drawing.Size(656, 79);
             this.homeSplitContainer2.SplitterDistance = 107;
             this.homeSplitContainer2.TabIndex = 5;
             // 
@@ -374,7 +444,7 @@
             this.listView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView2.Location = new System.Drawing.Point(0, 0);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(545, 90);
+            this.listView2.Size = new System.Drawing.Size(545, 79);
             this.listView2.TabIndex = 1;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -404,6 +474,50 @@
             this.columnHeader5.Text = "Background";
             this.columnHeader5.Width = 100;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::CharacterCreator.Properties.Resources.clear;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(705, 88);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 21);
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::CharacterCreator.Properties.Resources.clear;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Location = new System.Drawing.Point(705, 173);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(20, 21);
+            this.pictureBox2.TabIndex = 26;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::CharacterCreator.Properties.Resources.clear;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox3.Location = new System.Drawing.Point(705, 258);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(20, 21);
+            this.pictureBox3.TabIndex = 27;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = global::CharacterCreator.Properties.Resources.clear;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox4.Location = new System.Drawing.Point(705, 343);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(20, 21);
+            this.pictureBox4.TabIndex = 28;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
             // HomeControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -412,6 +526,7 @@
             this.Size = new System.Drawing.Size(757, 479);
             this.Load += new System.EventHandler(this.HomeControl_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.homeTableLayoutPanel.ResumeLayout(false);
             this.homeSplitContainer4.Panel1.ResumeLayout(false);
             this.homeSplitContainer4.Panel1.PerformLayout();
@@ -433,6 +548,10 @@
             this.homeSplitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.homeSplitContainer2)).EndInit();
             this.homeSplitContainer2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -472,5 +591,13 @@
         private System.Windows.Forms.ColumnHeader columnHeader13;
         private System.Windows.Forms.ColumnHeader columnHeader14;
         private System.Windows.Forms.ColumnHeader columnHeader15;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button CreateCharButton;
+        private System.Windows.Forms.Label charSlotLabel;
+        private System.Windows.Forms.ComboBox charSlotComboBox;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -7,13 +7,12 @@ namespace CharacterCreator
     public partial class StatsControl : UserControl
     {
         public OverviewControl OverviewControl { get; set; }
+        public MainForm MainForm { get; set; }
+
         public StatsControl()
         {
             InitializeComponent();
         }
-
-        //Character NewChar1 = new Character(Builder.NewChar.Name, Builder.NewChar.Race, Builder.NewChar.Subrace, Builder.NewChar.Class, Builder.NewChar.Background, Builder.NewChar.Alignment);
-        //Builder.NewChar = NewChar1;
 
         private String setModLabel(String label, String num)
         {
@@ -62,13 +61,26 @@ namespace CharacterCreator
             else return;
         }
 
+        public Character GetStatsCharacter()
+        {
+            Character temp = new Character();
+
+            temp.Strength = Int32.Parse(comboBoxStrength.Text);
+            temp.Dexterity = Int32.Parse(comboBoxDex.Text);
+            temp.Constitution = Int32.Parse(comboBoxConst.Text);
+            temp.Intelligence = Int32.Parse(comboBoxIntelli.Text);
+            temp.Wisdom = Int32.Parse(comboBoxWisdom.Text);
+            temp.Charisma = Int32.Parse(comboBoxCharisma.Text);
+            return temp;
+        }
+
         public void UpdateStats()
         {
             try
             {
-                if (comboBoxStrength.Text == "" || comboBoxDex.Text == "" || comboBoxIntelli.Text == "" || comboBoxWisdom.Text == "" || comboBoxCharisma.Text == "")
+                if (comboBoxStrength.Text == "" || comboBoxDex.Text == "" || comboBoxConst.Text == "" ||comboBoxIntelli.Text == "" || comboBoxWisdom.Text == "" || comboBoxCharisma.Text == "")
                 {
-                    MessageBox.Show("Can not leave any field empty!");
+                    MessageBox.Show("Can not leave any field empty!", "Error Updating Stats", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -78,6 +90,7 @@ namespace CharacterCreator
                     Builder.NewChar.Intelligence += Int32.Parse(comboBoxIntelli.Text);
                     Builder.NewChar.Wisdom += Int32.Parse(comboBoxWisdom.Text);
                     Builder.NewChar.Charisma += Int32.Parse(comboBoxCharisma.Text);
+                    Builder.NewChar.StatsChar = GetStatsCharacter();
                 }
             }
             catch (Exception e)
@@ -89,7 +102,10 @@ namespace CharacterCreator
         private void StatsSaveButton_Click(object sender, EventArgs e)
         {
             UpdateStats();
-            Console.WriteLine(Builder.NewChar.toString());
+            Character statsChar = GetStatsCharacter();
+            Console.WriteLine("Stats Char: " + statsChar.toString());
+
+            Console.WriteLine("Final Char: "+Builder.NewChar.toString());
             OverviewControl.charCharLabel.Text = Builder.NewChar.Charisma.ToString();
             OverviewControl.charWisLabel.Text = Builder.NewChar.Wisdom.ToString();
             OverviewControl.charIntLabel.Text = Builder.NewChar.Intelligence.ToString();
@@ -103,8 +119,7 @@ namespace CharacterCreator
             OverviewControl.IntMod.Text = Builder.NewChar.IntelligenceMod.ToString();
             OverviewControl.CharMod.Text = Builder.NewChar.CharismaMod.ToString();
             OverviewControl?.BringToFront();
+            MainForm.TitleLabel.Text = "Overview";
         }
-
-
     }
 }

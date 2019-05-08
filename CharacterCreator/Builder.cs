@@ -16,58 +16,57 @@ namespace CharacterCreator
             ActiveCharFile = CharFile1;
 
             NewChar = new Character();
-            /*if(!charFile1.Exists)
+            if(!CharFile1.Exists)
             {
-                FileStream fs = charFile1.Open(FileMode.Create,FileAccess.ReadWrite);
-                fs.Close();
+                FileStream fs = CharFile1.Open(FileMode.Create,FileAccess.ReadWrite);
             }
-            if (!charFile2.Exists)
+            if (!CharFile2.Exists)
             {
-                FileStream fs = charFile2.Open(FileMode.Create, FileAccess.ReadWrite);
-                fs.Close();
+                FileStream fs = CharFile2.Open(FileMode.Create, FileAccess.ReadWrite);
             }
-            if (!charFile3.Exists)
+            if (!CharFile3.Exists)
             {
-                FileStream fs = charFile3.Open(FileMode.Create, FileAccess.ReadWrite);
-                fs.Close();
+                FileStream fs = CharFile3.Open(FileMode.Create, FileAccess.ReadWrite);
             }
-            if (!charFile4.Exists)
+            if (!CharFile4.Exists)
             {
-                FileStream fs = charFile4.Open(FileMode.Create, FileAccess.ReadWrite);
-                fs.Close();
-            }*/
+                FileStream fs = CharFile4.Open(FileMode.Create, FileAccess.ReadWrite);
+            }
         }
 
         public static FileInfo CharFile1 { get; set; }
-
         public static FileInfo CharFile2 { get; set; }
         public static FileInfo CharFile3 { get; set; }
         public static FileInfo CharFile4 { get; set; }
 
         public static FileInfo ActiveCharFile { get; set; }
 
-        public static void SetSaveSlot(string s)
+        public static int SetSaveSlot(string s)
         {
             if (s.Equals("Character Slot 1"))
             {
                 ActiveCharFile = CharFile1;
+                return 1;
             }
 
             else if (s.Equals("Character Slot 2"))
             {
                 ActiveCharFile = CharFile2;
+                return 2;
             }
 
             else if (s.Equals("Character Slot 3"))
             {
                 ActiveCharFile = CharFile3;
+                return 3;
             }
 
             else if (s.Equals("Character Slot 4"))
             {
                 ActiveCharFile = CharFile4;
+                return 4;
             }
-
+            return 0;
         }
     }
 }

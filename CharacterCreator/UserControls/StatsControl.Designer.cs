@@ -460,17 +460,17 @@
         private System.Windows.Forms.Label labelWisdom;
         private System.Windows.Forms.Button StatsSaveButton;
         private System.Windows.Forms.Label labelCharisma;
-        private System.Windows.Forms.ComboBox comboBoxDex;
-        private System.Windows.Forms.ComboBox comboBoxConst;
-        private System.Windows.Forms.ComboBox comboBoxIntelli;
-        private System.Windows.Forms.ComboBox comboBoxWisdom;
-        private System.Windows.Forms.ComboBox comboBoxStrength;
-        private System.Windows.Forms.ComboBox comboBoxCharisma;
         private System.Windows.Forms.Label CharismaModLabel;
         private System.Windows.Forms.Label WisdomModLabel;
         private System.Windows.Forms.Label IntelliModLabel;
         private System.Windows.Forms.Label ConstModLabel;
         private System.Windows.Forms.Label DexModLabel;
         private System.Windows.Forms.Label StrengthModLabel;
+        public System.Windows.Forms.ComboBox comboBoxDex;
+        public System.Windows.Forms.ComboBox comboBoxConst;
+        public System.Windows.Forms.ComboBox comboBoxIntelli;
+        public System.Windows.Forms.ComboBox comboBoxWisdom;
+        public System.Windows.Forms.ComboBox comboBoxStrength;
+        public System.Windows.Forms.ComboBox comboBoxCharisma;
     }
 }

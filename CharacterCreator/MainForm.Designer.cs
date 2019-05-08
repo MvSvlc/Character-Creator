@@ -205,7 +205,9 @@
             this.generalControl1.Location = new System.Drawing.Point(203, 61);
             this.generalControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.generalControl1.Name = "generalControl1";
+            this.generalControl1.OverviewControl = null;
             this.generalControl1.Size = new System.Drawing.Size(757, 479);
+            this.generalControl1.StatsControl = null;
             this.generalControl1.TabIndex = 16;
             // 
             // statsControl1
@@ -214,15 +216,20 @@
             this.statsControl1.Location = new System.Drawing.Point(203, 61);
             this.statsControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.statsControl1.Name = "statsControl1";
+            this.statsControl1.OverviewControl = null;
             this.statsControl1.Size = new System.Drawing.Size(757, 479);
             this.statsControl1.TabIndex = 17;
             // 
             // overviewControl1
             // 
             this.overviewControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.overviewControl1.GeneralControl = null;
+            this.overviewControl1.HomeControl = null;
             this.overviewControl1.Location = new System.Drawing.Point(203, 61);
+            this.overviewControl1.MainForm = null;
             this.overviewControl1.Name = "overviewControl1";
             this.overviewControl1.Size = new System.Drawing.Size(757, 479);
+            this.overviewControl1.StatsControl = null;
             this.overviewControl1.TabIndex = 20;
             // 
             // MainForm
@@ -261,7 +268,6 @@
         private System.Windows.Forms.Button buttonHome;
         private System.Windows.Forms.Button overviewbtn;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label TitleLabel;
         private HomeControl homeControl1;
         private GeneralControl generalControl1;
         private StatsControl statsControl1;
@@ -270,6 +276,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
+        public System.Windows.Forms.Label TitleLabel;
     }
 }
 
