@@ -16,7 +16,7 @@ namespace CharacterCreator
             ActiveCharFile = CharFile1;
 
             NewChar = new Character();
-            if(!CharFile1.Exists)
+            /*if(!CharFile1.Exists)
             {
                 FileStream fs = CharFile1.Open(FileMode.Create,FileAccess.ReadWrite);
             }
@@ -31,7 +31,7 @@ namespace CharacterCreator
             if (!CharFile4.Exists)
             {
                 FileStream fs = CharFile4.Open(FileMode.Create, FileAccess.ReadWrite);
-            }
+            }*/
         }
 
         public static FileInfo CharFile1 { get; set; }
