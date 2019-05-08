@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
@@ -22,12 +15,6 @@ namespace CharacterCreator
         //Character NewChar1 = new Character(Builder.NewChar.Name, Builder.NewChar.Race, Builder.NewChar.Subrace, Builder.NewChar.Class, Builder.NewChar.Background, Builder.NewChar.Alignment);
         //Builder.NewChar = NewChar1;
 
-        public StatsControl sControl
-        {
-            get { return this.sControl; }
-            set { }
-        }
-
         private String setModLabel(String label, String num)
         {
             return String.Format("{0}: {1}", label, (Int32.Parse(num) / 2) - 5);
@@ -35,37 +22,44 @@ namespace CharacterCreator
 
         private void ComboBoxStrength_SelectedIndexChanged(object sender, EventArgs e)
         {
-            StrengthModLabel.Text = setModLabel("Strength Modifier", comboBoxStrength.Text);
-            
+            if (comboBoxStrength.SelectedIndex != -1)
+                StrengthModLabel.Text = setModLabel("Strength Modifier", comboBoxStrength.Text);
+            else return;
         }
 
         private void ComboBoxDex_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DexModLabel.Text = setModLabel("Dexterity Modifier", comboBoxDex.Text);
-            
+            if(comboBoxDex.SelectedIndex != -1)
+                DexModLabel.Text = setModLabel("Dexterity Modifier", comboBoxDex.Text);
+            else return;
         }
 
         private void ComboBoxConst_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ConstModLabel.Text = setModLabel("Constitution Modifier", comboBoxConst.Text);
-            
+            if(comboBoxConst.SelectedIndex != -1)
+                ConstModLabel.Text = setModLabel("Constitution Modifier", comboBoxConst.Text);
+            else return;
         }
 
         private void ComboBoxIntelli_SelectedIndexChanged(object sender, EventArgs e)
         {
-            IntelliModLabel.Text = setModLabel("Intelligence Modifier", comboBoxIntelli.Text);
-            
+            if(comboBoxIntelli.SelectedIndex != -1)
+                IntelliModLabel.Text = setModLabel("Intelligence Modifier", comboBoxIntelli.Text);
+            else return;
         }
 
         private void ComboBoxWisdom_SelectedIndexChanged(object sender, EventArgs e)
         {
-            WisdomModLabel.Text = setModLabel("Wisdom Modifier", comboBoxWisdom.Text);
-            
+            if(comboBoxWisdom.SelectedIndex != -1)
+                WisdomModLabel.Text = setModLabel("Wisdom Modifier", comboBoxWisdom.Text);
+            else return;
         }
 
         private void ComboBoxCharisma_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CharismaModLabel.Text = setModLabel("Charisma Modifier", comboBoxCharisma.Text);
+            if(comboBoxCharisma.SelectedIndex != -1)
+                CharismaModLabel.Text = setModLabel("Charisma Modifier", comboBoxCharisma.Text);
+            else return;
         }
 
         public void UpdateStats()
@@ -108,7 +102,7 @@ namespace CharacterCreator
             OverviewControl.WisMod.Text = Builder.NewChar.WisdomMod.ToString();
             OverviewControl.IntMod.Text = Builder.NewChar.IntelligenceMod.ToString();
             OverviewControl.CharMod.Text = Builder.NewChar.CharismaMod.ToString();
-            OverviewControl.BringToFront();
+            OverviewControl?.BringToFront();
         }
 
 

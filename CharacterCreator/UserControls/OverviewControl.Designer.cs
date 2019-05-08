@@ -419,9 +419,9 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
             this.label1.Location = new System.Drawing.Point(96, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 5;
-            this.label1.Text = "modifier:";
+            this.label1.Text = "Modifier:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label8
@@ -430,9 +430,9 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
             this.label8.Location = new System.Drawing.Point(96, 40);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(46, 13);
+            this.label8.Size = new System.Drawing.Size(47, 13);
             this.label8.TabIndex = 23;
-            this.label8.Text = "modifier:";
+            this.label8.Text = "Modifier:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label9
@@ -441,9 +441,9 @@
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
             this.label9.Location = new System.Drawing.Point(96, 80);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(46, 13);
+            this.label9.Size = new System.Drawing.Size(47, 13);
             this.label9.TabIndex = 24;
-            this.label9.Text = "modifier:";
+            this.label9.Text = "Modifier:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label10
@@ -452,9 +452,9 @@
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
             this.label10.Location = new System.Drawing.Point(96, 120);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(46, 13);
+            this.label10.Size = new System.Drawing.Size(47, 13);
             this.label10.TabIndex = 25;
-            this.label10.Text = "modifier:";
+            this.label10.Text = "Modifier:";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label11
@@ -463,9 +463,9 @@
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
             this.label11.Location = new System.Drawing.Point(96, 160);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(46, 13);
+            this.label11.Size = new System.Drawing.Size(47, 13);
             this.label11.TabIndex = 26;
-            this.label11.Text = "modifier:";
+            this.label11.Text = "Modifier:";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label12
@@ -474,16 +474,16 @@
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
             this.label12.Location = new System.Drawing.Point(96, 200);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(46, 13);
+            this.label12.Size = new System.Drawing.Size(47, 13);
             this.label12.TabIndex = 27;
-            this.label12.Text = "modifier:";
+            this.label12.Text = "Modifier:";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // CharMod
             // 
             this.CharMod.AutoSize = true;
             this.CharMod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.CharMod.Location = new System.Drawing.Point(148, 200);
+            this.CharMod.Location = new System.Drawing.Point(149, 200);
             this.CharMod.Name = "CharMod";
             this.CharMod.Size = new System.Drawing.Size(16, 13);
             this.CharMod.TabIndex = 28;
@@ -494,7 +494,7 @@
             // 
             this.WisMod.AutoSize = true;
             this.WisMod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.WisMod.Location = new System.Drawing.Point(148, 160);
+            this.WisMod.Location = new System.Drawing.Point(149, 160);
             this.WisMod.Name = "WisMod";
             this.WisMod.Size = new System.Drawing.Size(16, 13);
             this.WisMod.TabIndex = 29;
@@ -505,7 +505,7 @@
             // 
             this.IntMod.AutoSize = true;
             this.IntMod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.IntMod.Location = new System.Drawing.Point(148, 120);
+            this.IntMod.Location = new System.Drawing.Point(149, 120);
             this.IntMod.Name = "IntMod";
             this.IntMod.Size = new System.Drawing.Size(16, 13);
             this.IntMod.TabIndex = 30;
@@ -516,7 +516,7 @@
             // 
             this.ConsMod.AutoSize = true;
             this.ConsMod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.ConsMod.Location = new System.Drawing.Point(148, 80);
+            this.ConsMod.Location = new System.Drawing.Point(149, 80);
             this.ConsMod.Name = "ConsMod";
             this.ConsMod.Size = new System.Drawing.Size(16, 13);
             this.ConsMod.TabIndex = 31;
@@ -527,7 +527,7 @@
             // 
             this.DexMod.AutoSize = true;
             this.DexMod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.DexMod.Location = new System.Drawing.Point(148, 40);
+            this.DexMod.Location = new System.Drawing.Point(149, 40);
             this.DexMod.Name = "DexMod";
             this.DexMod.Size = new System.Drawing.Size(16, 13);
             this.DexMod.TabIndex = 32;
@@ -538,7 +538,7 @@
             // 
             this.StrMod.AutoSize = true;
             this.StrMod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.StrMod.Location = new System.Drawing.Point(148, 0);
+            this.StrMod.Location = new System.Drawing.Point(149, 0);
             this.StrMod.Name = "StrMod";
             this.StrMod.Size = new System.Drawing.Size(16, 13);
             this.StrMod.TabIndex = 33;

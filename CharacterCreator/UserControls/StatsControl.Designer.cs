@@ -41,7 +41,6 @@
             this.comboBoxWisdom = new System.Windows.Forms.ComboBox();
             this.comboBoxStrength = new System.Windows.Forms.ComboBox();
             this.comboBoxCharisma = new System.Windows.Forms.ComboBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.CharismaModLabel = new System.Windows.Forms.Label();
             this.WisdomModLabel = new System.Windows.Forms.Label();
             this.IntelliModLabel = new System.Windows.Forms.Label();
@@ -50,7 +49,6 @@
             this.StrengthModLabel = new System.Windows.Forms.Label();
             this.StatsSaveButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -70,7 +68,7 @@
             this.tableLayoutPanel1.Controls.Add(this.comboBoxWisdom, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.comboBoxStrength, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.comboBoxCharisma, 1, 5);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -348,28 +346,12 @@
             this.comboBoxCharisma.TabIndex = 17;
             this.comboBoxCharisma.SelectedIndexChanged += new System.EventHandler(this.ComboBoxCharisma_SelectedIndexChanged);
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.CharismaModLabel);
-            this.panel1.Controls.Add(this.WisdomModLabel);
-            this.panel1.Controls.Add(this.IntelliModLabel);
-            this.panel1.Controls.Add(this.ConstModLabel);
-            this.panel1.Controls.Add(this.DexModLabel);
-            this.panel1.Controls.Add(this.StrengthModLabel);
-            this.panel1.Controls.Add(this.tableLayoutPanel1);
-            this.panel1.Controls.Add(this.StatsSaveButton);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(757, 479);
-            this.panel1.TabIndex = 8;
-            // 
             // CharismaModLabel
             // 
             this.CharismaModLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CharismaModLabel.AutoSize = true;
             this.CharismaModLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.CharismaModLabel.Location = new System.Drawing.Point(170, 146);
+            this.CharismaModLabel.Location = new System.Drawing.Point(161, 143);
             this.CharismaModLabel.Name = "CharismaModLabel";
             this.CharismaModLabel.Size = new System.Drawing.Size(105, 13);
             this.CharismaModLabel.TabIndex = 13;
@@ -381,7 +363,7 @@
             this.WisdomModLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.WisdomModLabel.AutoSize = true;
             this.WisdomModLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.WisdomModLabel.Location = new System.Drawing.Point(170, 118);
+            this.WisdomModLabel.Location = new System.Drawing.Point(161, 115);
             this.WisdomModLabel.Name = "WisdomModLabel";
             this.WisdomModLabel.Size = new System.Drawing.Size(100, 13);
             this.WisdomModLabel.TabIndex = 12;
@@ -393,7 +375,7 @@
             this.IntelliModLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.IntelliModLabel.AutoSize = true;
             this.IntelliModLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.IntelliModLabel.Location = new System.Drawing.Point(170, 91);
+            this.IntelliModLabel.Location = new System.Drawing.Point(161, 88);
             this.IntelliModLabel.Name = "IntelliModLabel";
             this.IntelliModLabel.Size = new System.Drawing.Size(116, 13);
             this.IntelliModLabel.TabIndex = 11;
@@ -405,7 +387,7 @@
             this.ConstModLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ConstModLabel.AutoSize = true;
             this.ConstModLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.ConstModLabel.Location = new System.Drawing.Point(170, 64);
+            this.ConstModLabel.Location = new System.Drawing.Point(161, 61);
             this.ConstModLabel.Name = "ConstModLabel";
             this.ConstModLabel.Size = new System.Drawing.Size(117, 13);
             this.ConstModLabel.TabIndex = 10;
@@ -417,7 +399,7 @@
             this.DexModLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DexModLabel.AutoSize = true;
             this.DexModLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.DexModLabel.Location = new System.Drawing.Point(170, 37);
+            this.DexModLabel.Location = new System.Drawing.Point(161, 34);
             this.DexModLabel.Name = "DexModLabel";
             this.DexModLabel.Size = new System.Drawing.Size(103, 13);
             this.DexModLabel.TabIndex = 9;
@@ -429,7 +411,7 @@
             this.StrengthModLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.StrengthModLabel.AutoSize = true;
             this.StrengthModLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.StrengthModLabel.Location = new System.Drawing.Point(170, 10);
+            this.StrengthModLabel.Location = new System.Drawing.Point(161, 7);
             this.StrengthModLabel.Name = "StrengthModLabel";
             this.StrengthModLabel.Size = new System.Drawing.Size(102, 13);
             this.StrengthModLabel.TabIndex = 8;
@@ -451,14 +433,20 @@
             // StatsControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.StrengthModLabel);
+            this.Controls.Add(this.ConstModLabel);
+            this.Controls.Add(this.CharismaModLabel);
+            this.Controls.Add(this.WisdomModLabel);
+            this.Controls.Add(this.DexModLabel);
+            this.Controls.Add(this.IntelliModLabel);
+            this.Controls.Add(this.StatsSaveButton);
             this.Name = "StatsControl";
             this.Size = new System.Drawing.Size(757, 479);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -470,7 +458,6 @@
         private System.Windows.Forms.Label labelConst;
         private System.Windows.Forms.Label labelIntelli;
         private System.Windows.Forms.Label labelWisdom;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button StatsSaveButton;
         private System.Windows.Forms.Label labelCharisma;
         private System.Windows.Forms.ComboBox comboBoxDex;

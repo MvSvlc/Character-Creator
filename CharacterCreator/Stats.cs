@@ -4,9 +4,7 @@ namespace CharacterCreator
     [Serializable()]
     public class Stats : Utils
     {
-        private int hitPoints = 0;
         private int level = 1;
-        private int speed;
         private int strength = 0;
         private int strengthMod;
         private int dexterity = 0;
@@ -20,32 +18,10 @@ namespace CharacterCreator
         private int charisma = 0;
         private int charismaMod;
         private int armorClass = 10;
-        private int initiative;
         private int proficiencyBonus = 2;
-        private int acrobatics;
-        private int animalHandling;
-        private int arcana;
-        private int athletics;
         private int deception;
-        private int history;
-        private int insight;
-        private int intimidation;
-        private int investigation;
-        private int medicine;
-        private int nature;
-        private int perception;
-        private int performance;
-        private int persuasion;
-        private int religion;
-        private int sleightHand;
-        private int stealth;
-        private int survival;
 
-        public int HitPoints
-        {
-            get { return hitPoints; }
-            set { hitPoints = value; }
-        }
+        public int HitPoints { get; set; }
 
         public int Strength
         {
@@ -62,9 +38,9 @@ namespace CharacterCreator
             set {
                     strengthMod = value;
                     if (value < 0)
-                        athletics = 0;
+                        Athletics = 0;
                     else
-                        athletics = value;
+                        Athletics = value;
                 }
         }
 
@@ -85,17 +61,17 @@ namespace CharacterCreator
                     dexterityMod = value;
                     if (value < 0)
                     {
-                        initiative = 0;
-                        acrobatics = 0;
-                        sleightHand = 0;
-                        stealth = 0;
+                        Initiative = 0;
+                        Acrobatics = 0;
+                        SleightHand = 0;
+                        Stealth = 0;
                     }
                     else
                     {
-                        initiative = value;
-                        acrobatics = value;
-                        sleightHand = value;
-                        stealth = value;
+                        Initiative = value;
+                        Acrobatics = value;
+                        SleightHand = value;
+                        Stealth = value;
                     }
                 }
         }
@@ -131,19 +107,19 @@ namespace CharacterCreator
                     intelligenceMod = value;
                     if (value < 0)
                     {
-                        arcana = 0;
-                        history = 0;
-                        investigation = 0;
-                        nature = 0;
-                        religion = 0;
+                        Arcana = 0;
+                        History = 0;
+                        Investigation = 0;
+                        Nature = 0;
+                        Religion = 0;
                     }
                     else 
                     {
-                        arcana = value;
-                        history = value;
-                        investigation = value;
-                        nature = value;
-                        religion = value;
+                        Arcana = value;
+                        History = value;
+                        Investigation = value;
+                        Nature = value;
+                        Religion = value;
                     }
                 }
         }
@@ -164,20 +140,20 @@ namespace CharacterCreator
                     wisdomMod = value;
                     if (value < 0)
                     {
-                        animalHandling = 0;
-                        insight = 0;
-                        medicine = 0;
-                        perception = 0;
-                        survival = 0;
+                        AnimalHandling = 0;
+                        Insight = 0;
+                        Medicine = 0;
+                        Perception = 0;
+                        Survival = 0;
                     }
                     else
                     {
 
-                        animalHandling = value;
-                        insight = value;
-                        medicine = value;
-                        perception = value;
-                        survival = value;
+                        AnimalHandling = value;
+                        Insight = value;
+                        Medicine = value;
+                        Perception = value;
+                        Survival = value;
                     }
                 }
         }
@@ -199,16 +175,16 @@ namespace CharacterCreator
                     if ( value < 0)
                     {
                         deception = 0;
-                        intimidation = 0;
-                        performance = 0;
-                        persuasion = 0;
+                        Intimidation = 0;
+                        Performance = 0;
+                        Persuasion = 0;
                     }
                     else
                     {
                         deception = value;
-                        intimidation = value;
-                        performance = value;
-                        persuasion = value;
+                        Intimidation = value;
+                        Performance = value;
+                        Persuasion = value;
                     }
                 }
         }
@@ -219,11 +195,7 @@ namespace CharacterCreator
             set { armorClass = value; }
         }
 
-        public int Initiative
-        {
-            get { return initiative; }
-            set { initiative = value; }
-        }
+        public int Initiative { get; set; }
 
         public int Level
         {
@@ -231,102 +203,46 @@ namespace CharacterCreator
             set { level = value; }
         }
 
-        public int Speed
-        {
-            get { return speed; }
-            set { speed = value; }
-        }
+        public int Speed { get; set; }
 
 
-        public int Acrobatics
-        {
-            get { return acrobatics; }
-        }
+        public int Acrobatics { get; private set; }
 
-        public int AnimalHandling
-        {
-            get { return animalHandling; }
-        }
+        public int AnimalHandling { get; private set; }
 
-        public int Arcana
-        {
-            get { return arcana; }
-        }
+        public int Arcana { get; private set; }
 
-        public int Athletics
-        {
-            get { return athletics; }
-        }
+        public int Athletics { get; private set; }
 
         public int Deception
         {
-            get { return athletics; }
+            get { return Athletics; }
         }
 
-        public int History
-        {
-            get { return history; }
-        }
+        public int History { get; private set; }
 
-        public int Insight
-        {
-            get { return insight; }
+        public int Insight { get; private set; }
 
-        }
+        public int Intimidation { get; private set; }
 
-        public int Intimidation
-        {
-            get { return intimidation; }
-        }
+        public int Investigation { get; private set; }
 
-        public int Investigation
-        {
-            get { return investigation; }
-        }
+        public int Medicine { get; private set; }
 
-        public int Medicine
-        {
-            get { return medicine; }
-        }
+        public int Nature { get; private set; }
 
-        public int Nature
-        {
-            get { return nature; }
-        }
+        public int Perception { get; private set; }
 
-        public int Perception
-        {
-            get { return perception; }
-        }
+        public int Performance { get; private set; }
 
-        public int Performance
-        {
-            get { return performance; }
-        }
+        public int Persuasion { get; private set; }
 
-        public int Persuasion
-        {
-            get { return persuasion; }
-        }
+        public int Religion { get; private set; }
 
-        public int Religion
-        {
-            get { return religion; }
-        }
+        public int SleightHand { get; private set; }
 
-        public int SleightHand
-        {
-            get { return sleightHand; }
-        }
+        public int Stealth { get; private set; }
 
-        public int Stealth
-        {
-            get { return stealth; }
-        }
-
-        public int Survival
-        {
-            get { return survival; }
-        }
+        public int Survival { get; private set; }
     }
 }

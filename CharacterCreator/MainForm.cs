@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CharacterCreator
@@ -23,6 +17,9 @@ namespace CharacterCreator
             generalControl1.StatsControl = statsControl1;
             generalControl1.OverviewControl = overviewControl1;
             statsControl1.OverviewControl = overviewControl1;
+            overviewControl1.HomeControl = homeControl1;
+            overviewControl1.GeneralControl = generalControl1;
+            overviewControl1.StatsControl = statsControl1;
         }
 
         private void ExitButton_Click(object sender, EventArgs e)

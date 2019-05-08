@@ -28,7 +28,7 @@ namespace CharacterCreator
             Character temp = new Character();
             try
             {
-                Stream s = f.Open(FileMode.Open);
+                FileStream s = f.Open(FileMode.Open);
                 BinaryFormatter b = new BinaryFormatter();
                 temp = (Character)b.Deserialize(s);
                 s.Close();
