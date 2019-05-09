@@ -18,19 +18,23 @@ namespace CharacterCreator
             NewChar = new Character();
             /*if(!CharFile1.Exists)
             {
-                FileStream fs = CharFile1.Open(FileMode.Create,FileAccess.ReadWrite);
+                using (FileStream fs = CharFile1.Open(FileMode.Create))
+                    fs.Close();
             }
             if (!CharFile2.Exists)
             {
-                FileStream fs = CharFile2.Open(FileMode.Create, FileAccess.ReadWrite);
+                using (FileStream fs = CharFile2.Open(FileMode.Create))
+                    fs.Close();
             }
             if (!CharFile3.Exists)
             {
-                FileStream fs = CharFile3.Open(FileMode.Create, FileAccess.ReadWrite);
+                using (FileStream fs = CharFile3.Open(FileMode.Create))
+                    fs.Close();
             }
             if (!CharFile4.Exists)
             {
-                FileStream fs = CharFile4.Open(FileMode.Create, FileAccess.ReadWrite);
+                using (FileStream fs = CharFile4.Open(FileMode.Create))
+                fs.Close();
             }*/
         }
 

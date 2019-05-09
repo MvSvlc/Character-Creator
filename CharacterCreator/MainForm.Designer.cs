@@ -192,10 +192,13 @@
             // homeControl1
             // 
             this.homeControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.homeControl1.GeneralControl = null;
             this.homeControl1.Location = new System.Drawing.Point(203, 61);
+            this.homeControl1.MainForm = null;
             this.homeControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.homeControl1.Name = "homeControl1";
             this.homeControl1.Size = new System.Drawing.Size(757, 479);
+            this.homeControl1.StatsControl = null;
             this.homeControl1.TabIndex = 15;
             // 
             // generalControl1
@@ -203,6 +206,7 @@
             this.generalControl1.AutoSize = true;
             this.generalControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.generalControl1.Location = new System.Drawing.Point(203, 61);
+            this.generalControl1.MainForm = null;
             this.generalControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.generalControl1.Name = "generalControl1";
             this.generalControl1.OverviewControl = null;
@@ -214,6 +218,7 @@
             // 
             this.statsControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.statsControl1.Location = new System.Drawing.Point(203, 61);
+            this.statsControl1.MainForm = null;
             this.statsControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.statsControl1.Name = "statsControl1";
             this.statsControl1.OverviewControl = null;
@@ -246,6 +251,7 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
